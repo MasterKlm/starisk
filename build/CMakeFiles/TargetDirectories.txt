@@ -1,0 +1,3 @@
+C:/starisk/build/CMakeFiles/starisk.dir
+C:/starisk/build/CMakeFiles/edit_cache.dir
+C:/starisk/build/CMakeFiles/rebuild_cache.dir

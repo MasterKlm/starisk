@@ -5,17 +5,14 @@
 #include "stb_image.h"
 #include "stb_image_resize2.h"
 #include <vector>
-#include "TextureManager.h"
-#include "texture.h"
+#include "StarTextureManager.h"
+#include "StarTexture.h"
+#include "Starisk.h"
+#include "StarQuad.h"
+#include "StarBatch.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
-
-
-struct Vertex {
-    float x, y, z;
-    float u, v;
-};
 
 
 
@@ -40,7 +37,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-    GLFWwindow* window = glfwCreateWindow(800,600, "OpenGl", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(Starisk::WINDOW_WIDTH, Starisk::WINDOW_HEIGHT, "OpenGl", NULL, NULL);
 
     if(window == NULL){
         std::cout << "Window creaion failed" << "\n";
@@ -69,52 +66,28 @@ int main()
 
     Shader shader("assets/vertex_core.shader", "assets/fragment_core.shader");
 
-    TextureManager textureManager{};
+    StarTextureManager textureManager{};
     
-    Texture blueBox("assets/img/sky_box.png");
+    StarQuad blueBox(100.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
+    StarQuad blueBox2(600.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
+    StarQuad blueBox3(400.0f, 200.0f, 50.0f, 100.0f, "assets/img/sky_box.png");
+    StarQuad blueBox4(600.0f, 480.0f, 120.0f, 60.0f, "assets/img/sky_box.png");
+    StarQuad blueBox5(290.0f, 20.0f, 40.0f, 80.0f, "assets/img/sky_box.png");
 
 
-    std::cout << "UVs: " << blueBox.uMin << ", " << blueBox.vMin << ", " << blueBox.uMax << ", " << blueBox.vMax << "\n";
-
-    Vertex vertices[] = {
-        { 0.5f,  0.5f, 0.0f,     blueBox.uMin, blueBox.vMin},
-        {-0.5f,  0.5f, 0.0f,     blueBox.uMax, blueBox.vMin},
-        {-0.5f, -0.5f, 0.0f,     blueBox.uMax, blueBox.vMax},
-        { 0.5f, -0.5f, 0.0f,     blueBox.uMin, blueBox.vMax}
-    };
-
-    unsigned int indices[] = {
-        0, 1, 2,
-        2, 3, 0
-    };
-
-    unsigned int VAO, VBO, EBO;
-
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    glGenBuffers(1, &EBO);
-
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
-    int stride = sizeof(Vertex);
-
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, (void*)0);
-    glEnableVertexAttribArray(0);
-
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, stride, (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
-
+    StarBatch batch(1000);
+    batch.add(blueBox.vertices);
+    batch.add(blueBox2.vertices);
+    batch.add(blueBox3.vertices);
+    batch.add(blueBox4.vertices);
+    batch.add(blueBox5.vertices);
     
     
     shader.activate();
     shader.setInt("u_Atlas", 0);
     //shader.setHandleui64ARB("ourTexture", handle);
 
+    batch.prepareRender();
 
     while(!glfwWindowShouldClose(window))
         {
@@ -127,12 +100,7 @@ int main()
 
             textureManager.Bind();
             shader.activate();
-            glBindVertexArray(VAO);
-
-            
-
-            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
+            batch.render();
             //send new frame to, and generate kind of before hand and prevent flicketing
             glfwSwapBuffers(window);
             glfwPollEvents();

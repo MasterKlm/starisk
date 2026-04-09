@@ -171,10 +171,91 @@ CMakeFiles/starisk.dir/cmake_pch.hxx.gch
  C:/starisk/src/pch.h
  C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.cxx
 
-CMakeFiles/starisk.dir/src/TextureManager.cpp.obj
+CMakeFiles/starisk.dir/src/StarBatch.cpp.obj
  C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
- C:/starisk/src/TextureManager.cpp
- C:/starisk/src/TextureManager.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/enable_special_members.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_construct.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/version.h
+ C:/msys64/mingw64/include/c++/15.2.0/exception
+ C:/msys64/mingw64/include/c++/15.2.0/initializer_list
+ C:/msys64/mingw64/include/c++/15.2.0/iostream
+ C:/msys64/mingw64/include/c++/15.2.0/new
+ C:/msys64/mingw64/include/c++/15.2.0/optional
+ C:/msys64/mingw64/include/c++/15.2.0/type_traits
+ C:/msys64/mingw64/include/c++/15.2.0/vector
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h
+ C:/starisk/include/glad/glad.h
+ C:/starisk/src/StarBatch.cpp
+ C:/starisk/src/StarBatch.h
+ C:/starisk/src/Starisk.h
+
+CMakeFiles/starisk.dir/src/StarQuad.cpp.obj
+ C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+ C:/msys64/mingw64/include/c++/15.2.0/bits/enable_special_members.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_construct.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/version.h
+ C:/msys64/mingw64/include/c++/15.2.0/cstdlib
+ C:/msys64/mingw64/include/c++/15.2.0/exception
+ C:/msys64/mingw64/include/c++/15.2.0/initializer_list
+ C:/msys64/mingw64/include/c++/15.2.0/iostream
+ C:/msys64/mingw64/include/c++/15.2.0/new
+ C:/msys64/mingw64/include/c++/15.2.0/optional
+ C:/msys64/mingw64/include/c++/15.2.0/stdlib.h
+ C:/msys64/mingw64/include/c++/15.2.0/type_traits
+ C:/msys64/mingw64/include/c++/15.2.0/vector
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h
+ C:/msys64/mingw64/include/crtdefs.h
+ C:/msys64/mingw64/include/stddef.h
+ C:/msys64/mingw64/include/stdio.h
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h
+ C:/starisk/include/glad/glad.h
+ C:/starisk/include/stb_image.h
+ C:/starisk/include/stb_image_resize2.h
+ C:/starisk/src/StarQuad.cpp
+ C:/starisk/src/StarQuad.h
+ C:/starisk/src/StarTexture.h
+ C:/starisk/src/StarTextureManager.h
+ C:/starisk/src/StarUtils.h
+ C:/starisk/src/Starisk.h
+
+CMakeFiles/starisk.dir/src/StarTexture.cpp.obj
+ C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+ C:/msys64/mingw64/include/c++/15.2.0/bits/version.h
+ C:/msys64/mingw64/include/c++/15.2.0/cstdlib
+ C:/msys64/mingw64/include/c++/15.2.0/cstring
+ C:/msys64/mingw64/include/c++/15.2.0/stdlib.h
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h
+ C:/msys64/mingw64/include/crtdefs.h
+ C:/msys64/mingw64/include/sec_api/string_s.h
+ C:/msys64/mingw64/include/stddef.h
+ C:/msys64/mingw64/include/stdio.h
+ C:/msys64/mingw64/include/string.h
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h
+ C:/starisk/include/glad/glad.h
+ C:/starisk/include/stb_image.h
+ C:/starisk/include/stb_image_resize2.h
+ C:/starisk/src/StarTexture.cpp
+ C:/starisk/src/StarTexture.h
+ C:/starisk/src/StarTextureManager.h
+
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj
+ C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+ C:/starisk/src/StarTextureManager.cpp
+ C:/starisk/src/StarTextureManager.h
+
+CMakeFiles/starisk.dir/src/Starisk.cpp.obj
+ C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+ C:/msys64/mingw64/include/c++/15.2.0/iostream
+ C:/starisk/src/Starisk.cpp
+ C:/starisk/src/Starisk.h
 
 CMakeFiles/starisk.dir/src/glad.c.obj
  C:/starisk/src/glad.c
@@ -1211,13 +1292,25 @@ CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj
 
 CMakeFiles/starisk.dir/src/main.cpp.obj
  C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+ C:/msys64/mingw64/include/c++/15.2.0/bits/enable_special_members.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_construct.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/version.h
  C:/msys64/mingw64/include/c++/15.2.0/cstdlib
+ C:/msys64/mingw64/include/c++/15.2.0/exception
  C:/msys64/mingw64/include/c++/15.2.0/fstream
+ C:/msys64/mingw64/include/c++/15.2.0/initializer_list
  C:/msys64/mingw64/include/c++/15.2.0/iostream
+ C:/msys64/mingw64/include/c++/15.2.0/new
+ C:/msys64/mingw64/include/c++/15.2.0/optional
  C:/msys64/mingw64/include/c++/15.2.0/sstream
  C:/msys64/mingw64/include/c++/15.2.0/stdlib.h
  C:/msys64/mingw64/include/c++/15.2.0/string
+ C:/msys64/mingw64/include/c++/15.2.0/type_traits
  C:/msys64/mingw64/include/c++/15.2.0/vector
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/msys64/mingw64/include/crtdefs.h
  C:/msys64/mingw64/include/stddef.h
  C:/msys64/mingw64/include/stdio.h
@@ -1227,10 +1320,13 @@ CMakeFiles/starisk.dir/src/main.cpp.obj
  C:/starisk/include/glad/glad.h
  C:/starisk/include/stb_image.h
  C:/starisk/include/stb_image_resize2.h
- C:/starisk/src/TextureManager.h
+ C:/starisk/src/StarBatch.h
+ C:/starisk/src/StarQuad.h
+ C:/starisk/src/StarTexture.h
+ C:/starisk/src/StarTextureManager.h
+ C:/starisk/src/Starisk.h
  C:/starisk/src/main.cpp
  C:/starisk/src/shader.h
- C:/starisk/src/texture.h
 
 CMakeFiles/starisk.dir/src/shader.cpp.obj
  C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
@@ -1291,16 +1387,4 @@ CMakeFiles/starisk.dir/src/stb_impl.cpp.obj
  C:/starisk/include/stb_image.h
  C:/starisk/include/stb_image_resize2.h
  C:/starisk/src/stb_impl.cpp
-
-CMakeFiles/starisk.dir/src/texture.cpp.obj
- C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
- C:/msys64/mingw64/include/c++/15.2.0/bits/version.h
- C:/msys64/mingw64/include/c++/15.2.0/cstring
- C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h
- C:/msys64/mingw64/include/crtdefs.h
- C:/msys64/mingw64/include/sec_api/string_s.h
- C:/msys64/mingw64/include/string.h
- C:/starisk/src/TextureManager.h
- C:/starisk/src/texture.cpp
- C:/starisk/src/texture.h
 

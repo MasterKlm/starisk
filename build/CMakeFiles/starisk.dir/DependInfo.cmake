@@ -11,8 +11,16 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/starisk/src/glad.c" "CMakeFiles/starisk.dir/src/glad.c.obj" "gcc" "CMakeFiles/starisk.dir/src/glad.c.obj.d"
   "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.cxx" "CMakeFiles/starisk.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/starisk.dir/cmake_pch.hxx.gch.d"
   "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/starisk.dir/cmake_pch.hxx.gch.d"
-  "C:/starisk/src/TextureManager.cpp" "CMakeFiles/starisk.dir/src/TextureManager.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/TextureManager.cpp.obj.d"
-  "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/TextureManager.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/TextureManager.cpp.obj.d"
+  "C:/starisk/src/StarBatch.cpp" "CMakeFiles/starisk.dir/src/StarBatch.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarBatch.cpp.obj.d"
+  "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/StarBatch.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarBatch.cpp.obj.d"
+  "C:/starisk/src/StarQuad.cpp" "CMakeFiles/starisk.dir/src/StarQuad.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarQuad.cpp.obj.d"
+  "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/StarQuad.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarQuad.cpp.obj.d"
+  "C:/starisk/src/StarTexture.cpp" "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj.d"
+  "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj.d"
+  "C:/starisk/src/StarTextureManager.cpp" "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj.d"
+  "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj.d"
+  "C:/starisk/src/Starisk.cpp" "CMakeFiles/starisk.dir/src/Starisk.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/Starisk.cpp.obj.d"
+  "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/Starisk.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/Starisk.cpp.obj.d"
   "C:/starisk/src/imgui.cpp" "CMakeFiles/starisk.dir/src/imgui.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/imgui.cpp.obj.d"
   "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/imgui.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/imgui.cpp.obj.d"
   "C:/starisk/src/imgui_draw.cpp" "CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj.d"
@@ -27,8 +35,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/shader.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/shader.cpp.obj.d"
   "C:/starisk/src/stb_impl.cpp" "CMakeFiles/starisk.dir/src/stb_impl.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/stb_impl.cpp.obj.d"
   "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/stb_impl.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/stb_impl.cpp.obj.d"
-  "C:/starisk/src/texture.cpp" "CMakeFiles/starisk.dir/src/texture.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/texture.cpp.obj.d"
-  "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/texture.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/texture.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

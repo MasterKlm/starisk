@@ -87,28 +87,96 @@ CMakeFiles/starisk.dir/cmake_pch.hxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/cmake_pch.hxx.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\build\CMakeFiles\starisk.dir\cmake_pch.hxx.cxx -o CMakeFiles\starisk.dir\cmake_pch.hxx.s
 
-CMakeFiles/starisk.dir/src/TextureManager.cpp.obj: CMakeFiles/starisk.dir/flags.make
-CMakeFiles/starisk.dir/src/TextureManager.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
-CMakeFiles/starisk.dir/src/TextureManager.cpp.obj: C:/starisk/src/TextureManager.cpp
-CMakeFiles/starisk.dir/src/TextureManager.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
-CMakeFiles/starisk.dir/src/TextureManager.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
-CMakeFiles/starisk.dir/src/TextureManager.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/starisk.dir/src/TextureManager.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/TextureManager.cpp.obj -MF CMakeFiles\starisk.dir\src\TextureManager.cpp.obj.d -o CMakeFiles\starisk.dir\src\TextureManager.cpp.obj -c C:\starisk\src\TextureManager.cpp
+CMakeFiles/starisk.dir/src/StarBatch.cpp.obj: CMakeFiles/starisk.dir/flags.make
+CMakeFiles/starisk.dir/src/StarBatch.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
+CMakeFiles/starisk.dir/src/StarBatch.cpp.obj: C:/starisk/src/StarBatch.cpp
+CMakeFiles/starisk.dir/src/StarBatch.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
+CMakeFiles/starisk.dir/src/StarBatch.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
+CMakeFiles/starisk.dir/src/StarBatch.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/starisk.dir/src/StarBatch.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/StarBatch.cpp.obj -MF CMakeFiles\starisk.dir\src\StarBatch.cpp.obj.d -o CMakeFiles\starisk.dir\src\StarBatch.cpp.obj -c C:\starisk\src\StarBatch.cpp
 
-CMakeFiles/starisk.dir/src/TextureManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/TextureManager.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\TextureManager.cpp > CMakeFiles\starisk.dir\src\TextureManager.cpp.i
+CMakeFiles/starisk.dir/src/StarBatch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/StarBatch.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\StarBatch.cpp > CMakeFiles\starisk.dir\src\StarBatch.cpp.i
 
-CMakeFiles/starisk.dir/src/TextureManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/TextureManager.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\TextureManager.cpp -o CMakeFiles\starisk.dir\src\TextureManager.cpp.s
+CMakeFiles/starisk.dir/src/StarBatch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/StarBatch.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\StarBatch.cpp -o CMakeFiles\starisk.dir\src\StarBatch.cpp.s
+
+CMakeFiles/starisk.dir/src/StarQuad.cpp.obj: CMakeFiles/starisk.dir/flags.make
+CMakeFiles/starisk.dir/src/StarQuad.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
+CMakeFiles/starisk.dir/src/StarQuad.cpp.obj: C:/starisk/src/StarQuad.cpp
+CMakeFiles/starisk.dir/src/StarQuad.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
+CMakeFiles/starisk.dir/src/StarQuad.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
+CMakeFiles/starisk.dir/src/StarQuad.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/starisk.dir/src/StarQuad.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/StarQuad.cpp.obj -MF CMakeFiles\starisk.dir\src\StarQuad.cpp.obj.d -o CMakeFiles\starisk.dir\src\StarQuad.cpp.obj -c C:\starisk\src\StarQuad.cpp
+
+CMakeFiles/starisk.dir/src/StarQuad.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/StarQuad.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\StarQuad.cpp > CMakeFiles\starisk.dir\src\StarQuad.cpp.i
+
+CMakeFiles/starisk.dir/src/StarQuad.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/StarQuad.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\StarQuad.cpp -o CMakeFiles\starisk.dir\src\StarQuad.cpp.s
+
+CMakeFiles/starisk.dir/src/StarTexture.cpp.obj: CMakeFiles/starisk.dir/flags.make
+CMakeFiles/starisk.dir/src/StarTexture.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
+CMakeFiles/starisk.dir/src/StarTexture.cpp.obj: C:/starisk/src/StarTexture.cpp
+CMakeFiles/starisk.dir/src/StarTexture.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
+CMakeFiles/starisk.dir/src/StarTexture.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
+CMakeFiles/starisk.dir/src/StarTexture.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/starisk.dir/src/StarTexture.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/StarTexture.cpp.obj -MF CMakeFiles\starisk.dir\src\StarTexture.cpp.obj.d -o CMakeFiles\starisk.dir\src\StarTexture.cpp.obj -c C:\starisk\src\StarTexture.cpp
+
+CMakeFiles/starisk.dir/src/StarTexture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/StarTexture.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\StarTexture.cpp > CMakeFiles\starisk.dir\src\StarTexture.cpp.i
+
+CMakeFiles/starisk.dir/src/StarTexture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/StarTexture.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\StarTexture.cpp -o CMakeFiles\starisk.dir\src\StarTexture.cpp.s
+
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj: CMakeFiles/starisk.dir/flags.make
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj: C:/starisk/src/StarTextureManager.cpp
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj -MF CMakeFiles\starisk.dir\src\StarTextureManager.cpp.obj.d -o CMakeFiles\starisk.dir\src\StarTextureManager.cpp.obj -c C:\starisk\src\StarTextureManager.cpp
+
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/StarTextureManager.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\StarTextureManager.cpp > CMakeFiles\starisk.dir\src\StarTextureManager.cpp.i
+
+CMakeFiles/starisk.dir/src/StarTextureManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/StarTextureManager.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\StarTextureManager.cpp -o CMakeFiles\starisk.dir\src\StarTextureManager.cpp.s
+
+CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/flags.make
+CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
+CMakeFiles/starisk.dir/src/Starisk.cpp.obj: C:/starisk/src/Starisk.cpp
+CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
+CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
+CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/starisk.dir/src/Starisk.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/Starisk.cpp.obj -MF CMakeFiles\starisk.dir\src\Starisk.cpp.obj.d -o CMakeFiles\starisk.dir\src\Starisk.cpp.obj -c C:\starisk\src\Starisk.cpp
+
+CMakeFiles/starisk.dir/src/Starisk.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/Starisk.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\Starisk.cpp > CMakeFiles\starisk.dir\src\Starisk.cpp.i
+
+CMakeFiles/starisk.dir/src/Starisk.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/Starisk.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\Starisk.cpp -o CMakeFiles\starisk.dir\src\Starisk.cpp.s
 
 CMakeFiles/starisk.dir/src/glad.c.obj: CMakeFiles/starisk.dir/flags.make
 CMakeFiles/starisk.dir/src/glad.c.obj: CMakeFiles/starisk.dir/includes_C.rsp
 CMakeFiles/starisk.dir/src/glad.c.obj: C:/starisk/src/glad.c
 CMakeFiles/starisk.dir/src/glad.c.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/starisk.dir/src/glad.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/starisk.dir/src/glad.c.obj"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/starisk.dir/src/glad.c.obj -MF CMakeFiles\starisk.dir\src\glad.c.obj.d -o CMakeFiles\starisk.dir\src\glad.c.obj -c C:\starisk\src\glad.c
 
 CMakeFiles/starisk.dir/src/glad.c.i: cmake_force
@@ -125,7 +193,7 @@ CMakeFiles/starisk.dir/src/imgui.cpp.obj: C:/starisk/src/imgui.cpp
 CMakeFiles/starisk.dir/src/imgui.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/imgui.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/imgui.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/starisk.dir/src/imgui.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/starisk.dir/src/imgui.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/imgui.cpp.obj -MF CMakeFiles\starisk.dir\src\imgui.cpp.obj.d -o CMakeFiles\starisk.dir\src\imgui.cpp.obj -c C:\starisk\src\imgui.cpp
 
 CMakeFiles/starisk.dir/src/imgui.cpp.i: cmake_force
@@ -142,7 +210,7 @@ CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj: C:/starisk/src/imgui_draw.cpp
 CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj -MF CMakeFiles\starisk.dir\src\imgui_draw.cpp.obj.d -o CMakeFiles\starisk.dir\src\imgui_draw.cpp.obj -c C:\starisk\src\imgui_draw.cpp
 
 CMakeFiles/starisk.dir/src/imgui_draw.cpp.i: cmake_force
@@ -159,7 +227,7 @@ CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj: C:/starisk/src/imgui_tables.cpp
 CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj -MF CMakeFiles\starisk.dir\src\imgui_tables.cpp.obj.d -o CMakeFiles\starisk.dir\src\imgui_tables.cpp.obj -c C:\starisk\src\imgui_tables.cpp
 
 CMakeFiles/starisk.dir/src/imgui_tables.cpp.i: cmake_force
@@ -176,7 +244,7 @@ CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj: C:/starisk/src/imgui_widgets.c
 CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj -MF CMakeFiles\starisk.dir\src\imgui_widgets.cpp.obj.d -o CMakeFiles\starisk.dir\src\imgui_widgets.cpp.obj -c C:\starisk\src\imgui_widgets.cpp
 
 CMakeFiles/starisk.dir/src/imgui_widgets.cpp.i: cmake_force
@@ -193,7 +261,7 @@ CMakeFiles/starisk.dir/src/main.cpp.obj: C:/starisk/src/main.cpp
 CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/starisk.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/starisk.dir/src/main.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/main.cpp.obj -MF CMakeFiles\starisk.dir\src\main.cpp.obj.d -o CMakeFiles\starisk.dir\src\main.cpp.obj -c C:\starisk\src\main.cpp
 
 CMakeFiles/starisk.dir/src/main.cpp.i: cmake_force
@@ -210,7 +278,7 @@ CMakeFiles/starisk.dir/src/shader.cpp.obj: C:/starisk/src/shader.cpp
 CMakeFiles/starisk.dir/src/shader.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/shader.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/shader.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/starisk.dir/src/shader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/starisk.dir/src/shader.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/shader.cpp.obj -MF CMakeFiles\starisk.dir\src\shader.cpp.obj.d -o CMakeFiles\starisk.dir\src\shader.cpp.obj -c C:\starisk\src\shader.cpp
 
 CMakeFiles/starisk.dir/src/shader.cpp.i: cmake_force
@@ -227,7 +295,7 @@ CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: C:/starisk/src/stb_impl.cpp
 CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/starisk.dir/src/stb_impl.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/starisk.dir/src/stb_impl.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/stb_impl.cpp.obj -MF CMakeFiles\starisk.dir\src\stb_impl.cpp.obj.d -o CMakeFiles\starisk.dir\src\stb_impl.cpp.obj -c C:\starisk\src\stb_impl.cpp
 
 CMakeFiles/starisk.dir/src/stb_impl.cpp.i: cmake_force
@@ -238,26 +306,13 @@ CMakeFiles/starisk.dir/src/stb_impl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/stb_impl.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\stb_impl.cpp -o CMakeFiles\starisk.dir\src\stb_impl.cpp.s
 
-CMakeFiles/starisk.dir/src/texture.cpp.obj: CMakeFiles/starisk.dir/flags.make
-CMakeFiles/starisk.dir/src/texture.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
-CMakeFiles/starisk.dir/src/texture.cpp.obj: C:/starisk/src/texture.cpp
-CMakeFiles/starisk.dir/src/texture.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
-CMakeFiles/starisk.dir/src/texture.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
-CMakeFiles/starisk.dir/src/texture.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/starisk.dir/src/texture.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/texture.cpp.obj -MF CMakeFiles\starisk.dir\src\texture.cpp.obj.d -o CMakeFiles\starisk.dir\src\texture.cpp.obj -c C:\starisk\src\texture.cpp
-
-CMakeFiles/starisk.dir/src/texture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/texture.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\texture.cpp > CMakeFiles\starisk.dir\src\texture.cpp.i
-
-CMakeFiles/starisk.dir/src/texture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/texture.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\texture.cpp -o CMakeFiles\starisk.dir\src\texture.cpp.s
-
 # Object files for target starisk
 starisk_OBJECTS = \
-"CMakeFiles/starisk.dir/src/TextureManager.cpp.obj" \
+"CMakeFiles/starisk.dir/src/StarBatch.cpp.obj" \
+"CMakeFiles/starisk.dir/src/StarQuad.cpp.obj" \
+"CMakeFiles/starisk.dir/src/StarTexture.cpp.obj" \
+"CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj" \
+"CMakeFiles/starisk.dir/src/Starisk.cpp.obj" \
 "CMakeFiles/starisk.dir/src/glad.c.obj" \
 "CMakeFiles/starisk.dir/src/imgui.cpp.obj" \
 "CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj" \
@@ -265,14 +320,17 @@ starisk_OBJECTS = \
 "CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj" \
 "CMakeFiles/starisk.dir/src/main.cpp.obj" \
 "CMakeFiles/starisk.dir/src/shader.cpp.obj" \
-"CMakeFiles/starisk.dir/src/stb_impl.cpp.obj" \
-"CMakeFiles/starisk.dir/src/texture.cpp.obj"
+"CMakeFiles/starisk.dir/src/stb_impl.cpp.obj"
 
 # External object files for target starisk
 starisk_EXTERNAL_OBJECTS =
 
 starisk.exe: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
-starisk.exe: CMakeFiles/starisk.dir/src/TextureManager.cpp.obj
+starisk.exe: CMakeFiles/starisk.dir/src/StarBatch.cpp.obj
+starisk.exe: CMakeFiles/starisk.dir/src/StarQuad.cpp.obj
+starisk.exe: CMakeFiles/starisk.dir/src/StarTexture.cpp.obj
+starisk.exe: CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj
+starisk.exe: CMakeFiles/starisk.dir/src/Starisk.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/glad.c.obj
 starisk.exe: CMakeFiles/starisk.dir/src/imgui.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj
@@ -281,13 +339,12 @@ starisk.exe: CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/main.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/shader.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/stb_impl.cpp.obj
-starisk.exe: CMakeFiles/starisk.dir/src/texture.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/build.make
 starisk.exe: C:/starisk/lib/libglfw3.a
 starisk.exe: CMakeFiles/starisk.dir/linkLibs.rsp
 starisk.exe: CMakeFiles/starisk.dir/objects1.rsp
 starisk.exe: CMakeFiles/starisk.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable starisk.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable starisk.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\starisk.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

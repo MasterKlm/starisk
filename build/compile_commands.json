@@ -7,9 +7,33 @@
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\TextureManager.cpp.obj -c C:\\starisk\\src\\TextureManager.cpp",
-  "file": "C:/starisk/src/TextureManager.cpp",
-  "output": "CMakeFiles/starisk.dir/src/TextureManager.cpp.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\StarBatch.cpp.obj -c C:\\starisk\\src\\StarBatch.cpp",
+  "file": "C:/starisk/src/StarBatch.cpp",
+  "output": "CMakeFiles/starisk.dir/src/StarBatch.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\StarQuad.cpp.obj -c C:\\starisk\\src\\StarQuad.cpp",
+  "file": "C:/starisk/src/StarQuad.cpp",
+  "output": "CMakeFiles/starisk.dir/src/StarQuad.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\StarTexture.cpp.obj -c C:\\starisk\\src\\StarTexture.cpp",
+  "file": "C:/starisk/src/StarTexture.cpp",
+  "output": "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\StarTextureManager.cpp.obj -c C:\\starisk\\src\\StarTextureManager.cpp",
+  "file": "C:/starisk/src/StarTextureManager.cpp",
+  "output": "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\Starisk.cpp.obj -c C:\\starisk\\src\\Starisk.cpp",
+  "file": "C:/starisk/src/Starisk.cpp",
+  "output": "CMakeFiles/starisk.dir/src/Starisk.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
@@ -58,11 +82,5 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\stb_impl.cpp.obj -c C:\\starisk\\src\\stb_impl.cpp",
   "file": "C:/starisk/src/stb_impl.cpp",
   "output": "CMakeFiles/starisk.dir/src/stb_impl.cpp.obj"
-},
-{
-  "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\texture.cpp.obj -c C:\\starisk\\src\\texture.cpp",
-  "file": "C:/starisk/src/texture.cpp",
-  "output": "CMakeFiles/starisk.dir/src/texture.cpp.obj"
 }
 ]

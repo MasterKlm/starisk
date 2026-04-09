@@ -143,29 +143,125 @@ cmake_pch.hxx.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
-src/TextureManager.obj: src/TextureManager.cpp.obj
-.PHONY : src/TextureManager.obj
+src/StarBatch.obj: src/StarBatch.cpp.obj
+.PHONY : src/StarBatch.obj
 
 # target to build an object file
-src/TextureManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/TextureManager.cpp.obj
-.PHONY : src/TextureManager.cpp.obj
+src/StarBatch.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatch.cpp.obj
+.PHONY : src/StarBatch.cpp.obj
 
-src/TextureManager.i: src/TextureManager.cpp.i
-.PHONY : src/TextureManager.i
+src/StarBatch.i: src/StarBatch.cpp.i
+.PHONY : src/StarBatch.i
 
 # target to preprocess a source file
-src/TextureManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/TextureManager.cpp.i
-.PHONY : src/TextureManager.cpp.i
+src/StarBatch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatch.cpp.i
+.PHONY : src/StarBatch.cpp.i
 
-src/TextureManager.s: src/TextureManager.cpp.s
-.PHONY : src/TextureManager.s
+src/StarBatch.s: src/StarBatch.cpp.s
+.PHONY : src/StarBatch.s
 
 # target to generate assembly for a file
-src/TextureManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/TextureManager.cpp.s
-.PHONY : src/TextureManager.cpp.s
+src/StarBatch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatch.cpp.s
+.PHONY : src/StarBatch.cpp.s
+
+src/StarQuad.obj: src/StarQuad.cpp.obj
+.PHONY : src/StarQuad.obj
+
+# target to build an object file
+src/StarQuad.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarQuad.cpp.obj
+.PHONY : src/StarQuad.cpp.obj
+
+src/StarQuad.i: src/StarQuad.cpp.i
+.PHONY : src/StarQuad.i
+
+# target to preprocess a source file
+src/StarQuad.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarQuad.cpp.i
+.PHONY : src/StarQuad.cpp.i
+
+src/StarQuad.s: src/StarQuad.cpp.s
+.PHONY : src/StarQuad.s
+
+# target to generate assembly for a file
+src/StarQuad.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarQuad.cpp.s
+.PHONY : src/StarQuad.cpp.s
+
+src/StarTexture.obj: src/StarTexture.cpp.obj
+.PHONY : src/StarTexture.obj
+
+# target to build an object file
+src/StarTexture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarTexture.cpp.obj
+.PHONY : src/StarTexture.cpp.obj
+
+src/StarTexture.i: src/StarTexture.cpp.i
+.PHONY : src/StarTexture.i
+
+# target to preprocess a source file
+src/StarTexture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarTexture.cpp.i
+.PHONY : src/StarTexture.cpp.i
+
+src/StarTexture.s: src/StarTexture.cpp.s
+.PHONY : src/StarTexture.s
+
+# target to generate assembly for a file
+src/StarTexture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarTexture.cpp.s
+.PHONY : src/StarTexture.cpp.s
+
+src/StarTextureManager.obj: src/StarTextureManager.cpp.obj
+.PHONY : src/StarTextureManager.obj
+
+# target to build an object file
+src/StarTextureManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj
+.PHONY : src/StarTextureManager.cpp.obj
+
+src/StarTextureManager.i: src/StarTextureManager.cpp.i
+.PHONY : src/StarTextureManager.i
+
+# target to preprocess a source file
+src/StarTextureManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarTextureManager.cpp.i
+.PHONY : src/StarTextureManager.cpp.i
+
+src/StarTextureManager.s: src/StarTextureManager.cpp.s
+.PHONY : src/StarTextureManager.s
+
+# target to generate assembly for a file
+src/StarTextureManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarTextureManager.cpp.s
+.PHONY : src/StarTextureManager.cpp.s
+
+src/Starisk.obj: src/Starisk.cpp.obj
+.PHONY : src/Starisk.obj
+
+# target to build an object file
+src/Starisk.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/Starisk.cpp.obj
+.PHONY : src/Starisk.cpp.obj
+
+src/Starisk.i: src/Starisk.cpp.i
+.PHONY : src/Starisk.i
+
+# target to preprocess a source file
+src/Starisk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/Starisk.cpp.i
+.PHONY : src/Starisk.cpp.i
+
+src/Starisk.s: src/Starisk.cpp.s
+.PHONY : src/Starisk.s
+
+# target to generate assembly for a file
+src/Starisk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/Starisk.cpp.s
+.PHONY : src/Starisk.cpp.s
 
 src/glad.obj: src/glad.c.obj
 .PHONY : src/glad.obj
@@ -359,30 +455,6 @@ src/stb_impl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/stb_impl.cpp.s
 .PHONY : src/stb_impl.cpp.s
 
-src/texture.obj: src/texture.cpp.obj
-.PHONY : src/texture.obj
-
-# target to build an object file
-src/texture.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/texture.cpp.obj
-.PHONY : src/texture.cpp.obj
-
-src/texture.i: src/texture.cpp.i
-.PHONY : src/texture.i
-
-# target to preprocess a source file
-src/texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/texture.cpp.i
-.PHONY : src/texture.cpp.i
-
-src/texture.s: src/texture.cpp.s
-.PHONY : src/texture.s
-
-# target to generate assembly for a file
-src/texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/texture.cpp.s
-.PHONY : src/texture.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -395,9 +467,21 @@ help:
 	@echo ... cmake_pch.hxx.gch
 	@echo ... cmake_pch.hxx.i
 	@echo ... cmake_pch.hxx.s
-	@echo ... src/TextureManager.obj
-	@echo ... src/TextureManager.i
-	@echo ... src/TextureManager.s
+	@echo ... src/StarBatch.obj
+	@echo ... src/StarBatch.i
+	@echo ... src/StarBatch.s
+	@echo ... src/StarQuad.obj
+	@echo ... src/StarQuad.i
+	@echo ... src/StarQuad.s
+	@echo ... src/StarTexture.obj
+	@echo ... src/StarTexture.i
+	@echo ... src/StarTexture.s
+	@echo ... src/StarTextureManager.obj
+	@echo ... src/StarTextureManager.i
+	@echo ... src/StarTextureManager.s
+	@echo ... src/Starisk.obj
+	@echo ... src/Starisk.i
+	@echo ... src/Starisk.s
 	@echo ... src/glad.obj
 	@echo ... src/glad.i
 	@echo ... src/glad.s
@@ -422,9 +506,6 @@ help:
 	@echo ... src/stb_impl.obj
 	@echo ... src/stb_impl.i
 	@echo ... src/stb_impl.s
-	@echo ... src/texture.obj
-	@echo ... src/texture.i
-	@echo ... src/texture.s
 .PHONY : help
 
 

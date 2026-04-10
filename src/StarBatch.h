@@ -25,7 +25,7 @@ struct BatchConfig
 
 };
 
-
+template <typename T>
 class StarBatch 
 {
 public:
@@ -40,27 +40,145 @@ public:
     
 
     BatchConfig _config;
-    VertexUV _lastVertex;
+    T _lastVertex;
 
-    StarBatch(const unsigned maxNumVertices);
-    ~StarBatch();
-    void prepareRender();
-    void render();
+    
+    StarBatch(const unsigned maxNumVertices)
+    : uMaxNumVertices(maxNumVertices), uNumOfUsedVertices(0), VAO(0), VBO(0), _config(GL_TRIANGLES, 0)
+    {
+        EBO = 0;
 
-    bool isEnoughRoom(const unsigned numOfVertices);    
+        if(uMaxNumVertices < 1000)
+        {
+            std::cout << "max vertices of " << uMaxNumVertices << " is too small. Must be atleast 1000" << "\n";
+        }
+
+        glGenVertexArrays(1, &VAO);
+        glGenBuffers(1, &VBO);
+        glGenBuffers(1, &EBO);
+
+        glBindVertexArray(VAO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(T) * uMaxNumVertices, nullptr, GL_STATIC_DRAW);
+
+        enableAttribPointerf(3);
+        enableAttribPointerf(2);
+        
+    }
+
+    ~StarBatch(){ cleanUp(); }
+
+    
+    void prepareRender()
+    {
+        indices.clear();
+
+        for(int i = 0; i < uNumOfUsedVertices; i += 4)
+        {
+            if(i + 3 < uNumOfUsedVertices)
+            {
+                // First triangle
+                indices.push_back(i);
+                indices.push_back(i + 1);
+                indices.push_back(i + 2);
+                
+                // Second triangle
+                indices.push_back(i + 2);
+                indices.push_back(i + 3);
+                indices.push_back(i);
+            }
+        }
+
+        glBindVertexArray(VAO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
+
+        std::cout << "Batch Memory Usage: " << uNumOfUsedVertices * sizeof(T) << " Bytes" << "\n";
+    }
+
+    void render()
+    {
+        if(uNumOfUsedVertices == 0) return;
+        if(indices.empty()){
+            std::cout << "Run StarBatch.prepareRender() to set indices before calling render()" << "\n";
+            return;
+        };
+
+        
+
+
+        glBindVertexArray(VAO);
+        glDrawElements(_config.uRenderType, (GLsizei)indices.size(), GL_UNSIGNED_INT, 0);
+    }
+
+    bool isEnoughRoom(const unsigned numOfVertices)
+    {
+        return (uNumOfUsedVertices + numOfVertices <= uMaxNumVertices);
+    }    
     //bool isEmpty() const;
     //bool isBatchConfig(const StarBatch& other) const;
     
-    void add(const std::vector<VertexUV>& inputVertices, const BatchConfig& other);
-    void add(const std::vector<VertexUV>& inputVertices);
+    void add(const std::vector<T>& inputVertices, const BatchConfig& other){ _config = other; add(inputVertices);}
+    
+    
+    void add(const std::vector<T>& inputVertices)
+    {
+        if(inputVertices.size() > uMaxNumVertices)
+        {
+            std::cout << "Input vertices are over the limit of batch size " << uMaxNumVertices << "\n";
+            return;
+        }
 
-    void enableAttribPointerf(int numOfVertices);
+        if(inputVertices.empty())
+        {
+            std::cout << "Cannot add empty inputVertices" << "\n";
+            return;
+        }
+
+        if(!isEnoughRoom(inputVertices.size()))
+        {
+            std::cout << "Not enough room for vertices of size " << inputVertices.size() << "\n";
+            return;
+        }
+
+
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferSubData(GL_ARRAY_BUFFER, uNumOfUsedVertices * sizeof(T), inputVertices.size() * sizeof(T), &inputVertices[0]);
+
+
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        uNumOfUsedVertices += inputVertices.size();
+        _lastVertex = inputVertices[inputVertices.size() - 1];
+
+    }
+    
+    void enableAttribPointerf(int numOfVertices){
+        glVertexAttribPointer(attribIndex, numOfVertices, GL_FLOAT, GL_FALSE, sizeof(T), (void*)(attribOffset * sizeof(float)));
+        glEnableVertexAttribArray(attribIndex);
+        attribIndex++;
+        attribOffset += numOfVertices;
+    }
 
 
 
 protected:
 private:
-    void cleanUp();
+    void cleanUp(){
+        if(VBO != 0)
+        {
+            glBindBuffer(GL_ARRAY_BUFFER, 0);
+            glDeleteBuffers(1, &VBO);
+            VBO = 0;
+        }
+
+        if(VAO != 0)
+        {
+            glBindVertexArray(0);
+            glDeleteVertexArrays(1, &VAO);
+            VAO = 0;
+        }
+    }
 
 
 

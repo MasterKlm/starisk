@@ -10,6 +10,8 @@
 #include "Starisk.h"
 #include "StarQuad.h"
 #include "StarBatch.h"
+#include "glm/glm.hpp"
+#include "glm/common.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -65,29 +67,36 @@ int main()
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     Shader shader("assets/vertex_core.shader", "assets/fragment_core.shader");
+    Shader flatColorShader("assets/vertex_flat_color.shader", "assets/fragment_flat_color.shader");
 
     StarTextureManager textureManager{};
     
-    StarQuad blueBox(100.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
-    StarQuad blueBox2(600.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
-    StarQuad blueBox3(400.0f, 200.0f, 50.0f, 100.0f, "assets/img/sky_box.png");
-    StarQuad blueBox4(600.0f, 480.0f, 120.0f, 60.0f, "assets/img/sky_box.png");
-    StarQuad blueBox5(290.0f, 20.0f, 40.0f, 80.0f, "assets/img/sky_box.png");
+    StarQuad<VertexUV> blueBox(100.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
+    StarQuad<VertexUV> blueBox2(600.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
+    StarQuad<VertexUV> blueBox3(400.0f, 200.0f, 50.0f, 100.0f, "assets/img/sky_box.png");
+    StarQuad<VertexUV> blueBox4(600.0f, 480.0f, 120.0f, 60.0f, "assets/img/sky_box.png");
+    StarQuad<VertexUV> blueBox5(290.0f, 20.0f, 40.0f, 80.0f, "assets/img/sky_box.png");
+    StarQuad<VertexRGBA> redBox(330.0f, 200.0f, 200.0f, 100.0f, glm::vec4(1.0f,0.0f,0.0f,1.0f));
 
 
-    StarBatch batch(1000);
+    StarBatch<VertexUV> batch(1000);
+    StarBatch<VertexRGBA> colorBatch(1000);
+
     batch.add(blueBox.vertices);
     batch.add(blueBox2.vertices);
     batch.add(blueBox3.vertices);
     batch.add(blueBox4.vertices);
     batch.add(blueBox5.vertices);
     
+    colorBatch.add(redBox.vertices);
     
     shader.activate();
     shader.setInt("u_Atlas", 0);
+    flatColorShader.activate();
     //shader.setHandleui64ARB("ourTexture", handle);
 
     batch.prepareRender();
+    colorBatch.prepareRender();
 
     while(!glfwWindowShouldClose(window))
         {
@@ -101,6 +110,8 @@ int main()
             textureManager.Bind();
             shader.activate();
             batch.render();
+            flatColorShader.activate();
+            colorBatch.render();
             //send new frame to, and generate kind of before hand and prevent flicketing
             glfwSwapBuffers(window);
             glfwPollEvents();

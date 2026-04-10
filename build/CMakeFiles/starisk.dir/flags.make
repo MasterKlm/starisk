@@ -17,10 +17,6 @@ CXX_FLAGS = -g -std=gnu++17
 
 # PCH options: CMakeFiles/starisk.dir/cmake_pch.hxx.gch_OPTIONS = -Winvalid-pch;-x;c++-header;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/starisk.dir/src/StarBatch.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
-
-# PCH options: CMakeFiles/starisk.dir/src/StarQuad.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
-
 # PCH options: CMakeFiles/starisk.dir/src/StarTexture.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
 
 # PCH options: CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx

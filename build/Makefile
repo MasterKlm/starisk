@@ -143,54 +143,6 @@ cmake_pch.hxx.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
-src/StarBatch.obj: src/StarBatch.cpp.obj
-.PHONY : src/StarBatch.obj
-
-# target to build an object file
-src/StarBatch.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatch.cpp.obj
-.PHONY : src/StarBatch.cpp.obj
-
-src/StarBatch.i: src/StarBatch.cpp.i
-.PHONY : src/StarBatch.i
-
-# target to preprocess a source file
-src/StarBatch.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatch.cpp.i
-.PHONY : src/StarBatch.cpp.i
-
-src/StarBatch.s: src/StarBatch.cpp.s
-.PHONY : src/StarBatch.s
-
-# target to generate assembly for a file
-src/StarBatch.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatch.cpp.s
-.PHONY : src/StarBatch.cpp.s
-
-src/StarQuad.obj: src/StarQuad.cpp.obj
-.PHONY : src/StarQuad.obj
-
-# target to build an object file
-src/StarQuad.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarQuad.cpp.obj
-.PHONY : src/StarQuad.cpp.obj
-
-src/StarQuad.i: src/StarQuad.cpp.i
-.PHONY : src/StarQuad.i
-
-# target to preprocess a source file
-src/StarQuad.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarQuad.cpp.i
-.PHONY : src/StarQuad.cpp.i
-
-src/StarQuad.s: src/StarQuad.cpp.s
-.PHONY : src/StarQuad.s
-
-# target to generate assembly for a file
-src/StarQuad.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarQuad.cpp.s
-.PHONY : src/StarQuad.cpp.s
-
 src/StarTexture.obj: src/StarTexture.cpp.obj
 .PHONY : src/StarTexture.obj
 
@@ -467,12 +419,6 @@ help:
 	@echo ... cmake_pch.hxx.gch
 	@echo ... cmake_pch.hxx.i
 	@echo ... cmake_pch.hxx.s
-	@echo ... src/StarBatch.obj
-	@echo ... src/StarBatch.i
-	@echo ... src/StarBatch.s
-	@echo ... src/StarQuad.obj
-	@echo ... src/StarQuad.i
-	@echo ... src/StarQuad.s
 	@echo ... src/StarTexture.obj
 	@echo ... src/StarTexture.i
 	@echo ... src/StarTexture.s

@@ -3,7 +3,6 @@ CMakeFiles/starisk.dir/src/StarTexture.cpp.obj: \
  C:/starisk/include/glad/glad.h C:\starisk\src\StarTextureManager.h \
  C:/starisk/include/stb_image.h C:/msys64/mingw64/include/stdio.h \
  C:/msys64/mingw64/include/c++/15.2.0/stdlib.h \
- C:/msys64/mingw64/include/c++/15.2.0/cstdlib \
  C:/starisk/include/stb_image_resize2.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
  C:/msys64/mingw64/include/stddef.h C:/msys64/mingw64/include/crtdefs.h \

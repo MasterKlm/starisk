@@ -9,7 +9,7 @@ StarTexture::StarTexture(const char* filePath)
     unsigned char* data = stbi_load(filePath, &width, &height, &nChannels, 4);
 
     
-    std::cout << "Image size " << "(" << filePath  << "): " << width << "x" << height << "\n";
+    //std::cout << "Image size " << "(" << filePath  << "): " << width << "x" << height << "\n";
     
     //resize image to fit on texture atlas
     unsigned char* resized = (unsigned char*)malloc(StarTextureManager::targetResizeW * StarTextureManager::targetResizeH * 4); 
@@ -42,7 +42,7 @@ StarTexture::StarTexture(const char* filePath)
         glTexSubImage2D(GL_TEXTURE_2D, 0, xOffset, yOffset, StarTextureManager::targetResizeW, StarTextureManager::targetResizeH, GL_RGBA, GL_UNSIGNED_BYTE, resized);
         glGenerateMipmap(GL_TEXTURE_2D);
 
-        std::cout << "Image resized to " << "(" << filePath  << "): " << width << "x" << height << "\n";
+        //std::cout << "Image resized to " << "(" << filePath  << "): " << width << "x" << height << "\n";
 
 
     }

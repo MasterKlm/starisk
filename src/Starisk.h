@@ -3,32 +3,31 @@
 #include <iostream>
 #include "glm/glm.hpp"
 #include "glm/common.hpp"
-
-struct VertexUV {
-    float x, y, z;
-    float u, v;
-};
-
-struct VertexRGBA {
-    float x, y, z;
-    glm::vec4 rgba;
-};
-
-struct Vertex {
-    float x, y, z;
-};
+#include "StarQuad.h"
+#include "StarBatchManager.h"
+#include <functional>
 
 
 class Starisk
 {
 public:
-    static int WINDOW_WIDTH, WINDOW_HEIGHT;
 
-
+    StarBatchManager sbm{};
+    
     Starisk();
     ~Starisk();
-
+    
+    StarQuad CreateQuad(float x_pos, float y_pos, float weight, float height, const char* texturePath);
+    StarQuad CreateQuad(float x_pos, float y_pos, float weight, float height, glm::vec4 rgba);
+    
+    void mainLoop(std::function<void()> fn);
+    
     void init();
+
+    void setGameRunning(bool v);
+    bool isGameRunning();
+private:
+    bool gameRunning = true;
 };
 
 #endif

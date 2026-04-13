@@ -1,6 +1,5 @@
 #ifndef STARBATCH_H
 #define STARBATCH_H
-#include "Starisk.h"
 #include "glad/glad.h"
 #include <vector>
 #include <optional>
@@ -33,6 +32,7 @@ public:
     unsigned int uNumOfUsedVertices;
     unsigned int VAO, VBO, EBO;
 
+    std::vector<unsigned int> prevIndices;
     std::vector<unsigned int> indices;
 
     int attribOffset = 0;
@@ -42,6 +42,7 @@ public:
     BatchConfig _config;
     T _lastVertex;
 
+    
     
     StarBatch(const unsigned maxNumVertices)
     : uMaxNumVertices(maxNumVertices), uNumOfUsedVertices(0), VAO(0), VBO(0), _config(GL_TRIANGLES, 0)
@@ -67,7 +68,34 @@ public:
         
     }
 
-    ~StarBatch(){ cleanUp(); }
+    ~StarBatch(){ 
+        cleanUp();
+        std::cout << "Cleaned up batch" << "\n";
+     }
+
+
+    StarBatch(StarBatch&& other) noexcept
+    : uMaxNumVertices(other.uMaxNumVertices),
+      uNumOfUsedVertices(other.uNumOfUsedVertices),
+      VAO(other.VAO),
+      VBO(other.VBO),
+      EBO(other.EBO),
+      prevIndices(std::move(other.prevIndices)),
+      indices(std::move(other.indices)),
+      attribOffset(other.attribOffset),
+      attribIndex(other.attribIndex),
+      _config(other._config),
+      _lastVertex(other._lastVertex)
+    {
+        // Null out the moved-from object's GPU handles
+        // so its destructor doesn't delete them
+        other.VAO = 0;
+        other.VBO = 0;
+        other.EBO = 0;
+    }
+
+    StarBatch(const StarBatch&) = delete;
+    StarBatch& operator=(const StarBatch&) = delete;
 
     
     void prepareRender()
@@ -87,14 +115,23 @@ public:
                 indices.push_back(i + 2);
                 indices.push_back(i + 3);
                 indices.push_back(i);
+
+
             }
         }
 
-        glBindVertexArray(VAO);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
 
-        std::cout << "Batch Memory Usage: " << uNumOfUsedVertices * sizeof(T) << " Bytes" << "\n";
+
+        if(prevIndices != indices)
+        {
+            glBindVertexArray(VAO);
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+            glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
+
+            //std::cout << "Batch Memory Usage: " << uNumOfUsedVertices * sizeof(T) << " Bytes" << "\n";
+
+            prevIndices = indices;
+        }
     }
 
     void render()

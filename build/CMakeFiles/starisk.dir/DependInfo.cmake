@@ -11,6 +11,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/starisk/src/glad.c" "CMakeFiles/starisk.dir/src/glad.c.obj" "gcc" "CMakeFiles/starisk.dir/src/glad.c.obj.d"
   "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.cxx" "CMakeFiles/starisk.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/starisk.dir/cmake_pch.hxx.gch.d"
   "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/starisk.dir/cmake_pch.hxx.gch.d"
+  "C:/starisk/src/StarBatchManager.cpp" "CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj.d"
+  "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj.d"
   "C:/starisk/src/StarTexture.cpp" "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj.d"
   "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx" "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj.d"
   "C:/starisk/src/StarTextureManager.cpp" "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj" "gcc" "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj.d"

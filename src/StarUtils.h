@@ -1,71 +1,71 @@
 #ifndef STARUTILS_H
 #define STARUTILS_H
-#include "Starisk.h"
+#include "StarSettings.h"
 #include "glm/glm.hpp"
 #include "glm/common.hpp"
 
-std::vector<VertexUV> calcStarQuadVertUVFromfWidth(float x, float y, float w, float h, float uMin, float uMax, float vMin, float vMax)
+inline std::vector<float> calcStarQuadVertUVFromfWidth(float x, float y, float w, float h, float uMin, float uMax, float vMin, float vMax)
 {
     //float scaler = 10.0f;
     //Pixel to Ndc conversion
     float nx, ny, nw, nh;
-    nx = (x / Starisk::WINDOW_WIDTH)    * 2.0f - 1.0f;
-    ny = 1.0f - (y / Starisk::WINDOW_HEIGHT) * 2.0f;
-    nw = (w / Starisk::WINDOW_WIDTH)    * 2.0f;
-    nh = (h / Starisk::WINDOW_HEIGHT)   * 2.0f;
+    nx = (x / StariskSettings::WINDOW_WIDTH)    * 2.0f - 1.0f;
+    ny = 1.0f - (y / StariskSettings::WINDOW_HEIGHT) * 2.0f;
+    nw = (w / StariskSettings::WINDOW_WIDTH)    * 2.0f;
+    nh = (h / StariskSettings::WINDOW_HEIGHT)   * 2.0f;
     float z = 0.0f;
     
 
-    std::vector<VertexUV> vertices = {
-        {(nx + nw),     ny,         z,  uMax, vMin},  // top-right
-        {nx,            ny,         z,  uMin, vMin},  // top-left
-        {nx,            (ny - nh),  z,  uMin, vMax},  // bottom-left
-        {(nx + nw),     (ny - nh),  z,  uMax, vMax}   // bottom-right
+    std::vector<float> vertices = {
+        (nx + nw),     ny,         z,  uMax, vMin,  // top-right
+        nx,            ny,         z,  uMin, vMin,  // top-left
+        nx,            (ny - nh),  z,  uMin, vMax,  // bottom-left
+        (nx + nw),     (ny - nh),  z,  uMax, vMax   // bottom-right
     };
 
     return vertices;
 }
 
 
-std::vector<VertexRGBA> calcStarQuadVertRGBAFromfWidth(float x, float y, float w, float h, const glm::vec4& rgba)
+inline std::vector<float> calcStarQuadVertRGBAFromfWidth(float x, float y, float w, float h, const glm::vec4& rgba)
 {
     //float scaler = 10.0f;
     //Pixel to Ndc conversion
     float nx, ny, nw, nh;
-    nx = (x / Starisk::WINDOW_WIDTH)    * 2.0f - 1.0f;
-    ny = 1.0f - (y / Starisk::WINDOW_HEIGHT) * 2.0f;
-    nw = (w / Starisk::WINDOW_WIDTH)    * 2.0f;
-    nh = (h / Starisk::WINDOW_HEIGHT)   * 2.0f;
+    nx = (x / StariskSettings::WINDOW_WIDTH)    * 2.0f - 1.0f;
+    ny = 1.0f - (y / StariskSettings::WINDOW_HEIGHT) * 2.0f;
+    nw = (w / StariskSettings::WINDOW_WIDTH)    * 2.0f;
+    nh = (h / StariskSettings::WINDOW_HEIGHT)   * 2.0f;
     float z = 0.0f;
     
 
-    std::vector<VertexRGBA> vertices = {
-        {(nx + nw),     ny,         z, rgba},  // top-right
-        {nx,            ny,         z, rgba},  // top-left
-        {nx,            (ny - nh),  z, rgba},  // bottom-left
-        {(nx + nw),     (ny - nh),  z, rgba}   // bottom-right
+    std::vector<float> vertices = {
+        (nx + nw),     ny,         z, rgba.r, rgba.g, rgba.b, rgba.a,  // top-right
+        nx,            ny,         z, rgba.r, rgba.g, rgba.b, rgba.a,  // top-left
+        nx,            (ny - nh),  z, rgba.r, rgba.g, rgba.b, rgba.a,  // bottom-left
+        (nx + nw),     (ny - nh),  z, rgba.r, rgba.g, rgba.b, rgba.a   // bottom-right
     };
 
     return vertices;
 }
 
-std::vector<Vertex> calcStarQuadVertFromfWidth(float x, float y, float w, float h)
+inline std::vector<float> calcStarQuadVertFromfWidth(float x, float y, float w, float h)
 {
     //float scaler = 10.0f;
     //Pixel to Ndc conversion
     float nx, ny, nw, nh;
-    nx = (x / Starisk::WINDOW_WIDTH)    * 2.0f - 1.0f;
-    ny = 1.0f - (y / Starisk::WINDOW_HEIGHT) * 2.0f;
-    nw = (w / Starisk::WINDOW_WIDTH)    * 2.0f;
-    nh = (h / Starisk::WINDOW_HEIGHT)   * 2.0f;
+    nx = (x / StariskSettings::WINDOW_WIDTH)    * 2.0f - 1.0f;
+    ny = 1.0f - (y / StariskSettings::WINDOW_HEIGHT) * 2.0f;
+    nw = (w / StariskSettings::WINDOW_WIDTH)    * 2.0f;
+    nh = (h / StariskSettings::WINDOW_HEIGHT)   * 2.0f;
     float z = 0.0f;
     
 
-    std::vector<Vertex> vertices = {
-        {(nx + nw),     ny,         z},  // top-right
-        {nx,            ny,         z},  // top-left
-        {nx,            (ny - nh),  z},  // bottom-left
-        {(nx + nw),     (ny - nh),  z}   // bottom-right
+    std::vector<float> vertices = {
+        (nx + nw),     ny,         z,  // top-right
+        nx,            ny,         z,  // top-left
+        nx,            (ny - nh),  z,  // bottom-left
+        (nx + nw),     (ny - nh),  z   // bottom-right
     };
 
     return vertices;

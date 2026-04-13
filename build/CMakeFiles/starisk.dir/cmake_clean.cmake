@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/starisk.dir/cmake_pch.hxx.gch"
   "CMakeFiles/starisk.dir/cmake_pch.hxx.gch.d"
+  "CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj"
+  "CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj.d"
   "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj"
   "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj.d"
   "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj"

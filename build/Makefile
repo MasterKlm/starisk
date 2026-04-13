@@ -143,6 +143,30 @@ cmake_pch.hxx.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
+src/StarBatchManager.obj: src/StarBatchManager.cpp.obj
+.PHONY : src/StarBatchManager.obj
+
+# target to build an object file
+src/StarBatchManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj
+.PHONY : src/StarBatchManager.cpp.obj
+
+src/StarBatchManager.i: src/StarBatchManager.cpp.i
+.PHONY : src/StarBatchManager.i
+
+# target to preprocess a source file
+src/StarBatchManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatchManager.cpp.i
+.PHONY : src/StarBatchManager.cpp.i
+
+src/StarBatchManager.s: src/StarBatchManager.cpp.s
+.PHONY : src/StarBatchManager.s
+
+# target to generate assembly for a file
+src/StarBatchManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/StarBatchManager.cpp.s
+.PHONY : src/StarBatchManager.cpp.s
+
 src/StarTexture.obj: src/StarTexture.cpp.obj
 .PHONY : src/StarTexture.obj
 
@@ -419,6 +443,9 @@ help:
 	@echo ... cmake_pch.hxx.gch
 	@echo ... cmake_pch.hxx.i
 	@echo ... cmake_pch.hxx.s
+	@echo ... src/StarBatchManager.obj
+	@echo ... src/StarBatchManager.i
+	@echo ... src/StarBatchManager.s
 	@echo ... src/StarTexture.obj
 	@echo ... src/StarTexture.i
 	@echo ... src/StarTexture.s

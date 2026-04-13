@@ -1,14 +1,11 @@
 #ifndef STARQUAD_H
 #define STARQUAD_H
-#include "Starisk.h"
+
 #include <vector>
 #include "StarTexture.h"
 #include "StarUtils.h"
-#include "glm/glm.hpp"
-#include "glm/common.hpp"
 #include <optional>
 
-template <typename T>
 class StarQuad
 {
 
@@ -17,7 +14,7 @@ public:
     float width, height;
     std::optional<StarTexture> texture;
 
-    std::vector<T> vertices;
+    std::vector<float> vertices;
 
     StarQuad(float x_pos, float y_pos, float w, float h, const char* texturePath): x(x_pos), y(y_pos), width(w), height(h)
     {

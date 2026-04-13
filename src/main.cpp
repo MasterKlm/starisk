@@ -1,17 +1,16 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "shader.h"
 #include "stb_image.h"
 #include "stb_image_resize2.h"
 #include <vector>
-#include "StarTextureManager.h"
-#include "StarTexture.h"
 #include "Starisk.h"
-#include "StarQuad.h"
-#include "StarBatch.h"
+#include "StarSettings.h"
 #include "glm/glm.hpp"
 #include "glm/common.hpp"
+
+
+
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -39,7 +38,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-    GLFWwindow* window = glfwCreateWindow(Starisk::WINDOW_WIDTH, Starisk::WINDOW_HEIGHT, "OpenGl", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(StariskSettings::WINDOW_WIDTH, StariskSettings::WINDOW_HEIGHT, "Starisk **", NULL, NULL);
 
     if(window == NULL){
         std::cout << "Window creaion failed" << "\n";
@@ -66,37 +65,14 @@ int main()
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    Shader shader("assets/vertex_core.shader", "assets/fragment_core.shader");
-    Shader flatColorShader("assets/vertex_flat_color.shader", "assets/fragment_flat_color.shader");
-
-    StarTextureManager textureManager{};
+    Starisk starisk;
     
-    StarQuad<VertexUV> blueBox(100.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
-    StarQuad<VertexUV> blueBox2(600.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
-    StarQuad<VertexUV> blueBox3(400.0f, 200.0f, 50.0f, 100.0f, "assets/img/sky_box.png");
-    StarQuad<VertexUV> blueBox4(600.0f, 480.0f, 120.0f, 60.0f, "assets/img/sky_box.png");
-    StarQuad<VertexUV> blueBox5(290.0f, 20.0f, 40.0f, 80.0f, "assets/img/sky_box.png");
-    StarQuad<VertexRGBA> redBox(330.0f, 200.0f, 200.0f, 100.0f, glm::vec4(1.0f,0.0f,0.0f,1.0f));
-
-
-    StarBatch<VertexUV> batch(1000);
-    StarBatch<VertexRGBA> colorBatch(1000);
-
-    batch.add(blueBox.vertices);
-    batch.add(blueBox2.vertices);
-    batch.add(blueBox3.vertices);
-    batch.add(blueBox4.vertices);
-    batch.add(blueBox5.vertices);
-    
-    colorBatch.add(redBox.vertices);
-    
-    shader.activate();
-    shader.setInt("u_Atlas", 0);
-    flatColorShader.activate();
-    //shader.setHandleui64ARB("ourTexture", handle);
-
-    batch.prepareRender();
-    colorBatch.prepareRender();
+    auto blueBox = starisk.CreateQuad(100.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
+    auto blueBox2 = starisk.CreateQuad(600.0f, 20.0f, 100.0f, 100.0f, "assets/img/sky_box.png");
+    auto blueBox3 = starisk.CreateQuad(40.0f, 200.0f, 50.0f, 100.0f, "assets/img/sky_box.png");
+    auto blueBox4 = starisk.CreateQuad(100.0f, 180.0f, 120.0f, 60.0f, "assets/img/sky_box.png");
+    auto blueBox5 = starisk.CreateQuad(290.0f, 20.0f, 120.0f, 50.0f, "assets/img/sky_box.png");
+    auto redBox = starisk.CreateQuad(330.0f, 200.0f, 200.0f, 100.0f, glm::vec4(1.0f,0.0f,0.0f,1.0f));
 
     while(!glfwWindowShouldClose(window))
         {
@@ -107,11 +83,9 @@ int main()
             glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            textureManager.Bind();
-            shader.activate();
-            batch.render();
-            flatColorShader.activate();
-            colorBatch.render();
+            starisk.mainLoop([](){
+                
+            });
             //send new frame to, and generate kind of before hand and prevent flicketing
             glfwSwapBuffers(window);
             glfwPollEvents();

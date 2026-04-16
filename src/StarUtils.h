@@ -4,6 +4,12 @@
 #include "glm/glm.hpp"
 #include "glm/common.hpp"
 
+
+
+inline void framebuffer_size_callback(GLFWwindow* window, int width, int height){
+    glViewport(0,0, width, height);
+}
+
 inline std::vector<float> calcStarQuadVertUVFromfWidth(float x, float y, float w, float h, float uMin, float uMax, float vMin, float vMax)
 {
     //float scaler = 10.0f;

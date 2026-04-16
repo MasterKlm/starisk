@@ -103,8 +103,8 @@ void StarBatchManager::createNewBatchesIfNeeded()
         colorBatch.emplace_back(StarBatch<VertexRGBA>(1000));
     }
 
-    std::cout << "Total number of UV batches: " << (int)uvBatch.size() << "\n";
-    std::cout << "Total number of RGBA batches: " << (int)colorBatch.size() << "\n";
+    //std::cout << "Total number of UV batches: " << (int)uvBatch.size() << "\n";
+    //std::cout << "Total number of RGBA batches: " << (int)colorBatch.size() << "\n";
 }
 void StarBatchManager::update()
 {

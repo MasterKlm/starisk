@@ -27,4 +27,5 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: C:\starisk\src\Starisk.cpp \
  C:/msys64/mingw64/include/c++/15.2.0/string \
  C:/msys64/mingw64/include/c++/15.2.0/fstream \
  C:/msys64/mingw64/include/c++/15.2.0/sstream \
- C:/msys64/mingw64/include/c++/15.2.0/functional
+ C:/msys64/mingw64/include/c++/15.2.0/functional \
+ C:/starisk/include/GLFW/glfw3.h

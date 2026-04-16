@@ -1,16 +1,16 @@
 CMakeFiles/starisk.dir/src/main.cpp.obj: C:\starisk\src\main.cpp \
  C:/msys64/mingw64/include/c++/15.2.0/iostream \
  C:/starisk/include/glad/glad.h C:/starisk/include/GLFW/glfw3.h \
- C:/starisk/include/stb_image.h C:/msys64/mingw64/include/stdio.h \
+ C:\starisk\src\Starisk.h C:\starisk\src\StarQuad.h \
+ C:/msys64/mingw64/include/c++/15.2.0/vector C:\starisk\src\StarTexture.h \
+ C:\starisk\src\StarTextureManager.h C:/starisk/include/stb_image.h \
+ C:/msys64/mingw64/include/stdio.h \
  C:/msys64/mingw64/include/c++/15.2.0/stdlib.h \
  C:/starisk/include/stb_image_resize2.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
  C:/msys64/mingw64/include/stddef.h C:/msys64/mingw64/include/crtdefs.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
- C:/msys64/mingw64/include/c++/15.2.0/vector C:\starisk\src\Starisk.h \
- C:\starisk\src\StarQuad.h C:\starisk\src\StarTexture.h \
- C:\starisk\src\StarTextureManager.h C:\starisk\src\StarUtils.h \
- C:\starisk\src\StarSettings.h \
+ C:\starisk\src\StarUtils.h C:\starisk\src\StarSettings.h \
  C:/msys64/mingw64/include/c++/15.2.0/optional \
  C:/msys64/mingw64/include/c++/15.2.0/bits/version.h \
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \

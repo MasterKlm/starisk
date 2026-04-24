@@ -61,6 +61,24 @@
 },
 {
   "directory": "C:/starisk/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\io\\Joystick.cpp.obj -c C:\\starisk\\src\\io\\Joystick.cpp",
+  "file": "C:/starisk/src/io/Joystick.cpp",
+  "output": "CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\io\\Keyboard.cpp.obj -c C:\\starisk\\src\\io\\Keyboard.cpp",
+  "file": "C:/starisk/src/io/Keyboard.cpp",
+  "output": "CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\io\\Mouse.cpp.obj -c C:\\starisk\\src\\io\\Mouse.cpp",
+  "file": "C:/starisk/src/io/Mouse.cpp",
+  "output": "CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\main.cpp.obj -c C:\\starisk\\src\\main.cpp",
   "file": "C:/starisk/src/main.cpp",
   "output": "CMakeFiles/starisk.dir/src/main.cpp.obj"

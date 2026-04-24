@@ -33,6 +33,12 @@ CXX_FLAGS = -g -std=gnu++17
 
 # PCH options: CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
 
+# PCH options: CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+
 # PCH options: CMakeFiles/starisk.dir/src/main.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
 
 # PCH options: CMakeFiles/starisk.dir/src/shader.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx

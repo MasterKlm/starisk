@@ -238,13 +238,64 @@ CMakeFiles/starisk.dir/src/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/imgui_widgets.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\imgui_widgets.cpp -o CMakeFiles\starisk.dir\src\imgui_widgets.cpp.s
 
+CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj: CMakeFiles/starisk.dir/flags.make
+CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
+CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj: C:/starisk/src/io/Joystick.cpp
+CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
+CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
+CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj -MF CMakeFiles\starisk.dir\src\io\Joystick.cpp.obj.d -o CMakeFiles\starisk.dir\src\io\Joystick.cpp.obj -c C:\starisk\src\io\Joystick.cpp
+
+CMakeFiles/starisk.dir/src/io/Joystick.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/io/Joystick.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\io\Joystick.cpp > CMakeFiles\starisk.dir\src\io\Joystick.cpp.i
+
+CMakeFiles/starisk.dir/src/io/Joystick.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/io/Joystick.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\io\Joystick.cpp -o CMakeFiles\starisk.dir\src\io\Joystick.cpp.s
+
+CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj: CMakeFiles/starisk.dir/flags.make
+CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
+CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj: C:/starisk/src/io/Keyboard.cpp
+CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
+CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
+CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj -MF CMakeFiles\starisk.dir\src\io\Keyboard.cpp.obj.d -o CMakeFiles\starisk.dir\src\io\Keyboard.cpp.obj -c C:\starisk\src\io\Keyboard.cpp
+
+CMakeFiles/starisk.dir/src/io/Keyboard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/io/Keyboard.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\io\Keyboard.cpp > CMakeFiles\starisk.dir\src\io\Keyboard.cpp.i
+
+CMakeFiles/starisk.dir/src/io/Keyboard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/io/Keyboard.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\io\Keyboard.cpp -o CMakeFiles\starisk.dir\src\io\Keyboard.cpp.s
+
+CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj: CMakeFiles/starisk.dir/flags.make
+CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
+CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj: C:/starisk/src/io/Mouse.cpp
+CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
+CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
+CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj -MF CMakeFiles\starisk.dir\src\io\Mouse.cpp.obj.d -o CMakeFiles\starisk.dir\src\io\Mouse.cpp.obj -c C:\starisk\src\io\Mouse.cpp
+
+CMakeFiles/starisk.dir/src/io/Mouse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/starisk.dir/src/io/Mouse.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -E C:\starisk\src\io\Mouse.cpp > CMakeFiles\starisk.dir\src\io\Mouse.cpp.i
+
+CMakeFiles/starisk.dir/src/io/Mouse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/starisk.dir/src/io/Mouse.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -S C:\starisk\src\io\Mouse.cpp -o CMakeFiles\starisk.dir\src\io\Mouse.cpp.s
+
 CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/flags.make
 CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/includes_CXX.rsp
 CMakeFiles/starisk.dir/src/main.cpp.obj: C:/starisk/src/main.cpp
 CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/starisk.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/starisk.dir/src/main.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/main.cpp.obj -MF CMakeFiles\starisk.dir\src\main.cpp.obj.d -o CMakeFiles\starisk.dir\src\main.cpp.obj -c C:\starisk\src\main.cpp
 
 CMakeFiles/starisk.dir/src/main.cpp.i: cmake_force
@@ -261,7 +312,7 @@ CMakeFiles/starisk.dir/src/shader.cpp.obj: C:/starisk/src/shader.cpp
 CMakeFiles/starisk.dir/src/shader.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/shader.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/shader.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/starisk.dir/src/shader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/starisk.dir/src/shader.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/shader.cpp.obj -MF CMakeFiles\starisk.dir\src\shader.cpp.obj.d -o CMakeFiles\starisk.dir\src\shader.cpp.obj -c C:\starisk\src\shader.cpp
 
 CMakeFiles/starisk.dir/src/shader.cpp.i: cmake_force
@@ -278,7 +329,7 @@ CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: C:/starisk/src/stb_impl.cpp
 CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
 CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx.gch
 CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: CMakeFiles/starisk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/starisk.dir/src/stb_impl.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/starisk.dir/src/stb_impl.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -MD -MT CMakeFiles/starisk.dir/src/stb_impl.cpp.obj -MF CMakeFiles\starisk.dir\src\stb_impl.cpp.obj.d -o CMakeFiles\starisk.dir\src\stb_impl.cpp.obj -c C:\starisk\src\stb_impl.cpp
 
 CMakeFiles/starisk.dir/src/stb_impl.cpp.i: cmake_force
@@ -300,6 +351,9 @@ starisk_OBJECTS = \
 "CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj" \
 "CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj" \
 "CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj" \
+"CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj" \
+"CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj" \
+"CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj" \
 "CMakeFiles/starisk.dir/src/main.cpp.obj" \
 "CMakeFiles/starisk.dir/src/shader.cpp.obj" \
 "CMakeFiles/starisk.dir/src/stb_impl.cpp.obj"
@@ -317,6 +371,9 @@ starisk.exe: CMakeFiles/starisk.dir/src/imgui.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj
+starisk.exe: CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj
+starisk.exe: CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj
+starisk.exe: CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/main.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/shader.cpp.obj
 starisk.exe: CMakeFiles/starisk.dir/src/stb_impl.cpp.obj
@@ -325,7 +382,7 @@ starisk.exe: C:/starisk/lib/libglfw3.a
 starisk.exe: CMakeFiles/starisk.dir/linkLibs.rsp
 starisk.exe: CMakeFiles/starisk.dir/objects1.rsp
 starisk.exe: CMakeFiles/starisk.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable starisk.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\starisk\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable starisk.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\starisk.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,7 +1,7 @@
 CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj: \
  C:\starisk\src\StarBatchManager.cpp C:\starisk\src\StarBatchManager.h \
  C:/msys64/mingw64/include/c++/15.2.0/vector C:\starisk\src\StarBatch.h \
- C:/starisk/include/glad/glad.h \
+ C:/starisk/include/glad/glad.h C:\starisk\src\StarVertex.h \
  C:/msys64/mingw64/include/c++/15.2.0/optional \
  C:/msys64/mingw64/include/c++/15.2.0/bits/version.h \
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -14,8 +14,8 @@ CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj: \
  C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_construct.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h \
- C:\starisk\src\StarVertex.h C:\starisk\src\StarTextureManager.h \
- C:\starisk\src\shader.h C:/msys64/mingw64/include/c++/15.2.0/string \
+ C:\starisk\src\StarTextureManager.h C:\starisk\src\shader.h \
+ C:/msys64/mingw64/include/c++/15.2.0/string \
  C:/msys64/mingw64/include/c++/15.2.0/fstream \
  C:/msys64/mingw64/include/c++/15.2.0/sstream \
  C:/msys64/mingw64/include/c++/15.2.0/iostream

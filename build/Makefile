@@ -359,6 +359,78 @@ src/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/imgui_widgets.cpp.s
 .PHONY : src/imgui_widgets.cpp.s
 
+src/io/Joystick.obj: src/io/Joystick.cpp.obj
+.PHONY : src/io/Joystick.obj
+
+# target to build an object file
+src/io/Joystick.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj
+.PHONY : src/io/Joystick.cpp.obj
+
+src/io/Joystick.i: src/io/Joystick.cpp.i
+.PHONY : src/io/Joystick.i
+
+# target to preprocess a source file
+src/io/Joystick.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Joystick.cpp.i
+.PHONY : src/io/Joystick.cpp.i
+
+src/io/Joystick.s: src/io/Joystick.cpp.s
+.PHONY : src/io/Joystick.s
+
+# target to generate assembly for a file
+src/io/Joystick.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Joystick.cpp.s
+.PHONY : src/io/Joystick.cpp.s
+
+src/io/Keyboard.obj: src/io/Keyboard.cpp.obj
+.PHONY : src/io/Keyboard.obj
+
+# target to build an object file
+src/io/Keyboard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj
+.PHONY : src/io/Keyboard.cpp.obj
+
+src/io/Keyboard.i: src/io/Keyboard.cpp.i
+.PHONY : src/io/Keyboard.i
+
+# target to preprocess a source file
+src/io/Keyboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Keyboard.cpp.i
+.PHONY : src/io/Keyboard.cpp.i
+
+src/io/Keyboard.s: src/io/Keyboard.cpp.s
+.PHONY : src/io/Keyboard.s
+
+# target to generate assembly for a file
+src/io/Keyboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Keyboard.cpp.s
+.PHONY : src/io/Keyboard.cpp.s
+
+src/io/Mouse.obj: src/io/Mouse.cpp.obj
+.PHONY : src/io/Mouse.obj
+
+# target to build an object file
+src/io/Mouse.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj
+.PHONY : src/io/Mouse.cpp.obj
+
+src/io/Mouse.i: src/io/Mouse.cpp.i
+.PHONY : src/io/Mouse.i
+
+# target to preprocess a source file
+src/io/Mouse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Mouse.cpp.i
+.PHONY : src/io/Mouse.cpp.i
+
+src/io/Mouse.s: src/io/Mouse.cpp.s
+.PHONY : src/io/Mouse.s
+
+# target to generate assembly for a file
+src/io/Mouse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starisk.dir\build.make CMakeFiles/starisk.dir/src/io/Mouse.cpp.s
+.PHONY : src/io/Mouse.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -470,6 +542,15 @@ help:
 	@echo ... src/imgui_widgets.obj
 	@echo ... src/imgui_widgets.i
 	@echo ... src/imgui_widgets.s
+	@echo ... src/io/Joystick.obj
+	@echo ... src/io/Joystick.i
+	@echo ... src/io/Joystick.s
+	@echo ... src/io/Keyboard.obj
+	@echo ... src/io/Keyboard.i
+	@echo ... src/io/Keyboard.s
+	@echo ... src/io/Mouse.obj
+	@echo ... src/io/Mouse.i
+	@echo ... src/io/Mouse.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

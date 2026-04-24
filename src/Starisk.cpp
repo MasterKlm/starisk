@@ -1,6 +1,5 @@
 #include "Starisk.h"
 
-
 Starisk::Starisk()
 {
     init();
@@ -57,8 +56,14 @@ void Starisk::createWindow(int width, int height, const char* title)
     //set view port
     
     glViewport(0,0, 800, 600);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetKeyCallback(window, Keyboard::keyCallback);
+    glfwSetCursorPosCallback(window, Mouse::cursorPosCallback);
+    glfwSetMouseButtonCallback(window, Mouse::mouseButtonCallback);
+    glfwSetScrollCallback(window, Mouse::mouseWheelCallback);
 
     sbm = new StarBatchManager();
 }
@@ -78,6 +83,21 @@ void Starisk::processInput(){
 }
 
 
+Entity& Starisk::CreateEntity(float xpos, float ypos, int width, int height, const char* texturePath)
+{   
+    Entity& e = sem.addEntity();
+    e.addComponent<TransformComponent>(xpos, ypos);
+    e.quad = CreateQuad(xpos, ypos, width, height, texturePath);
+    return e;
+}
+
+Entity& Starisk::CreateEntity(float xpos, float ypos, int width, int height,  glm::vec4 rgba)
+{   
+    Entity& e = sem.addEntity();
+    e.addComponent<TransformComponent>(xpos, ypos);
+    e.quad = CreateQuad(xpos, ypos, width, height, rgba);
+    return e;
+}
 
 StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height, const char* texturePath)
 {
@@ -89,7 +109,7 @@ StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height
 
 StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height, glm::vec4 rgba)
 {
-    StarQuad quad{x_pos, y_pos, width, height, glm::vec4(rgba)};
+    StarQuad quad{x_pos, y_pos, width, height, rgba};
     sbm->add(quad.vertices);
 
     return quad;

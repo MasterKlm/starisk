@@ -1,0 +1,206 @@
+#ifndef ECS_H
+#define ECS_H
+#include <iostream>
+#include <vector>
+#include <memory>
+#include <bitset>
+#include <array>
+#include <algorithm>
+#include <iostream>
+#include "../StarQuad.h"
+
+
+class Component;
+class Entity;
+class StarECSManager;
+
+using ComponentId = std::size_t;
+
+inline ComponentId getComponentTypeID()
+{
+    static ComponentId lastId = 0;
+    return lastId++;
+}
+
+template <typename T>
+inline ComponentId getComponentTypeID()
+{
+    static ComponentId typeId = getComponentTypeID();
+    return typeId;
+}
+
+constexpr std::size_t maxComponents = 64;
+
+using ComponentArray = std::array<Component*, maxComponents>;
+
+using ComponentBitSet = std::bitset<maxComponents>;
+
+
+class Component
+{
+
+public:
+    Entity* entity;
+
+
+    Component() = default;
+    Component(const Component&) = delete;
+    Component& operator=(const Component&) = delete;
+    Component(Component&&) = default;
+    Component& operator=(Component&&) = default;
+
+    virtual void init(){};
+    virtual void update(){};
+    virtual void draw(){};
+    
+    virtual ~Component(){};
+};
+
+class Entity
+{
+private:
+    bool active = true;
+    std::vector<std::unique_ptr<Component>> components;
+
+    ComponentArray componentArray;
+    ComponentBitSet componentBitSet;
+    
+public:
+    StarQuad quad;
+
+  
+    //Entity(const Entity&) = delete;
+    //Entity& operator=(const Entity&) = delete;
+
+    
+    ///Entity(Entity&&) = default;
+    //Entity& operator=(Entity&&) = default;
+
+
+    Entity(){}
+    
+    ~Entity(){ destroy(); }
+
+    void destroy(){ active = false;}
+
+    bool isActive() const 
+    {
+        return active;
+    }
+
+    void update()
+    {
+        for(auto& c : components) c->update();
+    }
+
+    void draw()
+    {
+        for(auto& c:components) c->draw();
+    }
+
+
+    template <typename T>
+    bool hasComponent() const
+    {
+        return componentBitSet[getComponentTypeID<T>()];
+    }
+
+    template <typename T, typename... TArgs>
+    T& addComponent(TArgs&&... mArgs)
+    {
+        T* c(new T(std::forward<TArgs>(mArgs)...));
+        c->entity = this;
+        std::unique_ptr<Component> uPtr{c};
+        components.emplace_back(std::move(uPtr));
+
+        componentArray[getComponentTypeID<T>()] = c;
+        componentBitSet[getComponentTypeID<T>()] = true;
+
+        c->init();
+        return *c;
+    }
+
+    template <typename T>
+    T& getComponent() const
+    {
+        auto ptr(componentArray[getComponentTypeID<T>()]);
+        return  *static_cast<T*>(ptr);
+    }
+
+
+};
+
+class System
+{
+public:
+    
+
+
+    System(){}
+    virtual ~System(){}
+
+    virtual void init(){
+        extern StarECSManager sem;
+        sem.addSystem(*this);
+    }
+    virtual void update(StarECSManager &ecsManager){}
+
+
+
+};
+
+
+class StarECSManager
+{
+public:
+    std::vector<std::unique_ptr<Entity>> entities;
+    std::vector<System> systems;
+    
+
+    StarECSManager()
+    {
+
+    }
+
+    ~StarECSManager()
+    {
+
+    }
+
+
+    
+    void update()
+    {
+        for(auto& e : entities) e->update();
+        for(auto& s : systems) s->update();
+    }
+    void draw()
+    {
+        for(auto& e : entities) e->draw();
+    }
+
+    void refresh()
+    {
+        entities.erase(std::remove_if(std::begin(entities), std::end(entities), [](const std::unique_ptr<Entity> &mEntity)
+    {
+        return !mEntity->isActive();
+    }), std::end(entities));
+    }
+
+    void addSystem(System s)
+    {
+        systems.push_back(s);
+    }
+
+    Entity& addEntity()
+    {
+        Entity* e = new Entity();
+        std::unique_ptr<Entity> uPtr{e};
+        entities.emplace_back(std::move(uPtr));
+
+        return *e;
+    }
+
+};
+
+#endif

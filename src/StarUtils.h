@@ -1,6 +1,8 @@
 #ifndef STARUTILS_H
 #define STARUTILS_H
 #include "StarSettings.h"
+#include <glad/glad.h>   
+#include <GLFW/glfw3.h> 
 #include "glm/glm.hpp"
 #include "glm/common.hpp"
 

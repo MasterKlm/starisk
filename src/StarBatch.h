@@ -1,6 +1,7 @@
 #ifndef STARBATCH_H
 #define STARBATCH_H
 #include "glad/glad.h"
+#include "StarVertex.h"
 #include <vector>
 #include <optional>
 
@@ -63,8 +64,17 @@ public:
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, sizeof(T) * uMaxNumVertices, nullptr, GL_STATIC_DRAW);
 
-        enableAttribPointerf(3);
-        enableAttribPointerf(2);
+        
+        if constexpr (std::is_same_v<T, VertexUV>)
+        {
+            enableAttribPointerf(3);  // position
+            enableAttribPointerf(2);  // uv
+        }
+        else if constexpr (std::is_same_v<T, VertexRGBA>)
+        {
+            enableAttribPointerf(3);  // position
+            enableAttribPointerf(4);  // rgba 
+        }
         
     }
 

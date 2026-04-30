@@ -4,8 +4,9 @@
 
 StarBatchManager::StarBatchManager()
 {
-    uvBatch.emplace_back(StarBatch<VertexUV>(1000));
-    colorBatch.emplace_back(StarBatch<VertexRGBA>(1000));
+    int id = getBatchId();
+    uvBatch.emplace_back(StarBatch<VertexUV>(1000, id));
+    colorBatch.emplace_back(StarBatch<VertexRGBA>(1000, id));
 
     //set atlas texture
     uvShader.activate();
@@ -25,7 +26,20 @@ StarBatchManager::~StarBatchManager()
     // }
 }
 
-void StarBatchManager::add(const std::vector<float> &v)
+
+int StarBatchManager::getBatchId()
+{
+    //std::cout << "called getBatchId()" << "\n";
+    static int lastId = 0;
+    return lastId++;
+}
+
+// int StarBatchManager::getGroupBatchId()
+// {
+
+// }
+
+SBM_DATA StarBatchManager::add(const std::vector<float> &v)
 {
     constexpr int uvFloats      =   sizeof(VertexUV)    / sizeof(float); // 5
     constexpr int rgbaFloats    =   sizeof(VertexRGBA)   / sizeof(float); //7
@@ -39,7 +53,8 @@ void StarBatchManager::add(const std::vector<float> &v)
             uV.emplace_back(VertexUV{v[i], v[i + 1], v[i + 2], v[i +3], v[i + 4]});
         }
         //allocate to a relevant batch
-        allocate(uV);       
+        SBM_DATA ret = allocate(uV);
+        return ret;     
     }
     else if(v.size() % rgbaFloats == 0)
     {
@@ -51,32 +66,52 @@ void StarBatchManager::add(const std::vector<float> &v)
             colorV.emplace_back(VertexRGBA{v[i], v[i + 1], v[i + 2], glm::vec4(v[i +3], v[i + 4], v[i + 5], v[i + 6])});
         }
         //allocate to a relevant batch
-        allocate(colorV);
+        SBM_DATA ret = allocate(colorV);
+        return ret;
     }
     else 
     {
         std::cout << "Unrecognized Vertex Structure" << "\n";
-        return;
+        return SBM_DATA{-1, -1}; 
     }
 
 }
 
-void StarBatchManager::allocate(const std::vector<VertexUV> &v) noexcept
+SBM_DATA StarBatchManager::allocate(const std::vector<VertexUV> &v) noexcept
 {
-    if((int)uvBatch.size() == 0) return;
-    uvBatch[uvBatch.size() - 1].add(v);
-    createNewBatchesIfNeeded();
+    
+    //int starBatchIndex = (int)uvBatch.size() - 1;
+    SBM_DATA data = uvBatch.back().add(v);
+    
+    return data;
+}
 
+void StarBatchManager::move(std::vector<float> newVertices, SBM_DATA sbm_data)
+{
+    constexpr std::size_t uvQuadFloats   = (sizeof(VertexUV)   / sizeof(float)) * 4;  // 20
+    constexpr std::size_t rgbaQuadFloats = (sizeof(VertexRGBA) / sizeof(float)) * 4;  // 28
+
+    if(newVertices.size() == uvQuadFloats)
+    {
+        uvBatch[sbm_data.starBatchIndex].updateVertices(sbm_data.startBufferIndex, newVertices);
+    }
+    else if(newVertices.size() == rgbaQuadFloats)
+    {
+        colorBatch[sbm_data.starBatchIndex].updateVertices(sbm_data.startBufferIndex, newVertices);
+    }
 }
 
 
-void StarBatchManager::allocate(const std::vector<VertexRGBA> &v) noexcept
-{
-    if((int)colorBatch.size() == 0) return;
-    colorBatch[colorBatch.size() - 1].add(v);
-    createNewBatchesIfNeeded();
 
+SBM_DATA StarBatchManager::allocate(const std::vector<VertexRGBA> &v) noexcept
+{
+
+    SBM_DATA data = colorBatch.back().add(v);
+    
+    return data;
 }
+
+
 
 
 void StarBatchManager::createNewBatchesIfNeeded()
@@ -90,17 +125,23 @@ void StarBatchManager::createNewBatchesIfNeeded()
         return;
     };
 
-    auto& lastUvBatch = uvBatch[uvBatch.size() - 1];
-    auto& lastColorBatch = colorBatch[colorBatch.size() - 1];
+    auto& lastUvBatch = uvBatch.back();
+    auto& lastColorBatch = colorBatch.back();
     
     if(lastUvBatch.uNumOfUsedVertices == lastUvBatch.uMaxNumVertices)
     {
-        uvBatch.emplace_back(StarBatch<VertexUV>(1000));
+        int id = getBatchId();
+        //if((id + 1) >= (int)uvBatch.size()) id--;
+
+        uvBatch.emplace_back(StarBatch<VertexUV>(1000, id));
+
     }
     
     if(lastColorBatch.uNumOfUsedVertices == lastColorBatch.uMaxNumVertices)
     {
-        colorBatch.emplace_back(StarBatch<VertexRGBA>(1000));
+        int id = getBatchId();
+        //if((id + 1) >= (int)uvBatch.size()) id--;
+        colorBatch.emplace_back(StarBatch<VertexRGBA>(1000, id));
     }
 
     //std::cout << "Total number of UV batches: " << (int)uvBatch.size() << "\n";

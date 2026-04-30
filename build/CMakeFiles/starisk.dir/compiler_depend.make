@@ -400,6 +400,7 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
   C:/msys64/mingw64/include/c++/15.2.0/bits/allocator.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/codecvt.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/concept_check.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/cxxabi_forced.h \
@@ -407,11 +408,22 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
   C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_conv.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.tcc \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/localefwd.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/memoryfwd.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/move.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/predefined_ops.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/ptr_traits.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/quoted_string.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/random.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/random.tcc \
   C:/msys64/mingw64/include/c++/15.2.0/bits/refwrap.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/requires_hosted.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_atomic.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_base.h \
@@ -422,17 +434,22 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_heap.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_numeric.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_uninitialized.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/stringfwd.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/uniform_int_dist.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/unique_ptr.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/uses_allocator.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/version.h \
   C:/msys64/mingw64/include/c++/15.2.0/bitset \
+  C:/msys64/mingw64/include/c++/15.2.0/cmath \
+  C:/msys64/mingw64/include/c++/15.2.0/cstdint \
   C:/msys64/mingw64/include/c++/15.2.0/cstdlib \
+  C:/msys64/mingw64/include/c++/15.2.0/ctime \
   C:/msys64/mingw64/include/c++/15.2.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/15.2.0/debug/debug.h \
   C:/msys64/mingw64/include/c++/15.2.0/exception \
@@ -444,16 +461,23 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
   C:/msys64/mingw64/include/c++/15.2.0/fstream \
   C:/msys64/mingw64/include/c++/15.2.0/functional \
   C:/msys64/mingw64/include/c++/15.2.0/initializer_list \
+  C:/msys64/mingw64/include/c++/15.2.0/iomanip \
   C:/msys64/mingw64/include/c++/15.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/15.2.0/iostream \
+  C:/msys64/mingw64/include/c++/15.2.0/limits \
+  C:/msys64/mingw64/include/c++/15.2.0/locale \
   C:/msys64/mingw64/include/c++/15.2.0/memory \
   C:/msys64/mingw64/include/c++/15.2.0/new \
+  C:/msys64/mingw64/include/c++/15.2.0/numeric \
   C:/msys64/mingw64/include/c++/15.2.0/optional \
   C:/msys64/mingw64/include/c++/15.2.0/pstl/execution_defs.h \
   C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_memory_defs.h \
+  C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
+  C:/msys64/mingw64/include/c++/15.2.0/random \
   C:/msys64/mingw64/include/c++/15.2.0/sstream \
   C:/msys64/mingw64/include/c++/15.2.0/stdlib.h \
+  C:/msys64/mingw64/include/c++/15.2.0/streambuf \
   C:/msys64/mingw64/include/c++/15.2.0/string \
   C:/msys64/mingw64/include/c++/15.2.0/tuple \
   C:/msys64/mingw64/include/c++/15.2.0/type_traits \
@@ -461,19 +485,39 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx
   C:/msys64/mingw64/include/c++/15.2.0/vector \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/opt_random.h \
+  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/time_members.h \
   C:/msys64/mingw64/include/crtdefs.h \
   C:/msys64/mingw64/include/stddef.h \
   C:/msys64/mingw64/include/stdio.h \
+  C:/msys64/mingw64/include/time.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/emmintrin.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mmintrin.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mwaitintrin.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pmmintrin.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xmmintrin.h \
   C:/starisk/include/GLFW/glfw3.h \
   C:/starisk/include/glad/glad.h \
   C:/starisk/include/stb_image.h \
   C:/starisk/include/stb_image_resize2.h \
-  C:/starisk/src/ECS/ecs.h \
-  C:/starisk/src/StarQuad.h \
+  C:/starisk/src/ECS/components/KeyboardMovementComponent.h \
   C:/starisk/src/ECS/components/TransformComponent.h \
   C:/starisk/src/ECS/ecs.h \
+  C:/starisk/src/ECS/systems.h \
+  C:/starisk/src/StarQuad.h \
+  C:/starisk/src/StarUtils.h \
+  C:/starisk/src/io/Joystick.h \
+  C:/starisk/src/io/Keyboard.h \
+  C:/starisk/src/io/Mouse.h \
+  C:/starisk/src/ECS/components/TransformComponent.h \
+  C:/starisk/src/ECS/ecs.h \
+  C:/starisk/src/ECS/systems.h \
+  C:/starisk/src/ECS/systems/KeyboardMovementSystem.h \
+  C:/starisk/src/ECS/systems/TransformSystem.h \
   C:/starisk/src/StarBatch.h \
   C:/starisk/src/StarBatchManager.h \
   C:/starisk/src/StarQuad.h \
@@ -1451,6 +1495,7 @@ CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx \
   C:/msys64/mingw64/include/c++/15.2.0/bits/allocator.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/codecvt.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/concept_check.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/cxxabi_forced.h \
@@ -1458,11 +1503,22 @@ CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx \
   C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_conv.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.tcc \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/localefwd.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/memoryfwd.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/move.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/predefined_ops.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/ptr_traits.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/quoted_string.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/random.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/random.tcc \
   C:/msys64/mingw64/include/c++/15.2.0/bits/refwrap.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/requires_hosted.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_atomic.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_base.h \
@@ -1473,17 +1529,22 @@ CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_heap.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_numeric.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stl_uninitialized.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/stringfwd.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/uniform_int_dist.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/unique_ptr.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/uses_allocator.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/version.h \
   C:/msys64/mingw64/include/c++/15.2.0/bitset \
+  C:/msys64/mingw64/include/c++/15.2.0/cmath \
+  C:/msys64/mingw64/include/c++/15.2.0/cstdint \
   C:/msys64/mingw64/include/c++/15.2.0/cstdlib \
+  C:/msys64/mingw64/include/c++/15.2.0/ctime \
   C:/msys64/mingw64/include/c++/15.2.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/15.2.0/debug/debug.h \
   C:/msys64/mingw64/include/c++/15.2.0/exception \
@@ -1495,16 +1556,23 @@ CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx \
   C:/msys64/mingw64/include/c++/15.2.0/fstream \
   C:/msys64/mingw64/include/c++/15.2.0/functional \
   C:/msys64/mingw64/include/c++/15.2.0/initializer_list \
+  C:/msys64/mingw64/include/c++/15.2.0/iomanip \
   C:/msys64/mingw64/include/c++/15.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/15.2.0/iostream \
+  C:/msys64/mingw64/include/c++/15.2.0/limits \
+  C:/msys64/mingw64/include/c++/15.2.0/locale \
   C:/msys64/mingw64/include/c++/15.2.0/memory \
   C:/msys64/mingw64/include/c++/15.2.0/new \
+  C:/msys64/mingw64/include/c++/15.2.0/numeric \
   C:/msys64/mingw64/include/c++/15.2.0/optional \
   C:/msys64/mingw64/include/c++/15.2.0/pstl/execution_defs.h \
   C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_memory_defs.h \
+  C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
+  C:/msys64/mingw64/include/c++/15.2.0/random \
   C:/msys64/mingw64/include/c++/15.2.0/sstream \
   C:/msys64/mingw64/include/c++/15.2.0/stdlib.h \
+  C:/msys64/mingw64/include/c++/15.2.0/streambuf \
   C:/msys64/mingw64/include/c++/15.2.0/string \
   C:/msys64/mingw64/include/c++/15.2.0/tuple \
   C:/msys64/mingw64/include/c++/15.2.0/type_traits \
@@ -1512,19 +1580,41 @@ CMakeFiles/starisk.dir/src/main.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hxx \
   C:/msys64/mingw64/include/c++/15.2.0/vector \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/opt_random.h \
+  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/time_members.h \
   C:/msys64/mingw64/include/crtdefs.h \
   C:/msys64/mingw64/include/stddef.h \
   C:/msys64/mingw64/include/stdio.h \
+  C:/msys64/mingw64/include/time.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/emmintrin.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mmintrin.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mwaitintrin.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pmmintrin.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xmmintrin.h \
   C:/starisk/include/GLFW/glfw3.h \
   C:/starisk/include/glad/glad.h \
   C:/starisk/include/stb_image.h \
   C:/starisk/include/stb_image_resize2.h \
-  C:/starisk/src/ECS/ecs.h \
-  C:/starisk/src/StarQuad.h \
+  C:/starisk/src/ECS/components/KeyboardMovementComponent.h \
   C:/starisk/src/ECS/components/TransformComponent.h \
   C:/starisk/src/ECS/ecs.h \
+  C:/starisk/src/ECS/systems.h \
+  C:/starisk/src/StarQuad.h \
+  C:/starisk/src/StarUtils.h \
+  C:/starisk/src/io/Joystick.h \
+  C:/starisk/src/io/Keyboard.h \
+  C:/starisk/src/io/Mouse.h \
+  C:/starisk/src/ECS/components.h \
+  C:/starisk/src/ECS/components/KeyboardMovementComponent.h \
+  C:/starisk/src/ECS/components/TransformComponent.h \
+  C:/starisk/src/ECS/ecs.h \
+  C:/starisk/src/ECS/systems.h \
+  C:/starisk/src/ECS/systems/KeyboardMovementSystem.h \
+  C:/starisk/src/ECS/systems/TransformSystem.h \
   C:/starisk/src/StarBatch.h \
   C:/starisk/src/StarBatchManager.h \
   C:/starisk/src/StarQuad.h \
@@ -1577,8 +1667,6 @@ CMakeFiles/starisk.dir/src/stb_impl.cpp.obj: CMakeFiles/starisk.dir/cmake_pch.hx
 
 CMakeFiles/starisk.dir/cmake_pch.hxx:
 
-C:/msys64/mingw64/include/windef.h:
-
 C:/msys64/mingw64/include/_mingw_secapi.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h:
@@ -1621,13 +1709,11 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/immintrin.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.tcc:
 
-C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator.h:
-
 C:/msys64/mingw64/include/c++/15.2.0/bits/basic_ios.h:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2mediaintrin.h:
+C:/msys64/mingw64/include/c++/15.2.0/bits/quoted_string.h:
 
-C:/msys64/mingw64/include/winefs.h:
+C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bit:
 
@@ -1641,11 +1727,11 @@ C:/msys64/mingw64/include/ddeml.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/hashtable.h:
 
-C:/msys64/mingw64/include/c++/15.2.0/backward/binders.h:
+C:/msys64/mingw64/include/sec_api/wchar_s.h:
 
 C:/msys64/mingw64/include/winapifamily.h:
 
-C:/msys64/mingw64/include/sec_api/wchar_s.h:
+C:/msys64/mingw64/include/c++/15.2.0/backward/binders.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/postypes.h:
 
@@ -1658,6 +1744,8 @@ C:/starisk/include/glm/detail/compute_vector_decl.hpp:
 C:/msys64/mingw64/include/c++/15.2.0/bits/alloc_traits.h:
 
 C:/starisk/include/glm/ext/vector_float2.hpp:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/locale_conv.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets.tcc:
 
@@ -1711,6 +1799,10 @@ C:/msys64/mingw64/include/mmsystem.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h:
 
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxtf32intrin.h:
+
+C:/starisk/src/ECS/systems/TransformSystem.h:
+
 C:/msys64/mingw64/include/c++/15.2.0/bits/new_allocator.h:
 
 C:/msys64/mingw64/include/heapapi.h:
@@ -1751,11 +1843,11 @@ C:/msys64/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h:
 
+C:/msys64/mingw64/include/unknwnbase.h:
+
 C:/msys64/mingw64/include/c++/15.2.0/bits/invoke.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h:
-
-C:/msys64/mingw64/include/unknwnbase.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/istream.tcc:
 
@@ -1795,11 +1887,15 @@ C:/msys64/mingw64/include/apisetcconv.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:
 
+C:/starisk/src/io/Keyboard.cpp:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.h:
+
+C:/msys64/mingw64/include/timezoneapi.h:
+
 C:/msys64/mingw64/include/c++/15.2.0/bits/ostream_insert.h:
 
 C:/starisk/include/glm/ext/matrix_float2x4.hpp:
-
-C:/msys64/mingw64/include/timezoneapi.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/refwrap.h:
 
@@ -1865,6 +1961,8 @@ C:/msys64/mingw64/include/c++/15.2.0/bits/uses_allocator.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/uses_allocator_args.h:
 
+C:/starisk/src/ECS/systems/KeyboardMovementSystem.h:
+
 C:/starisk/include/glm/fwd.hpp:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h:
@@ -1908,10 +2006,6 @@ C:/msys64/mingw64/include/c++/15.2.0/initializer_list:
 C:/msys64/mingw64/include/psdk_inc/_wsadata.h:
 
 C:/starisk/include/glm/ext/vector_float4_precision.hpp:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxbf16intrin.h:
-
-C:/msys64/mingw64/include/wincon.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/concepts:
 
@@ -1993,17 +2087,15 @@ C:/msys64/mingw64/include/corecrt_stdio_config.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++locale.h:
 
-C:/msys64/mingw64/include/unknwn.h:
-
 C:/msys64/mingw64/include/c++/15.2.0/new:
 
 C:/starisk/include/glm/ext/matrix_float3x3_precision.hpp:
 
 C:/msys64/mingw64/include/c++/15.2.0/ostream:
 
-C:/msys64/mingw64/include/c++/15.2.0/pstl/pstl_config.h:
-
 C:/msys64/mingw64/include/synchapi.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/pstl/pstl_config.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/sstream:
 
@@ -2017,9 +2109,9 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx2intrin.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/streambuf:
 
-C:/msys64/mingw64/include/c++/15.2.0/string:
-
 C:/msys64/mingw64/include/threadpoolapiset.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/string:
 
 C:/msys64/mingw64/include/c++/15.2.0/system_error:
 
@@ -2041,11 +2133,11 @@ C:/msys64/mingw64/include/imm.h:
 
 C:/msys64/mingw64/include/namespaceapi.h:
 
-C:/msys64/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc:
+C:/msys64/mingw64/include/msxml.h:
 
 C:/msys64/mingw64/include/windows.h:
 
-C:/msys64/mingw64/include/msxml.h:
+C:/msys64/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc:
 
 C:/msys64/mingw64/include/locale.h:
 
@@ -2127,6 +2219,8 @@ C:/msys64/mingw64/include/corecrt.h:
 
 C:/msys64/mingw64/include/corecrt_wconio.h:
 
+C:/msys64/mingw64/include/c++/15.2.0/iomanip:
+
 C:/msys64/mingw64/include/corecrt_wctype.h:
 
 C:/starisk/include/glm/ext/vector_bool4.hpp:
@@ -2153,9 +2247,9 @@ C:/msys64/mingw64/include/rpcsal.h:
 
 C:/starisk/include/glm/integer.hpp:
 
-C:/msys64/mingw64/include/pthread.h:
-
 C:/msys64/mingw64/include/systemtopologyapi.h:
+
+C:/msys64/mingw64/include/pthread.h:
 
 C:/msys64/mingw64/include/pthread_compat.h:
 
@@ -2164,10 +2258,6 @@ C:/msys64/mingw64/include/memoryapi.h:
 C:/msys64/mingw64/include/pthread_signal.h:
 
 C:/starisk/include/glm/mat4x2.hpp:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vbmiintrin.h:
-
-C:/msys64/mingw64/include/stralign.h:
 
 C:/msys64/mingw64/include/pthread_time.h:
 
@@ -2199,9 +2289,13 @@ C:/msys64/mingw64/include/stdio.h:
 
 C:/starisk/include/glm/vec4.hpp:
 
+C:/msys64/mingw64/include/c++/15.2.0/bits/stl_numeric.h:
+
 C:/msys64/mingw64/include/sys/timeb.h:
 
 C:/msys64/mingw64/include/vadefs.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/random.h:
 
 C:/starisk/include/glm/detail/type_mat3x4.hpp:
 
@@ -2249,9 +2343,11 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512fp16vlintrin.h
 
 C:/starisk/include/glm/detail/_vectorize.hpp:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mmintrin.h:
-
 C:/starisk/include/glm/detail/func_integer.inl:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.tcc:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mmintrin.h:
 
 C:/starisk/include/glm/detail/func_matrix.inl:
 
@@ -2295,8 +2391,6 @@ C:/starisk/include/glm/detail/type_mat3x2.hpp:
 
 C:/starisk/include/glm/ext/vector_float3_precision.hpp:
 
-C:/msys64/mingw64/include/winbase.h:
-
 C:/starisk/include/glm/detail/type_mat4x2.inl:
 
 C:/starisk/include/glm/detail/type_mat4x4.hpp:
@@ -2335,9 +2429,9 @@ C:/starisk/include/glm/ext/matrix_double2x4.hpp:
 
 C:/msys64/mingw64/include/joystickapi.h:
 
-C:/starisk/include/glm/ext/matrix_double3x2.hpp:
-
 C:/msys64/mingw64/include/timeapi.h:
+
+C:/starisk/include/glm/ext/matrix_double3x2.hpp:
 
 C:/msys64/mingw64/include/mmsyscom.h:
 
@@ -2387,9 +2481,9 @@ C:/starisk/include/glm/ext/matrix_float3x4_precision.hpp:
 
 C:/starisk/include/glm/ext/matrix_float4x2_precision.hpp:
 
-C:/msys64/mingw64/include/shellapi.h:
-
 C:/msys64/mingw64/include/wincrypt.h:
+
+C:/msys64/mingw64/include/shellapi.h:
 
 C:/starisk/include/glm/ext/matrix_float4x3.hpp:
 
@@ -2403,9 +2497,9 @@ C:/starisk/include/glm/ext/matrix_float4x4_precision.hpp:
 
 C:/starisk/include/glm/ext/scalar_int_sized.hpp:
 
-C:/starisk/src/io/Mouse.h:
-
 C:/msys64/mingw64/include/wingdi.h:
+
+C:/starisk/src/io/Mouse.h:
 
 C:/starisk/include/glm/ext/vector_bool2_precision.hpp:
 
@@ -2443,6 +2537,8 @@ C:/starisk/include/glm/ext/vector_int2.hpp:
 
 C:/starisk/include/glm/ext/vector_int2_sized.hpp:
 
+C:/msys64/mingw64/include/c++/15.2.0/locale:
+
 C:/starisk/include/glm/ext/vector_int3.hpp:
 
 C:/starisk/include/glm/ext/vector_int4.hpp:
@@ -2454,6 +2550,8 @@ C:/starisk/include/glm/ext/vector_uint2.hpp:
 C:/msys64/mingw64/include/prsht.h:
 
 C:/starisk/include/glm/ext/vector_uint2_sized.hpp:
+
+C:/starisk/src/ECS/components/KeyboardMovementComponent.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/movrsintrin.h:
 
@@ -2531,6 +2629,8 @@ C:/starisk/src/StarTexture.h:
 
 C:/starisk/include/stb_image_resize2.h:
 
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/emmintrin.h:
+
 C:/starisk/src/StarTexture.cpp:
 
 C:/msys64/mingw64/include/c++/15.2.0/algorithm:
@@ -2538,6 +2638,10 @@ C:/msys64/mingw64/include/c++/15.2.0/algorithm:
 C:/msys64/mingw64/include/c++/15.2.0/backward/auto_ptr.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/allocated_ptr.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/tsxldtrkintrin.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/random.tcc:
 
 C:/msys64/mingw64/include/lzexpand.h:
 
@@ -2555,13 +2659,43 @@ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_tempbuf.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bitset:
 
+C:/msys64/mingw64/include/c++/15.2.0/ctime:
+
 C:/msys64/mingw64/include/c++/15.2.0/memory:
 
 C:/msys64/mingw64/include/_bsd_types.h:
 
+C:/msys64/mingw64/include/c++/15.2.0/numeric:
+
 C:/msys64/mingw64/include/c++/15.2.0/pstl/execution_defs.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_numeric_defs.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/random:
+
+C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/messages_members.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/opt_random.h:
+
+C:/msys64/mingw64/include/rpcdcep.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/sm4intrin.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/time_members.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mwaitintrin.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pmmintrin.h:
+
+C:/msys64/mingw64/include/psdk_inc/_xmitfile.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xmmintrin.h:
+
+C:/starisk/src/ECS/systems.h:
+
+C:/msys64/mingw64/include/consoleapi3.h:
 
 C:/starisk/src/StarQuad.h:
 
@@ -2569,11 +2703,11 @@ C:/starisk/src/glad.c:
 
 C:/starisk/src/StarUtils.h:
 
+C:/starisk/src/io/Keyboard.h:
+
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxfp16intrin.h:
 
 C:/starisk/src/Starisk.cpp:
-
-C:/starisk/src/io/Keyboard.h:
 
 C:/msys64/mingw64/include/_mingw_unicode.h:
 
@@ -2598,8 +2732,6 @@ C:/msys64/mingw64/include/concurrencysal.h:
 C:/msys64/mingw64/include/consoleapi.h:
 
 C:/msys64/mingw64/include/namedpipeapi.h:
-
-C:/msys64/mingw64/include/consoleapi3.h:
 
 C:/msys64/mingw64/include/datetimeapi.h:
 
@@ -2629,8 +2761,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/f16cintrin.h:
 
 C:/msys64/mingw64/include/ktmtypes.h:
 
-C:/msys64/mingw64/include/threadpoollegacyapiset.h:
-
 C:/msys64/mingw64/include/mciapi.h:
 
 C:/msys64/mingw64/include/minwinbase.h:
@@ -2657,13 +2787,9 @@ C:/msys64/mingw64/include/psdk_inc/_socket_types.h:
 
 C:/msys64/mingw64/include/psdk_inc/_wsa_errnos.h:
 
-C:/msys64/mingw64/include/psdk_inc/_xmitfile.h:
-
 C:/msys64/mingw64/include/psdk_inc/intrin-impl.h:
 
 C:/msys64/mingw64/include/realtimeapiset.h:
-
-C:/msys64/mingw64/include/rpcdcep.h:
 
 C:/starisk/include/imgui/imgui.h:
 
@@ -2673,13 +2799,21 @@ C:/msys64/mingw64/include/rpcnsip.h:
 
 C:/msys64/mingw64/include/securityappcontainer.h:
 
+C:/msys64/mingw64/include/sysinfoapi.h:
+
 C:/msys64/mingw64/include/stdarg.h:
 
-C:/msys64/mingw64/include/sysinfoapi.h:
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vbmiintrin.h:
+
+C:/msys64/mingw64/include/stralign.h:
 
 C:/msys64/mingw64/include/stringapiset.h:
 
+C:/msys64/mingw64/include/threadpoollegacyapiset.h:
+
 C:/msys64/mingw64/include/tvout.h:
+
+C:/msys64/mingw64/include/unknwn.h:
 
 C:/msys64/mingw64/include/urlmon.h:
 
@@ -2687,7 +2821,19 @@ C:/msys64/mingw64/include/utilapiset.h:
 
 C:/msys64/mingw64/include/virtdisk.h:
 
+C:/msys64/mingw64/include/winbase.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxbf16intrin.h:
+
+C:/msys64/mingw64/include/wincon.h:
+
 C:/msys64/mingw64/include/wincontypes.h:
+
+C:/msys64/mingw64/include/windef.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2mediaintrin.h:
+
+C:/msys64/mingw64/include/winefs.h:
 
 C:/msys64/mingw64/include/winerror.h:
 
@@ -2734,8 +2880,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2convertintrin
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxfp8intrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxmovrsintrin.h:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxtf32intrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxtileintrin.h:
 
@@ -2797,8 +2941,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/cetintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/clflushoptintrin.h:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/emmintrin.h:
-
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/fma4intrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/fmaintrin.h:
@@ -2819,8 +2961,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm3dnow.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/movdirintrin.h:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mwaitintrin.h:
-
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mwaitxintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pconfigintrin.h:
@@ -2828,8 +2968,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pconfigintrin.h:
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/sha512intrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pkuintrin.h:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pmmintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/prfchwintrin.h:
 
@@ -2843,11 +2981,7 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/sgxintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/sm3intrin.h:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/sm4intrin.h:
-
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/smmintrin.h:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/tsxldtrkintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/uintrintrin.h:
 
@@ -2862,8 +2996,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/wmmintrin.h:
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/x86gprintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/x86intrin.h:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xmmintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xopintrin.h:
 
@@ -2893,9 +3025,9 @@ C:/starisk/include/imgui/imstb_textedit.h:
 
 C:/starisk/src/imgui_widgets.cpp:
 
-C:/starisk/src/io/Keyboard.cpp:
-
 C:/starisk/src/io/Mouse.cpp:
+
+C:/starisk/src/ECS/components.h:
 
 C:/starisk/src/main.cpp:
 

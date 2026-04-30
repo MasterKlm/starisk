@@ -9,8 +9,8 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: C:\starisk\src\Starisk.cpp \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
  C:/msys64/mingw64/include/stddef.h C:/msys64/mingw64/include/crtdefs.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
- C:\starisk\src\StarUtils.h C:\starisk\src\StarSettings.h \
- C:/starisk/include/GLFW/glfw3.h \
+ C:\starisk\src\StarBatchManager.h C:\starisk\src\StarBatch.h \
+ C:\starisk\src\StarVertex.h \
  C:/msys64/mingw64/include/c++/15.2.0/optional \
  C:/msys64/mingw64/include/c++/15.2.0/bits/version.h \
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -23,33 +23,72 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: C:\starisk\src\Starisk.cpp \
  C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_construct.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h \
- C:\starisk\src\StarBatchManager.h C:\starisk\src\StarBatch.h \
- C:\starisk\src\StarVertex.h C:\starisk\src\shader.h \
- C:/msys64/mingw64/include/c++/15.2.0/string \
+ C:\starisk\src\shader.h C:/msys64/mingw64/include/c++/15.2.0/string \
  C:/msys64/mingw64/include/c++/15.2.0/fstream \
- C:/msys64/mingw64/include/c++/15.2.0/sstream \
+ C:/msys64/mingw64/include/c++/15.2.0/sstream C:\starisk\src\StarUtils.h \
+ C:\starisk\src\StarSettings.h C:/starisk/include/GLFW/glfw3.h \
+ C:/msys64/mingw64/include/c++/15.2.0/random \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/requires_hosted.h \
+ C:/msys64/mingw64/include/c++/15.2.0/cmath \
+ C:/msys64/mingw64/include/c++/15.2.0/cstdint \
+ C:/msys64/mingw64/include/c++/15.2.0/cstdlib \
+ C:/msys64/mingw64/include/c++/15.2.0/iosfwd \
+ C:/msys64/mingw64/include/c++/15.2.0/limits \
+ C:/msys64/mingw64/include/c++/15.2.0/debug/debug.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/random.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/uniform_int_dist.h \
+ C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/concept_check.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/opt_random.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pmmintrin.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/emmintrin.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xmmintrin.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mmintrin.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mwaitintrin.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/random.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/numeric \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_numeric.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/move.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bit \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_function.h \
+ C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
+ C:/msys64/mingw64/include/c++/15.2.0/pstl/execution_defs.h \
+ C:/msys64/mingw64/include/c++/15.2.0/iomanip \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h \
+ C:/msys64/mingw64/include/c++/15.2.0/locale \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/localefwd.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.h \
+ C:/msys64/mingw64/include/c++/15.2.0/ctime \
+ C:/msys64/mingw64/include/time.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/time_members.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/codecvt.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_conv.h \
+ C:/msys64/mingw64/include/c++/15.2.0/streambuf \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stringfwd.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/allocator.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/quoted_string.h \
  C:/msys64/mingw64/include/c++/15.2.0/functional \
  C:\starisk\src\io/Keyboard.h C:\starisk\src\io/Mouse.h \
  C:\starisk\src\io/Joystick.h C:\starisk\src\ECS/ecs.h \
  C:/msys64/mingw64/include/c++/15.2.0/memory \
  C:/msys64/mingw64/include/c++/15.2.0/bits/memoryfwd.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/allocator.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_tempbuf.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_pair.h \
- C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_uninitialized.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/align.h \
- C:/msys64/mingw64/include/c++/15.2.0/bit \
  C:/msys64/mingw64/include/c++/15.2.0/debug/assertions.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/uses_allocator.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/alloc_traits.h \
- C:/msys64/mingw64/include/c++/15.2.0/debug/debug.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/unique_ptr.h \
  C:/msys64/mingw64/include/c++/15.2.0/tuple \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_function.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr.h \
- C:/msys64/mingw64/include/c++/15.2.0/iosfwd \
  C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_base.h \
  C:/msys64/mingw64/include/c++/15.2.0/typeinfo \
  C:/msys64/mingw64/include/c++/15.2.0/bits/allocated_ptr.h \
@@ -65,10 +104,8 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: C:\starisk\src\Starisk.cpp \
  C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_atomic.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/move.h \
  C:/msys64/mingw64/include/c++/15.2.0/backward/auto_ptr.h \
  C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_memory_defs.h \
- C:/msys64/mingw64/include/c++/15.2.0/pstl/execution_defs.h \
  C:/msys64/mingw64/include/c++/15.2.0/bitset \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_algobase.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/cxxabi_forced.h \
@@ -76,14 +113,18 @@ CMakeFiles/starisk.dir/src/Starisk.cpp.obj: C:\starisk\src\Starisk.cpp \
  C:/msys64/mingw64/include/c++/15.2.0/algorithm \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_algo.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/algorithmfwd.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_heap.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/predefined_ops.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/uniform_int_dist.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/concept_check.h \
- C:/msys64/mingw64/include/c++/15.2.0/cstdlib \
  C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
- C:/starisk/src/StarQuad.h \
+ C:/starisk/src/StarQuad.h C:/starisk/src/StarUtils.h \
  C:\starisk\src\ECS/components/TransformComponent.h \
- C:/starisk/src/ECS/ecs.h
+ C:/starisk/src/ECS/ecs.h C:\starisk\src\ECS/systems.h \
+ C:\starisk\src\ECS/systems/KeyboardMovementSystem.h \
+ C:/starisk/src/ECS/systems.h C:/starisk/src/io/Keyboard.h \
+ C:/starisk/src/io/Mouse.h \
+ C:/starisk/src/ECS/components/KeyboardMovementComponent.h \
+ C:/starisk/src/ECS/ecs.h \
+ C:/starisk/src/ECS/components/TransformComponent.h \
+ C:/starisk/src/io/Joystick.h C:/starisk/src/ECS/ecs.h \
+ C:\starisk\src\ECS/systems/TransformSystem.h C:\starisk\src\ECS/ecs.h

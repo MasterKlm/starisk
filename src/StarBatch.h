@@ -32,6 +32,7 @@ public:
     unsigned int uMaxNumVertices;
     unsigned int uNumOfUsedVertices;
     unsigned int VAO, VBO, EBO;
+    int sbmIndex;
 
     std::vector<unsigned int> prevIndices;
     std::vector<unsigned int> indices;
@@ -45,8 +46,8 @@ public:
 
     
     
-    StarBatch(const unsigned maxNumVertices)
-    : uMaxNumVertices(maxNumVertices), uNumOfUsedVertices(0), VAO(0), VBO(0), _config(GL_TRIANGLES, 0)
+    StarBatch(const unsigned maxNumVertices, int sbm_index)
+    : uMaxNumVertices(maxNumVertices), sbmIndex(sbm_index), uNumOfUsedVertices(0), VAO(0), VBO(0), _config(GL_TRIANGLES, 0)
     {
         EBO = 0;
 
@@ -80,9 +81,19 @@ public:
 
     ~StarBatch(){ 
         cleanUp();
-        std::cout << "Cleaned up batch" << "\n";
+        //std::cout << "Cleaned up batch" << "\n";
      }
 
+    
+    // int getVertexArrayIDIndex(int member_count)
+    // {
+    //     static int lastStride = 0;
+    //     static int lastId = 0;
+
+    //     lastId += lastStride == 0 ? (member_count - 1) : lastStride; //-1 to map to indexing in vector arrays then add stride directly since its one behind already
+    //     lastStride = member_count;
+    //     return lastId;
+    // }
 
     StarBatch(StarBatch&& other) noexcept
     : uMaxNumVertices(other.uMaxNumVertices),
@@ -90,6 +101,7 @@ public:
       VAO(other.VAO),
       VBO(other.VBO),
       EBO(other.EBO),
+      sbmIndex(other.sbmIndex),
       prevIndices(std::move(other.prevIndices)),
       indices(std::move(other.indices)),
       attribOffset(other.attribOffset),
@@ -166,29 +178,32 @@ public:
     //bool isEmpty() const;
     //bool isBatchConfig(const StarBatch& other) const;
     
-    void add(const std::vector<T>& inputVertices, const BatchConfig& other){ _config = other; add(inputVertices);}
+    SBM_DATA add(const std::vector<T>& inputVertices, const BatchConfig& other){ _config = other; return add(inputVertices);}
     
     
-    void add(const std::vector<T>& inputVertices)
+    SBM_DATA add(const std::vector<T>& inputVertices)
     {
         if(inputVertices.size() > uMaxNumVertices)
         {
             std::cout << "Input vertices are over the limit of batch size " << uMaxNumVertices << "\n";
-            return;
+            
         }
 
         if(inputVertices.empty())
         {
             std::cout << "Cannot add empty inputVertices" << "\n";
-            return;
+            
         }
 
         if(!isEnoughRoom(inputVertices.size()))
         {
             std::cout << "Not enough room for vertices of size " << inputVertices.size() << "\n";
-            return;
+            
         }
 
+        int startIndex = uNumOfUsedVertices;
+        //std::cout << "StartIndex in Batch:  " << startIndex << "\n";
+        //std::cout << "SbmIndex: " << sbmIndex << "\n";
 
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferSubData(GL_ARRAY_BUFFER, uNumOfUsedVertices * sizeof(T), inputVertices.size() * sizeof(T), &inputVertices[0]);
@@ -198,6 +213,19 @@ public:
         uNumOfUsedVertices += inputVertices.size();
         _lastVertex = inputVertices[inputVertices.size() - 1];
 
+
+        return SBM_DATA{startIndex, sbmIndex};
+
+    }
+
+    void updateVertices(int startIndex, const std::vector<float>& newVertices)
+    {
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferSubData(GL_ARRAY_BUFFER,
+                        startIndex * sizeof(T),      
+                        newVertices.size() * sizeof(float),
+                        &newVertices[0]);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
     
     void enableAttribPointerf(int numOfVertices){

@@ -1,5 +1,9 @@
 #include "Starisk.h"
 
+
+
+    
+
 Starisk::Starisk()
 {
     init();
@@ -66,6 +70,9 @@ void Starisk::createWindow(int width, int height, const char* title)
     glfwSetScrollCallback(window, Mouse::mouseWheelCallback);
 
     sbm = new StarBatchManager();
+    
+    auto& ts = sem.addSystem<TransformSystem>();
+    auto& kms = sem.addSystem<KeyboardMovementSystem>();
 }
 
 
@@ -85,24 +92,28 @@ void Starisk::processInput(){
 
 Entity& Starisk::CreateEntity(float xpos, float ypos, int width, int height, const char* texturePath)
 {   
+    
     Entity& e = sem.addEntity();
     e.addComponent<TransformComponent>(xpos, ypos);
     e.quad = CreateQuad(xpos, ypos, width, height, texturePath);
     return e;
+    
 }
 
 Entity& Starisk::CreateEntity(float xpos, float ypos, int width, int height,  glm::vec4 rgba)
 {   
+    
     Entity& e = sem.addEntity();
     e.addComponent<TransformComponent>(xpos, ypos);
     e.quad = CreateQuad(xpos, ypos, width, height, rgba);
     return e;
+    
 }
 
 StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height, const char* texturePath)
 {
     StarQuad quad{x_pos, y_pos, width, height, texturePath};
-    sbm->add(quad.vertices);
+    quad.sbm_data = sbm->add(quad.vertices);
 
     return quad;
 }
@@ -110,7 +121,9 @@ StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height
 StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height, glm::vec4 rgba)
 {
     StarQuad quad{x_pos, y_pos, width, height, rgba};
-    sbm->add(quad.vertices);
+    quad.sbm_data = sbm->add(quad.vertices);
+    //std::cout << "Quad batch id: " << quad.sbm_data.starBatchIndex << "\n";
+    //std::cout << "Buffer start index: " << quad.sbm_data.startBufferIndex << "\n";
 
     return quad;
 }
@@ -132,6 +145,7 @@ void Starisk::mainLoop(std::function<void()> fn)
             glClear(GL_COLOR_BUFFER_BIT);
 
             sbm->update();
+            sem.update(sbm);
             fn();
             //send new frame to, and generate kind of before hand and prevent flicketing
             glfwSwapBuffers(window);
@@ -164,6 +178,7 @@ void Starisk::mainLoop()
             glClear(GL_COLOR_BUFFER_BIT);
 
             sbm->update();
+            sem.update(sbm);
            
             //send new frame to, and generate kind of before hand and prevent flicketing
             glfwSwapBuffers(window);

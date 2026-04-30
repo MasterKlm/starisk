@@ -3,16 +3,23 @@
 
 #include <vector>
 #include "StarTexture.h"
+#include "StarBatchManager.h"
 #include "StarUtils.h"
 #include <optional>
+#include "StarVertex.h"
 
+
+//template <typename T>
 class StarQuad
 {
 
 public:
     float x = 0.0f, y = 0.0f, z = 0.0f;
     float width, height;
+    SBM_DATA sbm_data;
     std::optional<StarTexture> texture;
+    std:: optional<glm::vec4> rgba;
+    //T vertexType;
 
     std::vector<float> vertices;
 
@@ -31,21 +38,45 @@ public:
         }
     }
 
+    
 
     StarQuad(float x_pos, float y_pos, float w, float h)
-    : x(x_pos), y(y_pos), width(w), height(h)
+    :x(x_pos), y(y_pos), width(w), height(h)
     {
         //vertices = calcStarQuadVertFromfWidth(x_pos, y_pos, w, h);
     }  // no texture quad
     
-    StarQuad(float x_pos, float y_pos, float w, float h, glm::vec4 rgba)
-    : x(x_pos), y(y_pos), width(w), height(h)
+    StarQuad(float x_pos, float y_pos, float w, float h, glm::vec4 color_rgba)
+    :x(x_pos), y(y_pos), width(w), height(h)
     {
-        vertices = calcStarQuadVertRGBAFromfWidth(x_pos, y_pos, w, h, rgba);
+        vertices = calcStarQuadVertRGBAFromfWidth(x_pos, y_pos, w, h, color_rgba);
+        rgba = color_rgba;
         
     }
 
     ~StarQuad(){};
+
+
+    void move(float x_pos, float y_pos, StarBatchManager* sbm)
+    {
+        if(x == x_pos && y == y_pos) return;
+        std::vector<float> newVertices;
+        if(texture.has_value())
+        {
+            newVertices = calcStarQuadVertUVFromfWidth(x_pos, y_pos, width, height, texture->uMin, texture->uMax, texture->vMin, texture->vMax);
+            
+        }
+        if(rgba.has_value())
+        {
+            newVertices = calcStarQuadVertRGBAFromfWidth(x_pos, y_pos, width, height, rgba.value());
+
+        }
+
+        vertices = newVertices;
+        
+
+        sbm->move(newVertices, sbm_data);
+    }
 
 
 

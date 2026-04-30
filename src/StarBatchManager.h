@@ -21,12 +21,16 @@ public:
     int prevTotalBatchMemory_VertexUV = 0;
     int prevTotalBatchMemory_VertexRGBA = 0;
     
-    void add(const std::vector<float> &v);
-    void allocate(const std::vector<VertexUV> &v) noexcept;
-    void allocate(const std::vector<VertexRGBA> &v) noexcept;
+    SBM_DATA add(const std::vector<float> &v);
+    SBM_DATA allocate(const std::vector<VertexUV> &v) noexcept;
+    SBM_DATA allocate(const std::vector<VertexRGBA> &v) noexcept;
+    void move(std::vector<float> newVertices, SBM_DATA sbm_data);
     void createNewBatchesIfNeeded();
     void update();
+    int getGroudBatchId();
 
+    
+    int getBatchId();
 
 private:
     std::vector<StarBatch<VertexUV>> uvBatch;

@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <iostream>
 #include "../StarQuad.h"
+#include "../StarUtils.h"
 
 
 class Component;
@@ -56,11 +57,13 @@ public:
     virtual ~Component(){};
 };
 
+
 class Entity
 {
 private:
     bool active = true;
     std::vector<std::unique_ptr<Component>> components;
+    std::string id;
 
     ComponentArray componentArray;
     ComponentBitSet componentBitSet;
@@ -77,9 +80,14 @@ public:
     //Entity& operator=(Entity&&) = default;
 
 
-    Entity(){}
+    Entity(){ id = generateUUID(); }
     
     ~Entity(){ destroy(); }
+
+    std::string getId()
+    {
+        return id;
+    }
 
     void destroy(){ active = false;}
 
@@ -139,11 +147,8 @@ public:
     System(){}
     virtual ~System(){}
 
-    virtual void init(){
-        extern StarECSManager sem;
-        sem.addSystem(*this);
-    }
-    virtual void update(StarECSManager &ecsManager){}
+    virtual void init(){}
+    virtual void update(StarECSManager* sem, StarBatchManager* sbm){}
 
 
 
@@ -154,8 +159,8 @@ class StarECSManager
 {
 public:
     std::vector<std::unique_ptr<Entity>> entities;
-    std::vector<System> systems;
-    
+    std::vector<std::unique_ptr<System>> systems;
+    StarBatchManager* sbm;
 
     StarECSManager()
     {
@@ -169,10 +174,10 @@ public:
 
 
     
-    void update()
+    void update(StarBatchManager* sbm)
     {
         for(auto& e : entities) e->update();
-        for(auto& s : systems) s->update();
+        for(auto& s : systems) s->update(this, sbm);
     }
     void draw()
     {
@@ -187,9 +192,13 @@ public:
     }), std::end(entities));
     }
 
-    void addSystem(System s)
+    template <typename T, typename... Targs>
+    T& addSystem(Targs&&... mArgs)
     {
-        systems.push_back(s);
+        T* s(new T(std::forward<Targs>(mArgs)...));
+        std::unique_ptr<System> uPtr{s};
+        systems.emplace_back(std::move(uPtr));
+        return *s;
     }
 
     Entity& addEntity()

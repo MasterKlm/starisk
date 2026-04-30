@@ -1,7 +1,7 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 
-#include "KeyboardMovementComponent.h"
-#include "TranformComponent.h"
+#include "components/KeyboardMovementComponent.h"
+#include "components/TransformComponent.h"
 
 #endif

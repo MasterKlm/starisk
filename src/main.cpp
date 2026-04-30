@@ -4,6 +4,7 @@
 #include "Starisk.h"
 #include "glm/glm.hpp"
 #include "glm/common.hpp"
+#include "ECS/components.h"
 
 
 
@@ -22,6 +23,8 @@ int main()
     auto redBox = starisk.CreateQuad(330.0f, 200.0f, 200.0f, 100.0f, glm::vec4(1.0f,0.0f,0.0f,1.0f));*/
 
     Entity& player = starisk.CreateEntity(100.0f, 100.0f, 30, 70, glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
+    
+    player.addComponent<KeyboardMovementComponent>();
 
     starisk.mainLoop();
 

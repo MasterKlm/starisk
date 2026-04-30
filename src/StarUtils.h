@@ -5,7 +5,9 @@
 #include <GLFW/glfw3.h> 
 #include "glm/glm.hpp"
 #include "glm/common.hpp"
-
+#include <random>
+#include <sstream>
+#include <iomanip>
 
 
 inline void framebuffer_size_callback(GLFWwindow* window, int width, int height){
@@ -34,6 +36,27 @@ inline std::vector<float> calcStarQuadVertUVFromfWidth(float x, float y, float w
     return vertices;
 }
 
+
+inline std::string generateUUID() {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<uint32_t> dis(0, 15);
+    std::uniform_int_distribution<uint32_t> dis2(8, 11);
+
+    std::stringstream ss;
+    ss << std::hex;
+    for (int i = 0; i < 8; i++) ss << dis(gen);
+    ss << "-";
+    for (int i = 0; i < 4; i++) ss << dis(gen);
+    ss << "-4";  // version 4
+    for (int i = 0; i < 3; i++) ss << dis(gen);
+    ss << "-";
+    ss << dis2(gen);  // variant bits
+    for (int i = 0; i < 3; i++) ss << dis(gen);
+    ss << "-";
+    for (int i = 0; i < 12; i++) ss << dis(gen);
+    return ss.str();
+}
 
 inline std::vector<float> calcStarQuadVertRGBAFromfWidth(float x, float y, float w, float h, const glm::vec4& rgba)
 {

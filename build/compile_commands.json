@@ -1,98 +1,122 @@
 [
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -x c++-header -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\cmake_pch.hxx.gch -c C:\\starisk\\build\\CMakeFiles\\starisk.dir\\cmake_pch.hxx.cxx",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -emit-pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -x c++-header -o CMakeFiles\\starisk.dir\\cmake_pch.hxx.pch -c C:\\starisk\\build\\CMakeFiles\\starisk.dir\\cmake_pch.hxx.cxx",
   "file": "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.cxx",
-  "output": "CMakeFiles/starisk.dir/cmake_pch.hxx.gch"
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\StarBatchManager.cpp.obj -c C:\\starisk\\src\\StarBatchManager.cpp",
-  "file": "C:/starisk/src/StarBatchManager.cpp",
-  "output": "CMakeFiles/starisk.dir/src/StarBatchManager.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\include\\imgui\\backends\\imgui_impl_glfw.cpp.obj -c C:\\starisk\\include\\imgui\\backends\\imgui_impl_glfw.cpp",
+  "file": "C:/starisk/include/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\StarTexture.cpp.obj -c C:\\starisk\\src\\StarTexture.cpp",
-  "file": "C:/starisk/src/StarTexture.cpp",
-  "output": "CMakeFiles/starisk.dir/src/StarTexture.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\include\\imgui\\backends\\imgui_impl_opengl3.cpp.obj -c C:\\starisk\\include\\imgui\\backends\\imgui_impl_opengl3.cpp",
+  "file": "C:/starisk/include/imgui/backends/imgui_impl_opengl3.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\StarTextureManager.cpp.obj -c C:\\starisk\\src\\StarTextureManager.cpp",
-  "file": "C:/starisk/src/StarTextureManager.cpp",
-  "output": "CMakeFiles/starisk.dir/src/StarTextureManager.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\StarBatchManager.cpp.obj -c C:\\starisk\\src\\core\\StarBatchManager.cpp",
+  "file": "C:/starisk/src/core/StarBatchManager.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/StarBatchManager.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\Starisk.cpp.obj -c C:\\starisk\\src\\Starisk.cpp",
-  "file": "C:/starisk/src/Starisk.cpp",
-  "output": "CMakeFiles/starisk.dir/src/Starisk.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\StarQuad.cpp.obj -c C:\\starisk\\src\\core\\StarQuad.cpp",
+  "file": "C:/starisk/src/core/StarQuad.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/StarQuad.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/starisk.dir/includes_C.rsp -g -o CMakeFiles\\starisk.dir\\src\\glad.c.obj -c C:\\starisk\\src\\glad.c",
-  "file": "C:/starisk/src/glad.c",
-  "output": "CMakeFiles/starisk.dir/src/glad.c.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\StarTexture.cpp.obj -c C:\\starisk\\src\\core\\StarTexture.cpp",
+  "file": "C:/starisk/src/core/StarTexture.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/StarTexture.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\imgui.cpp.obj -c C:\\starisk\\src\\imgui.cpp",
-  "file": "C:/starisk/src/imgui.cpp",
-  "output": "CMakeFiles/starisk.dir/src/imgui.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\StarTextureManager.cpp.obj -c C:\\starisk\\src\\core\\StarTextureManager.cpp",
+  "file": "C:/starisk/src/core/StarTextureManager.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/StarTextureManager.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\imgui_draw.cpp.obj -c C:\\starisk\\src\\imgui_draw.cpp",
-  "file": "C:/starisk/src/imgui_draw.cpp",
-  "output": "CMakeFiles/starisk.dir/src/imgui_draw.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\Starisk.cpp.obj -c C:\\starisk\\src\\core\\Starisk.cpp",
+  "file": "C:/starisk/src/core/Starisk.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/Starisk.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\imgui_tables.cpp.obj -c C:\\starisk\\src\\imgui_tables.cpp",
-  "file": "C:/starisk/src/imgui_tables.cpp",
-  "output": "CMakeFiles/starisk.dir/src/imgui_tables.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\starisk.dir\\src\\core\\glad.c.obj -c C:\\starisk\\src\\core\\glad.c",
+  "file": "C:/starisk/src/core/glad.c",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/glad.c.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\imgui_widgets.cpp.obj -c C:\\starisk\\src\\imgui_widgets.cpp",
-  "file": "C:/starisk/src/imgui_widgets.cpp",
-  "output": "CMakeFiles/starisk.dir/src/imgui_widgets.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\imgui\\imgui.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui.cpp",
+  "file": "C:/starisk/src/core/imgui/imgui.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/imgui/imgui.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\io\\Joystick.cpp.obj -c C:\\starisk\\src\\io\\Joystick.cpp",
-  "file": "C:/starisk/src/io/Joystick.cpp",
-  "output": "CMakeFiles/starisk.dir/src/io/Joystick.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\imgui\\imgui_draw.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_draw.cpp",
+  "file": "C:/starisk/src/core/imgui/imgui_draw.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/imgui/imgui_draw.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\io\\Keyboard.cpp.obj -c C:\\starisk\\src\\io\\Keyboard.cpp",
-  "file": "C:/starisk/src/io/Keyboard.cpp",
-  "output": "CMakeFiles/starisk.dir/src/io/Keyboard.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\imgui\\imgui_tables.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_tables.cpp",
+  "file": "C:/starisk/src/core/imgui/imgui_tables.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/imgui/imgui_tables.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\io\\Mouse.cpp.obj -c C:\\starisk\\src\\io\\Mouse.cpp",
-  "file": "C:/starisk/src/io/Mouse.cpp",
-  "output": "CMakeFiles/starisk.dir/src/io/Mouse.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\imgui\\imgui_widgets.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_widgets.cpp",
+  "file": "C:/starisk/src/core/imgui/imgui_widgets.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/imgui/imgui_widgets.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\main.cpp.obj -c C:\\starisk\\src\\main.cpp",
-  "file": "C:/starisk/src/main.cpp",
-  "output": "CMakeFiles/starisk.dir/src/main.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\io\\Joystick.cpp.obj -c C:\\starisk\\src\\core\\io\\Joystick.cpp",
+  "file": "C:/starisk/src/core/io/Joystick.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/io/Joystick.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\shader.cpp.obj -c C:\\starisk\\src\\shader.cpp",
-  "file": "C:/starisk/src/shader.cpp",
-  "output": "CMakeFiles/starisk.dir/src/shader.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\io\\Keyboard.cpp.obj -c C:\\starisk\\src\\core\\io\\Keyboard.cpp",
+  "file": "C:/starisk/src/core/io/Keyboard.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/io/Keyboard.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/starisk.dir/includes_CXX.rsp -g -std=gnu++17 -Winvalid-pch -include C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\stb_impl.cpp.obj -c C:\\starisk\\src\\stb_impl.cpp",
-  "file": "C:/starisk/src/stb_impl.cpp",
-  "output": "CMakeFiles/starisk.dir/src/stb_impl.cpp.obj"
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\io\\Mouse.cpp.obj -c C:\\starisk\\src\\core\\io\\Mouse.cpp",
+  "file": "C:/starisk/src/core/io/Mouse.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/io/Mouse.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\shader.cpp.obj -c C:\\starisk\\src\\core\\shader.cpp",
+  "file": "C:/starisk/src/core/shader.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/shader.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\core\\stb_impl.cpp.obj -c C:\\starisk\\src\\core\\stb_impl.cpp",
+  "file": "C:/starisk/src/core/stb_impl.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/core/stb_impl.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\stariskEditor\\StariskEditor.cpp.obj -c C:\\starisk\\src\\stariskEditor\\StariskEditor.cpp",
+  "file": "C:/starisk/src/stariskEditor/StariskEditor.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/stariskEditor/StariskEditor.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -o CMakeFiles\\starisk.dir\\src\\stariskEditor\\main.cpp.obj -c C:\\starisk\\src\\stariskEditor\\main.cpp",
+  "file": "C:/starisk/src/stariskEditor/main.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk.dir/src/stariskEditor/main.cpp.obj"
 }
 ]

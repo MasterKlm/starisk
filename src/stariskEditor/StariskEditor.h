@@ -5,6 +5,10 @@
 #include "imgui/imgui.h"
 #include "imgui/backends/imgui_impl_glfw.h"
 #include "imgui/backends/imgui_impl_opengl3.h"
+#include <string>
+#include <istream>
+#include <fstream>
+#include <windows.h>
 
 
 class StariskEditor
@@ -14,11 +18,13 @@ public:
     int WINDOW_WIDTH = 800, WINDOW_HEIGHT = 600;
     GLFWwindow* window = nullptr;
     ImGuiIO* io = nullptr;
-
+    HMODULE projectDLL = nullptr;
 
     // StariskEditor();
+    ~StariskEditor();
 
     void createWindow();
+    void displayProject(const char* projectPath);
     void mainLoop();
     void processInput();
 

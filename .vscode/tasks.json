@@ -4,7 +4,7 @@
         {
             "label": "Run starisk",
             "type": "shell",
-            "command": "${workspaceFolder}/build/starisk.exe",
+            "command": "${workspaceFolder}/build/starisk_editor.exe",
             "options": {
                 "cwd": "${workspaceFolder}"
             },

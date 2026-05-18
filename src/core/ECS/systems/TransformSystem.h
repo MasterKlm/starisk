@@ -2,8 +2,9 @@
 #define TRANSFORMSYSTEM_H
 #include "../ecs.h"
 #include "../components/TransformComponent.h"
+#include "../../StariskExport.h"
 
-class TransformSystem : public System
+class STARISK_API TransformSystem : public System
 {
 public:
     //void init(StarBatchManager* sbm) override{}

@@ -1,10 +1,11 @@
 #ifndef COLLIDERSYSTEM_H
 #define COLLIDERSYSTEM_H
 #include "../ecs.h"
+#include "../../StariskExport.h"
 #include "../components/ColliderComponent.h"
 #include <functional>
 
-class ColliderSystem : public System
+class STARISK_API ColliderSystem : public System
 {
     public:         
     

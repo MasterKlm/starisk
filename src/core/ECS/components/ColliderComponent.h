@@ -2,9 +2,10 @@
 #define COLLIDERCOMPONENT_H
 #include "../ecs.h"
 #include <string>
+#include "../../StariskExport.h"
 #include "TransformComponent.h"
 
-class ColliderComponent : public Component
+class STARISK_API ColliderComponent : public Component
 {
     public:
 

@@ -255,6 +255,9 @@ starisk_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 starisk_SOURCE_DIR:STATIC=C:/starisk
 
+//Dependencies for the target
+starisk_core_LIB_DEPENDS:STATIC=general;C:/starisk/lib/glfw3.lib;general;opengl32;general;gdi32;general;user32;
+
 
 ########################
 # INTERNAL cache entries

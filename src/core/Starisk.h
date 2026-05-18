@@ -15,9 +15,9 @@
 #include "ECS/ecs.h"
 #include "ECS/components/TransformComponent.h"
 #include "ECS/systems.h"
+#include "StariskExport.h"
 
-
-class Starisk
+class STARISK_API Starisk
 {
 public:
 
@@ -47,6 +47,7 @@ public:
     void mainLoop(std::function<void()> fn);
     void mainLoop();
     void init();
+    void initStariskBaseSystems();
 
     void setGameRunning(bool v);
     bool isGameRunning();

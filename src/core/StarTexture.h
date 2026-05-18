@@ -4,10 +4,10 @@
 #include "StarTextureManager.h"
 #include "stb_image.h"          
 #include "stb_image_resize2.h"
+#include "StariskExport.h"
 
 
-
-class StarTexture
+class STARISK_API StarTexture
 {
 
 public:

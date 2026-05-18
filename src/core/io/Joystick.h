@@ -1,6 +1,6 @@
 #ifndef JOYSTICK_H
 #define JOYSTICK_H
-
+#include "../StariskExport.h"
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
@@ -32,7 +32,7 @@
 #define GLFW_JOYSTICK_AXES_RIGHT_TRIGGER 4
 #define GLFW_JOYSTICK_AXES_RIGHT_STICK_Y 5
 
-class Joystick
+class STARISK_API Joystick
 {
 
 public:

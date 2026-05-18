@@ -7,9 +7,10 @@
 #include "../components/TransformComponent.h"
 #include "../../io/Joystick.h"
 #include "../ecs.h"
+#include "../../StariskExport.h"
 #include <functional>
 
-class KeyboardMovementSystem : public System
+class STARISK_API KeyboardMovementSystem : public System
 {
 
  public:

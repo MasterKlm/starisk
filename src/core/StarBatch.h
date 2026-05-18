@@ -4,9 +4,9 @@
 #include "StarVertex.h"
 #include <vector>
 #include <optional>
+#include "./StariskExport.h"
 
-
-struct BatchConfig
+struct STARISK_API BatchConfig
 {
     unsigned int uRenderType;
     int iPriority;
@@ -26,7 +26,7 @@ struct BatchConfig
 };
 
 template <typename T>
-class StarBatch 
+class STARISK_API StarBatch 
 {
 public:
     unsigned int uMaxNumVertices;

@@ -1,0 +1,456 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "starisk_core.dll"
+		},
+		{
+			"path" : "starisk_core.lib"
+		},
+		{
+			"path" : "starisk_core.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_include_directories",
+			"target_precompile_headers"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17"
+				},
+				{
+					"fragment" : "-Xclang -emit-pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -x c++-header"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "starisk_core_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include/imgui"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include/imgui/backends"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"precompileHeaders" : 
+			[
+				{
+					"backtrace" : 4,
+					"header" : "C:/starisk/src/core/pch.h"
+				}
+			],
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17"
+				},
+				{
+					"fragment" : "-Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "starisk_core_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include/imgui"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include/imgui/backends"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"precompileHeaders" : 
+			[
+				{
+					"backtrace" : 4,
+					"header" : "C:/starisk/src/core/pch.h"
+				}
+			],
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "starisk_core_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include/imgui"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/starisk/include/imgui/backends"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				8
+			]
+		}
+	],
+	"id" : "starisk_core::@6890427a1f51a3e7e1df",
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"fragment" : "C:/starisk/lib/glfw3.lib"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "opengl32"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "gdi32"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "user32"
+		}
+	],
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-shared",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-fuse-ld=lld-link",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\starisk\\lib\\glfw3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lopengl32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lgdi32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-luser32.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"fragment" : "C:/starisk/lib/glfw3.lib"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "opengl32"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "gdi32"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "user32"
+		}
+	],
+	"name" : "starisk_core",
+	"nameOnDisk" : "starisk_core.dll",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17
+			]
+		},
+		{
+			"name" : "Precompile Header File",
+			"sourceIndexes" : 
+			[
+				18
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"path" : "build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "include/imgui/backends/imgui_impl_glfw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "include/imgui/backends/imgui_impl_opengl3.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/StarBatchManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/StarQuad.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/StarTexture.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/StarTextureManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/Starisk.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 2,
+			"path" : "src/core/glad.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/imgui/imgui.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/imgui/imgui_draw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/imgui/imgui_tables.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/imgui/imgui_widgets.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/io/Joystick.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/io/Keyboard.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/io/Mouse.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/shader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/stb_impl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"path" : "build/CMakeFiles/starisk_core.dir/cmake_pch.hxx",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

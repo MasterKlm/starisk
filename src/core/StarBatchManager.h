@@ -5,14 +5,17 @@
 #include "StarVertex.h"
 #include "StarTextureManager.h"
 #include "shader.h"
+#include "StariskExport.h"
 
-
-class StarBatchManager
+class STARISK_API StarBatchManager
 {
 
 public:
     StarBatchManager();
     ~StarBatchManager();
+
+    StarBatchManager(StarBatchManager&&) noexcept = default;
+    StarBatchManager& operator=(StarBatchManager&&) noexcept = default;
 
     StarTextureManager textureManager{};
     Shader uvShader = Shader("assets/vertex_core.shader", "assets/fragment_core.shader");

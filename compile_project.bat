@@ -1,0 +1,12 @@
+clang++ -shared -o %OUTPUT_DLL% %PROJECT_FILE% ^
+    -IC:/starisk/include ^
+    -IC:/starisk/include/imgui ^
+    -IC:/starisk/src/core ^
+    -LC:/starisk/build ^
+    -lstarisk_core ^
+    -LC:/starisk/lib ^
+    -lglfw3 ^
+    -lopengl32 ^
+    -lgdi32 ^
+    -luser32 ^
+    -std=c++17

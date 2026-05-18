@@ -1,12 +1,12 @@
 #ifndef STARTEXTUREMANAGER_H
 #define STARTEXTUREMANAGER_H
+#include "StariskExport.h"
 
-
-struct AtlasRegion {
+struct STARISK_API AtlasRegion {
     float uMin = 0.0f, vMin = 0.0f, uMax = 0.0f, vMax = 0.0f;
 };
 
-class StarTextureManager
+class STARISK_API StarTextureManager
 {
 
 public:

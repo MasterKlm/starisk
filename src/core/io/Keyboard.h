@@ -2,10 +2,11 @@
 #define KEYBOARD_H
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
+#include "../StariskExport.h"
 
 
 
-class Keyboard
+class STARISK_API Keyboard
 {
 
 public:

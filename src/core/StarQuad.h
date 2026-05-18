@@ -7,11 +7,12 @@
 #include "StarUtils.h"
 #include <optional>
 #include "StarVertex.h"
+#include "StariskExport.h"
 
-class Starisk; 
+class STARISK_API Starisk; 
 
 //template <typename T>
-class StarQuad
+class STARISK_API StarQuad
 {
 
 public:

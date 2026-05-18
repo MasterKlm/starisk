@@ -41,255 +41,316 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/starisk/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target starisk
+# Object build statements for SHARED_LIBRARY target starisk_core
 
 
 #############################################
-# Order-only phony target for starisk
+# Order-only phony target for starisk_core
 
-build cmake_object_order_depends_target_starisk: phony || .
+build cmake_object_order_depends_target_starisk_core: phony || .
 
-build CMakeFiles/starisk.dir/cmake_pch.hxx.pch: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.cxx | CMakeFiles/starisk.dir/cmake_pch.hxx || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.cxx | CMakeFiles/starisk_core.dir/cmake_pch.hxx || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\cmake_pch.hxx.pch.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -emit-pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx -x c++-header
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\cmake_pch.hxx.pch.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -emit-pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -x c++-header
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/include/imgui/backends/imgui_impl_glfw.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/include/imgui/backends/imgui_impl_glfw.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\include\imgui\backends\imgui_impl_glfw.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\include\imgui\backends\imgui_impl_glfw.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\include\imgui\backends
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\include\imgui\backends
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/include/imgui/backends/imgui_impl_opengl3.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/include/imgui/backends/imgui_impl_opengl3.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\include\imgui\backends\imgui_impl_opengl3.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\include\imgui\backends\imgui_impl_opengl3.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\include\imgui\backends
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\include\imgui\backends
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/StarBatchManager.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/StarBatchManager.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/StarBatchManager.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/StarBatchManager.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\StarBatchManager.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\StarBatchManager.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/StarQuad.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/StarQuad.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/StarQuad.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/StarQuad.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\StarQuad.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\StarQuad.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/StarTexture.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/StarTexture.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/StarTexture.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/StarTexture.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\StarTexture.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\StarTexture.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/StarTextureManager.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/StarTextureManager.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/StarTextureManager.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/StarTextureManager.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\StarTextureManager.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\StarTextureManager.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/Starisk.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/Starisk.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/Starisk.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\Starisk.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\Starisk.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/glad.c.obj: C_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/glad.c || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/glad.c.obj: C_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/glad.c || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\glad.c.obj.d
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\glad.c.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/imgui/imgui.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/imgui/imgui.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/imgui/imgui.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/imgui/imgui.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\imgui\imgui.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\imgui\imgui.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/imgui/imgui_draw.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/imgui/imgui_draw.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/imgui/imgui_draw.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/imgui/imgui_draw.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\imgui\imgui_draw.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\imgui\imgui_draw.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/imgui/imgui_tables.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/imgui/imgui_tables.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/imgui/imgui_tables.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/imgui/imgui_tables.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\imgui\imgui_tables.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\imgui\imgui_tables.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/imgui/imgui_widgets.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/imgui/imgui_widgets.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\imgui\imgui_widgets.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\imgui\imgui_widgets.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/io/Joystick.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/io/Joystick.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/io/Joystick.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/io/Joystick.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\io\Joystick.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\io\Joystick.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core\io
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\io
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/io/Keyboard.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/io/Keyboard.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/io/Keyboard.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/io/Keyboard.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\io\Keyboard.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\io\Keyboard.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core\io
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\io
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/io/Mouse.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/io/Mouse.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/io/Mouse.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/io/Mouse.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\io\Mouse.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\io\Mouse.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core\io
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\io
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/shader.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/shader.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/shader.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/shader.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\shader.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\shader.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
-build CMakeFiles/starisk.dir/src/core/stb_impl.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/core/stb_impl.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
+build CMakeFiles/starisk_core.dir/src/core/stb_impl.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/stb_impl.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\core\stb_impl.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\stb_impl.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
-
-build CMakeFiles/starisk.dir/src/stariskEditor/StariskEditor.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/stariskEditor/StariskEditor.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\stariskEditor\StariskEditor.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\stariskEditor
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
-
-build CMakeFiles/starisk.dir/src/stariskEditor/main.cpp.obj: CXX_COMPILER__starisk_unscanned_Debug C$:/starisk/src/stariskEditor/main.cpp | CMakeFiles/starisk.dir/cmake_pch.hxx CMakeFiles/starisk.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles\starisk.dir\src\stariskEditor\main.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk.dir/cmake_pch.hxx
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk.dir\src\stariskEditor
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target starisk
+# Link build statements for SHARED_LIBRARY target starisk_core
 
 
 #############################################
-# Link the executable starisk.exe
+# Link the shared library starisk_core.dll
 
-build starisk.exe: CXX_EXECUTABLE_LINKER__starisk_Debug CMakeFiles/starisk.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj CMakeFiles/starisk.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj CMakeFiles/starisk.dir/src/core/StarBatchManager.cpp.obj CMakeFiles/starisk.dir/src/core/StarQuad.cpp.obj CMakeFiles/starisk.dir/src/core/StarTexture.cpp.obj CMakeFiles/starisk.dir/src/core/StarTextureManager.cpp.obj CMakeFiles/starisk.dir/src/core/Starisk.cpp.obj CMakeFiles/starisk.dir/src/core/glad.c.obj CMakeFiles/starisk.dir/src/core/imgui/imgui.cpp.obj CMakeFiles/starisk.dir/src/core/imgui/imgui_draw.cpp.obj CMakeFiles/starisk.dir/src/core/imgui/imgui_tables.cpp.obj CMakeFiles/starisk.dir/src/core/imgui/imgui_widgets.cpp.obj CMakeFiles/starisk.dir/src/core/io/Joystick.cpp.obj CMakeFiles/starisk.dir/src/core/io/Keyboard.cpp.obj CMakeFiles/starisk.dir/src/core/io/Mouse.cpp.obj CMakeFiles/starisk.dir/src/core/shader.cpp.obj CMakeFiles/starisk.dir/src/core/stb_impl.cpp.obj CMakeFiles/starisk.dir/src/stariskEditor/StariskEditor.cpp.obj CMakeFiles/starisk.dir/src/stariskEditor/main.cpp.obj | C$:/starisk/lib/glfw3.lib
+build starisk_core.dll starisk_core.lib: CXX_SHARED_LIBRARY_LINKER__starisk_core_Debug CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarBatchManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarQuad.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTexture.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTextureManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj CMakeFiles/starisk_core.dir/src/core/glad.c.obj CMakeFiles/starisk_core.dir/src/core/imgui/imgui.cpp.obj CMakeFiles/starisk_core.dir/src/core/imgui/imgui_draw.cpp.obj CMakeFiles/starisk_core.dir/src/core/imgui/imgui_tables.cpp.obj CMakeFiles/starisk_core.dir/src/core/imgui/imgui_widgets.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Joystick.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Keyboard.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Mouse.cpp.obj CMakeFiles/starisk_core.dir/src/core/shader.cpp.obj CMakeFiles/starisk_core.dir/src/core/stb_impl.cpp.obj | C$:/starisk/lib/glfw3.lib
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  LINK_FLAGS = -shared -fuse-ld=lld-link
+  LINK_LIBRARIES = C:/starisk/lib/glfw3.lib  -lopengl32.lib  -lgdi32.lib  -luser32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  RESTAT = 1
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_FILE = starisk_core.dll
+  TARGET_IMPLIB = starisk_core.lib
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target starisk_editor
+
+
+#############################################
+# Order-only phony target for starisk_editor
+
+build cmake_object_order_depends_target_starisk_editor: phony || cmake_object_order_depends_target_starisk_core
+
+build CMakeFiles/starisk_editor.dir/cmake_pch.hxx.pch: CXX_COMPILER__starisk_editor_unscanned_Debug C$:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx.cxx | CMakeFiles/starisk_editor.dir/cmake_pch.hxx || cmake_object_order_depends_target_starisk_editor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_editor.dir\cmake_pch.hxx.pch.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -emit-pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx -x c++-header
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -IC:/starisk/src/core
+  OBJECT_DIR = CMakeFiles\starisk_editor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_editor.dir
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_editor.dir\
+  TARGET_PDB = starisk_editor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_editor.dir
+
+build CMakeFiles/starisk_editor.dir/src/stariskEditor/StariskEditor.cpp.obj: CXX_COMPILER__starisk_editor_unscanned_Debug C$:/starisk/src/stariskEditor/StariskEditor.cpp | CMakeFiles/starisk_editor.dir/cmake_pch.hxx CMakeFiles/starisk_editor.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_editor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_editor.dir\src\stariskEditor\StariskEditor.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -IC:/starisk/src/core
+  OBJECT_DIR = CMakeFiles\starisk_editor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_editor.dir\src\stariskEditor
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_editor.dir\
+  TARGET_PDB = starisk_editor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_editor.dir
+
+build CMakeFiles/starisk_editor.dir/src/stariskEditor/main.cpp.obj: CXX_COMPILER__starisk_editor_unscanned_Debug C$:/starisk/src/stariskEditor/main.cpp | CMakeFiles/starisk_editor.dir/cmake_pch.hxx CMakeFiles/starisk_editor.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_editor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_editor.dir\src\stariskEditor\main.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -IC:/starisk/src/core
+  OBJECT_DIR = CMakeFiles\starisk_editor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_editor.dir\src\stariskEditor
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_editor.dir\
+  TARGET_PDB = starisk_editor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_editor.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target starisk_editor
+
+
+#############################################
+# Link the executable starisk_editor.exe
+
+build starisk_editor.exe: CXX_EXECUTABLE_LINKER__starisk_editor_Debug CMakeFiles/starisk_editor.dir/src/stariskEditor/StariskEditor.cpp.obj CMakeFiles/starisk_editor.dir/src/stariskEditor/main.cpp.obj | starisk_core.lib C$:/starisk/lib/glfw3.lib || starisk_core.dll
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = C:/starisk/lib/glfw3.lib  -lopengl32.lib  -lgdi32.lib  -luser32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
-  OBJECT_DIR = CMakeFiles\starisk.dir
+  LINK_LIBRARIES = starisk_core.lib  C:/starisk/lib/glfw3.lib  -lopengl32.lib  -lgdi32.lib  -luser32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  OBJECT_DIR = CMakeFiles\starisk_editor.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\starisk.dir\
-  TARGET_FILE = starisk.exe
-  TARGET_IMPLIB = starisk.lib
-  TARGET_PDB = starisk.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk.dir
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_editor.dir\
+  TARGET_FILE = starisk_editor.exe
+  TARGET_IMPLIB = starisk_editor.lib
+  TARGET_PDB = starisk_editor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_editor.dir
 
 
 #############################################
@@ -318,7 +379,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build starisk: phony starisk.exe
+build starisk_core: phony starisk_core.dll
+
+build starisk_editor: phony starisk_editor.exe
 
 # =============================================================================
 # Folder targets.
@@ -328,7 +391,7 @@ build starisk: phony starisk.exe
 #############################################
 # Folder: C:/starisk/build
 
-build all: phony starisk.exe
+build all: phony starisk_core.dll starisk_editor.exe
 
 # =============================================================================
 # Built-in targets

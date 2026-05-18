@@ -1,8 +1,9 @@
 #ifndef TRANSFORMCOMPONENT_H
 #define TRANSFORMCOMPONENT_H
+#include "../../StariskExport.h"
 #include "../ecs.h"
 
-class TransformComponent : public Component
+class STARISK_API TransformComponent : public Component
 {
 public:
     float x, y;

@@ -5,8 +5,9 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include "StariskExport.h"
 
-class Shader
+class STARISK_API Shader
 {
 public:
     unsigned int id;

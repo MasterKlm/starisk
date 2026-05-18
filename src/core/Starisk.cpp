@@ -5,6 +5,7 @@
 Starisk::Starisk()
 {
     init();
+    initStariskBaseSystems();
     
 
 }
@@ -67,13 +68,16 @@ void Starisk::createWindow(int width, int height, const char* title)
     glfwSetMouseButtonCallback(window, Mouse::mouseButtonCallback);
     glfwSetScrollCallback(window, Mouse::mouseWheelCallback);
 
-    sbm = new StarBatchManager();
-    
-    auto& ts = sem.addSystem<TransformSystem>();
+    initStariskBaseSystems();
     // auto& kms = sem.addSystem<KeyboardMovementSystem>();
 }
 
-
+void Starisk::initStariskBaseSystems()
+{
+    sbm = new StarBatchManager();
+    
+    auto& ts = sem.addSystem<TransformSystem>();
+}
 
 void Starisk::processInput(){
     if(window == nullptr) 
@@ -139,19 +143,19 @@ StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height
 
 void Starisk::mainLoop(std::function<void()> fn)
 {
-    if(window == nullptr) 
-    {
-        std::cout << "Create Window Using Starisk.createWindow() First before calling Starisk.mainLoop()" << "\n";
-        return;
-    }
-    while(!glfwWindowShouldClose(window))
-        {
-            //proccess input
-            processInput();
+    // if(window == nullptr) 
+    // {
+    //     std::cout << "Create Window Using Starisk.createWindow() First before calling Starisk.mainLoop()" << "\n";
+    //     return;
+    // }
+    // while(!glfwWindowShouldClose(window))
+    //     {
+    //         //proccess input
+    //         processInput();
 
             //render
-            glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT);
+            // glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+            // glClear(GL_COLOR_BUFFER_BIT);
 
             
 
@@ -161,35 +165,35 @@ void Starisk::mainLoop(std::function<void()> fn)
             fn();
 
             
-            //send new frame to, and generate kind of before hand and prevent flicketing
-            glfwSwapBuffers(window);
-            glfwPollEvents();
+        //     //send new frame to, and generate kind of before hand and prevent flicketing
+        //     glfwSwapBuffers(window);
+        //     glfwPollEvents();
 
 
-        }
+        // }
 
         
 
-    glfwTerminate();
+    // glfwTerminate();
    
 }
 
 
 void Starisk::mainLoop()
 {
-    if(window == nullptr) 
-    {
-        std::cout << "Create Window Using Starisk.createWindow() First before calling Starisk.mainLoop()" << "\n";
-        return;
-    }
-    while(!glfwWindowShouldClose(window))
-        {
-            //proccess input
-            processInput();
+    // if(window == nullptr) 
+    // {
+    //     std::cout << "Create Window Using Starisk.createWindow() First before calling Starisk.mainLoop()" << "\n";
+    //     return;
+    // }
+    // while(!glfwWindowShouldClose(window))
+    //     {
+    //         //proccess input
+    //         processInput();
 
-            //render
-            glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT);
+    //         //render
+    //         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    //         glClear(GL_COLOR_BUFFER_BIT);
 
             
 
@@ -198,16 +202,16 @@ void Starisk::mainLoop()
 
             
             
-            //send new frame to, and generate kind of before hand and prevent flicketing
-            glfwSwapBuffers(window);
-            glfwPollEvents();
+    //         //send new frame to, and generate kind of before hand and prevent flicketing
+    //         glfwSwapBuffers(window);
+    //         glfwPollEvents();
 
 
-        }
+    //     }
 
         
 
-    glfwTerminate();
+    // glfwTerminate();
    
 }
 

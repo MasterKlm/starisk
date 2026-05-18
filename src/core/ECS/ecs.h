@@ -9,11 +9,12 @@
 #include <iostream>
 #include "../StarQuad.h"
 #include "../StarUtils.h"
+#include "../StariskExport.h"
 
 
-class Component;
-class Entity;
-class StarECSManager;
+class STARISK_API Component;
+class STARISK_API Entity;
+class STARISK_API StarECSManager;
 
 using ComponentId = std::size_t;
 
@@ -37,7 +38,7 @@ using ComponentArray = std::array<Component*, maxComponents>;
 using ComponentBitSet = std::bitset<maxComponents>;
 
 
-class Component
+class STARISK_API Component
 {
 
 public:
@@ -58,7 +59,7 @@ public:
 };
 
 
-class Entity
+class STARISK_API Entity
 {
 private:
     bool active = true;
@@ -70,10 +71,11 @@ private:
     
 public:
     StarQuad quad;
+    
 
   
-    //Entity(const Entity&) = delete;
-    //Entity& operator=(const Entity&) = delete;
+    Entity(const Entity&) = delete;
+    Entity& operator=(const Entity&) = delete;
 
     
     ///Entity(Entity&&) = default;
@@ -138,7 +140,7 @@ public:
 
 };
 
-class System
+class STARISK_API System
 {
 public:
     
@@ -156,7 +158,7 @@ public:
 };
 
 
-class StarECSManager
+class STARISK_API StarECSManager
 {
 public:
     std::vector<std::unique_ptr<Entity>> entities;
@@ -172,6 +174,12 @@ public:
     {
 
     }
+
+    StarECSManager(const StarECSManager&) = delete;
+    StarECSManager& operator=(const StarECSManager&) = delete;
+
+    StarECSManager(StarECSManager&&) noexcept = default;
+    StarECSManager& operator=(StarECSManager&&) noexcept = default;
 
 
     

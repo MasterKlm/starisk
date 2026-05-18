@@ -33,25 +33,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 17,
+				"line" : 41,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 25,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 19,
+				"line" : 43,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 32,
+				"line" : 58,
 				"parent" : 0
 			}
 		]
@@ -61,6 +61,13 @@
 		"major" : 2,
 		"minor" : 10
 	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
+		}
+	],
 	"compileGroups" : 
 	[
 		{
@@ -171,55 +178,33 @@
 				5,
 				6,
 				7,
+				8,
 				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			]
-		},
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"define" : "starisk_core_EXPORTS"
-				}
-			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 3,
-					"path" : "C:/starisk/include"
-				},
-				{
-					"backtrace" : 3,
-					"path" : "C:/starisk/include/imgui"
-				},
-				{
-					"backtrace" : 3,
-					"path" : "C:/starisk/include/imgui/backends"
-				}
-			],
-			"language" : "C",
-			"sourceIndexes" : 
-			[
-				8
+				10
 			]
 		}
 	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
+		}
+	],
 	"id" : "starisk_core::@6890427a1f51a3e7e1df",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
+		}
+	],
 	"interfaceLinkLibraries" : 
 	[
+		{
+			"backtrace" : 2,
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
+		},
 		{
 			"backtrace" : 2,
 			"fragment" : "C:/starisk/lib/glfw3.lib"
@@ -251,6 +236,11 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "starisk_vendor.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "C:\\starisk\\lib\\glfw3.lib",
 				"role" : "libraries"
 			},
@@ -278,6 +268,10 @@
 	},
 	"linkLibraries" : 
 	[
+		{
+			"backtrace" : 2,
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
+		},
 		{
 			"backtrace" : 2,
 			"fragment" : "C:/starisk/lib/glfw3.lib"
@@ -318,21 +312,14 @@
 				7,
 				8,
 				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
+				10
 			]
 		},
 		{
 			"name" : "Precompile Header File",
 			"sourceIndexes" : 
 			[
-				18
+				11
 			]
 		}
 	],
@@ -342,18 +329,6 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"path" : "build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.cxx",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "include/imgui/backends/imgui_impl_glfw.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "include/imgui/backends/imgui_impl_opengl3.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -384,36 +359,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/core/Starisk.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 2,
-			"path" : "src/core/glad.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "src/core/imgui/imgui.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "src/core/imgui/imgui_draw.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "src/core/imgui/imgui_tables.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "src/core/imgui/imgui_widgets.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

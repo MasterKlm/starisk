@@ -4,10 +4,21 @@
 
 Starisk::Starisk()
 {
-    init();
+    if (!glfwGetCurrentContext()) {
+        init();
+    }
     initStariskBaseSystems();
     
 
+}
+
+Starisk::Starisk(GLFWwindow* existingWindow)
+{
+    std::cout << "[DEBUG] Starisk(window) ctor called\n";
+    window = existingWindow;
+    std::cout << "[DEBUG] Calling initStariskBaseSystems...\n";
+    initStariskBaseSystems();
+    std::cout << "[DEBUG] initStariskBaseSystems done\n";
 }
 
 void Starisk::init()
@@ -74,9 +85,11 @@ void Starisk::createWindow(int width, int height, const char* title)
 
 void Starisk::initStariskBaseSystems()
 {
+    std::cout << "[DEBUG] Creating StarBatchManager...\n";
     sbm = new StarBatchManager();
-    
+    std::cout << "[DEBUG] StarBatchManager created\n";
     auto& ts = sem.addSystem<TransformSystem>();
+    std::cout << "[DEBUG] TransformSystem added\n";
 }
 
 void Starisk::processInput(){

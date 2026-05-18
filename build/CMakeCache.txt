@@ -256,7 +256,10 @@ starisk_IS_TOP_LEVEL:STATIC=ON
 starisk_SOURCE_DIR:STATIC=C:/starisk
 
 //Dependencies for the target
-starisk_core_LIB_DEPENDS:STATIC=general;C:/starisk/lib/glfw3.lib;general;opengl32;general;gdi32;general;user32;
+starisk_core_LIB_DEPENDS:STATIC=general;starisk_vendor;general;C:/starisk/lib/glfw3.lib;general;opengl32;general;gdi32;general;user32;
+
+//Dependencies for the target
+starisk_vendor_LIB_DEPENDS:STATIC=general;C:/starisk/lib/glfw3.lib;general;opengl32;general;gdi32;general;user32;
 
 
 ########################

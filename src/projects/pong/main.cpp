@@ -7,14 +7,6 @@
 
 extern "C" __declspec(dllexport) void runProject(Starisk* s)
 {
-    static bool gladInitialized = false;
-    if (!gladInitialized) {
-        if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-            std::cout << "Failed to initialize GLAD inside Game DLL!\n";
-            return;
-        }
-        gladInitialized = true;
-    }
 
     // Safety check to prevent Culprit 2
     if (!s) return;

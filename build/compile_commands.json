@@ -1,21 +1,51 @@
 [
 {
   "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\starisk_vendor.dir\\include\\imgui\\backends\\imgui_impl_glfw.cpp.obj -c C:\\starisk\\include\\imgui\\backends\\imgui_impl_glfw.cpp",
+  "file": "C:/starisk/include/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk_vendor.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\starisk_vendor.dir\\include\\imgui\\backends\\imgui_impl_opengl3.cpp.obj -c C:\\starisk\\include\\imgui\\backends\\imgui_impl_opengl3.cpp",
+  "file": "C:/starisk/include/imgui/backends/imgui_impl_opengl3.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk_vendor.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\starisk_vendor.dir\\src\\core\\glad.c.obj -c C:\\starisk\\src\\core\\glad.c",
+  "file": "C:/starisk/src/core/glad.c",
+  "output": "C:/starisk/build/CMakeFiles/starisk_vendor.dir/src/core/glad.c.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\starisk_vendor.dir\\src\\core\\imgui\\imgui.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui.cpp",
+  "file": "C:/starisk/src/core/imgui/imgui.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\starisk_vendor.dir\\src\\core\\imgui\\imgui_draw.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_draw.cpp",
+  "file": "C:/starisk/src/core/imgui/imgui_draw.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_draw.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\starisk_vendor.dir\\src\\core\\imgui\\imgui_tables.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_tables.cpp",
+  "file": "C:/starisk/src/core/imgui/imgui_tables.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_tables.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\starisk_vendor.dir\\src\\core\\imgui\\imgui_widgets.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_widgets.cpp",
+  "file": "C:/starisk/src/core/imgui/imgui_widgets.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_widgets.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -emit-pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -x c++-header -o CMakeFiles\\starisk_core.dir\\cmake_pch.hxx.pch -c C:\\starisk\\build\\CMakeFiles\\starisk_core.dir\\cmake_pch.hxx.cxx",
   "file": "C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.cxx",
   "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch"
-},
-{
-  "directory": "C:/starisk/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\include\\imgui\\backends\\imgui_impl_glfw.cpp.obj -c C:\\starisk\\include\\imgui\\backends\\imgui_impl_glfw.cpp",
-  "file": "C:/starisk/include/imgui/backends/imgui_impl_glfw.cpp",
-  "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj"
-},
-{
-  "directory": "C:/starisk/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\include\\imgui\\backends\\imgui_impl_opengl3.cpp.obj -c C:\\starisk\\include\\imgui\\backends\\imgui_impl_opengl3.cpp",
-  "file": "C:/starisk/include/imgui/backends/imgui_impl_opengl3.cpp",
-  "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",
@@ -46,36 +76,6 @@
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\src\\core\\Starisk.cpp.obj -c C:\\starisk\\src\\core\\Starisk.cpp",
   "file": "C:/starisk/src/core/Starisk.cpp",
   "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj"
-},
-{
-  "directory": "C:/starisk/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\starisk_core.dir\\src\\core\\glad.c.obj -c C:\\starisk\\src\\core\\glad.c",
-  "file": "C:/starisk/src/core/glad.c",
-  "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/src/core/glad.c.obj"
-},
-{
-  "directory": "C:/starisk/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\src\\core\\imgui\\imgui.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui.cpp",
-  "file": "C:/starisk/src/core/imgui/imgui.cpp",
-  "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/src/core/imgui/imgui.cpp.obj"
-},
-{
-  "directory": "C:/starisk/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\src\\core\\imgui\\imgui_draw.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_draw.cpp",
-  "file": "C:/starisk/src/core/imgui/imgui_draw.cpp",
-  "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/src/core/imgui/imgui_draw.cpp.obj"
-},
-{
-  "directory": "C:/starisk/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\src\\core\\imgui\\imgui_tables.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_tables.cpp",
-  "file": "C:/starisk/src/core/imgui/imgui_tables.cpp",
-  "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/src/core/imgui/imgui_tables.cpp.obj"
-},
-{
-  "directory": "C:/starisk/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\src\\core\\imgui\\imgui_widgets.cpp.obj -c C:\\starisk\\src\\core\\imgui\\imgui_widgets.cpp",
-  "file": "C:/starisk/src/core/imgui/imgui_widgets.cpp",
-  "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/src/core/imgui/imgui_widgets.cpp.obj"
 },
 {
   "directory": "C:/starisk/build",

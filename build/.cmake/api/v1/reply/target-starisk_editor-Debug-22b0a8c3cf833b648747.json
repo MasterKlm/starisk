@@ -29,25 +29,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 44,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 46,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 25,
+				"line" : 79,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 48,
+				"line" : 72,
 				"parent" : 0
 			}
 		]
@@ -62,6 +56,10 @@
 		{
 			"backtrace" : 2,
 			"id" : "starisk_core::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
 		}
 	],
 	"compileGroups" : 
@@ -79,19 +77,19 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/starisk/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/starisk/include/imgui"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/starisk/include/imgui/backends"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/starisk/src/core"
 				}
 			],
@@ -129,19 +127,19 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/starisk/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/starisk/include/imgui"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/starisk/include/imgui/backends"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "C:/starisk/src/core"
 				}
 			],
@@ -172,6 +170,10 @@
 	[
 		{
 			"backtrace" : 2,
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "starisk_core::@6890427a1f51a3e7e1df"
 		}
 	],
@@ -198,22 +200,27 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
+				"fragment" : "starisk_vendor.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "C:\\starisk\\lib\\glfw3.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
 				"fragment" : "-lopengl32.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
 				"fragment" : "-lgdi32.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
 				"fragment" : "-luser32.lib",
 				"role" : "libraries"
 			},
@@ -229,6 +236,26 @@
 		{
 			"backtrace" : 2,
 			"id" : "starisk_core::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "C:/starisk/lib/glfw3.lib"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "opengl32"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "gdi32"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "user32"
 		}
 	],
 	"name" : "starisk_editor",

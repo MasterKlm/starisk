@@ -17,7 +17,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -33,7 +34,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -42,15 +44,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "starisk_core::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-starisk_core-Debug-c1c3e34dd0ab4ec34b20.json",
+					"jsonFile" : "target-starisk_core-Debug-c6ec612cab1b955c0812.json",
 					"name" : "starisk_core",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "starisk_editor::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-starisk_editor-Debug-0c5b772d959d53338663.json",
+					"jsonFile" : "target-starisk_editor-Debug-22b0a8c3cf833b648747.json",
 					"name" : "starisk_editor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "starisk_vendor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-starisk_vendor-Debug-771e67ef828803cebc13.json",
+					"name" : "starisk_vendor",
 					"projectIndex" : 0
 				}
 			]

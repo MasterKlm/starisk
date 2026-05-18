@@ -1387,6 +1387,18 @@
 				}
 			],
 			"type" : "STATIC",
+			"value" : "general;starisk_vendor;general;C:/starisk/lib/glfw3.lib;general;opengl32;general;gdi32;general;user32;"
+		},
+		{
+			"name" : "starisk_vendor_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
 			"value" : "general;C:/starisk/lib/glfw3.lib;general;opengl32;general;gdi32;general;user32;"
 		}
 	],

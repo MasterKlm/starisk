@@ -78,7 +78,7 @@ void StariskEditor::createWindow()
     // glfwSetMouseButtonCallback(window, Mouse::mouseButtonCallback);
     // glfwSetScrollCallback(window, Mouse::mouseWheelCallback);
 
-
+    initGameFramebuffer(800, 500);
 }
 
 
@@ -96,21 +96,33 @@ void StariskEditor::displayProject(const char* projectPath)
         if(starisk) { delete starisk; starisk = nullptr; }
     }
 
-    // Compile the specific project file into a DLL
-    std::string compileCmd = std::string("C:/starisk/compile_project.bat ") + 
-                             projectPath + " C:/starisk/build/project.dll";
-    
-    int result = system(compileCmd.c_str());
-    if(result != 0)
+    std::string sourcePath = projectPath;
+    std::string outputPath = sourcePath;
+
+    size_t extPos = outputPath.find_last_of(".");
+    if (extPos != std::string::npos) {
+        outputPath = outputPath.substr(0, extPos) + ".dll";
+    }
+
+    SetEnvironmentVariableA("STARISK_SRC", sourcePath.c_str());
+    SetEnvironmentVariableA("STARISK_OUT", outputPath.c_str());
+
+    int result = std::system("compile_project.bat");
+
+    if (result != 0)
     {
         std::cout << "Compilation failed for: " << projectPath << "\n";
         return;
     }
 
-    // Small delay to ensure file is written
+    std::cout << "Compilation successful! Loading " << outputPath << "...\n";
     Sleep(500);
 
-    projectDLL = LoadLibrary("C:/starisk/build/project.dll");
+    // FIX 2: Convert relative path to absolute path for LoadLibraryA
+    char absolutePath[MAX_PATH];
+    GetFullPathNameA(outputPath.c_str(), MAX_PATH, absolutePath, nullptr);
+
+    projectDLL = LoadLibraryA(absolutePath);
     if(!projectDLL)
     {
         std::cout << "Failed to load DLL. Error: " << GetLastError() << "\n";
@@ -122,7 +134,12 @@ void StariskEditor::displayProject(const char* projectPath)
 
     if(runProject)
     {
-        starisk = new Starisk();
+        glfwMakeContextCurrent(window);
+        std::cout << "[DEBUG] Re-initializing GLAD in starisk_core...\n";
+        Starisk::initGLAD((GLADloadproc)glfwGetProcAddress);
+        std::cout << "[DEBUG] Creating Starisk...\n";
+        starisk = new Starisk(window);
+        std::cout << "[DEBUG] Starisk created. Calling runProject...\n";
         runProject(starisk);
         std::cout << "Running project: " << projectPath << "\n";
     }
@@ -130,6 +147,23 @@ void StariskEditor::displayProject(const char* projectPath)
     {
         std::cout << "Could not find runProject() in DLL\n";
     }
+}
+
+void StariskEditor::initGameFramebuffer(int w, int h)
+{
+    gameViewWidth = w; gameViewHeight = h;
+
+    glGenFramebuffers(1, &gameFramebuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, gameFramebuffer);
+
+    glGenTextures(1, &gameColorTexture);
+    glBindTexture(GL_TEXTURE_2D, gameColorTexture);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, nullptr);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gameColorTexture, 0);
+
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
 
 void StariskEditor::mainLoop()
@@ -148,8 +182,27 @@ void StariskEditor::mainLoop()
             ImGui::NewFrame();
 
             //render
-            if(starisk != nullptr) starisk->mainLoop();
+            // Render game into FBO
+            if (starisk != nullptr) {
+                glBindFramebuffer(GL_FRAMEBUFFER, gameFramebuffer);
+                glViewport(0, 0, gameViewWidth, gameViewHeight);
+                glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+                glClear(GL_COLOR_BUFFER_BIT);
 
+                starisk->mainLoop();
+
+                glBindFramebuffer(GL_FRAMEBUFFER, 0);
+                glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+            }
+
+
+           
+            ImGui::SetNextWindowPos(ImVec2(0,0));
+            ImGui::Begin("Game View");
+            ImGui::Image((ImTextureID)(intptr_t)gameColorTexture,
+                        ImVec2(gameViewWidth, gameViewHeight),
+                        ImVec2(0,1), ImVec2(1,0)); // flipped UV because OpenGL
+            ImGui::End();
 
   
             ImGui::SetNextWindowPos(ImVec2(0,WINDOW_HEIGHT - (WINDOW_HEIGHT * 0.30)));

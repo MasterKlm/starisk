@@ -41,13 +41,118 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/starisk/build/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target starisk_vendor
+
+
+#############################################
+# Order-only phony target for starisk_vendor
+
+build cmake_object_order_depends_target_starisk_vendor: phony || .
+
+build CMakeFiles/starisk_vendor.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj: CXX_COMPILER__starisk_vendor_unscanned_Debug C$:/starisk/include/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_starisk_vendor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_vendor.dir\include\imgui\backends\imgui_impl_glfw.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
+  OBJECT_DIR = CMakeFiles\starisk_vendor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_vendor.dir\include\imgui\backends
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_vendor.dir\starisk_vendor.pdb
+  TARGET_PDB = starisk_vendor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_vendor.dir
+
+build CMakeFiles/starisk_vendor.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj: CXX_COMPILER__starisk_vendor_unscanned_Debug C$:/starisk/include/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_starisk_vendor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_vendor.dir\include\imgui\backends\imgui_impl_opengl3.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
+  OBJECT_DIR = CMakeFiles\starisk_vendor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_vendor.dir\include\imgui\backends
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_vendor.dir\starisk_vendor.pdb
+  TARGET_PDB = starisk_vendor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_vendor.dir
+
+build CMakeFiles/starisk_vendor.dir/src/core/glad.c.obj: C_COMPILER__starisk_vendor_unscanned_Debug C$:/starisk/src/core/glad.c || cmake_object_order_depends_target_starisk_vendor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_vendor.dir\src\core\glad.c.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
+  OBJECT_DIR = CMakeFiles\starisk_vendor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_vendor.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_vendor.dir\starisk_vendor.pdb
+  TARGET_PDB = starisk_vendor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_vendor.dir
+
+build CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui.cpp.obj: CXX_COMPILER__starisk_vendor_unscanned_Debug C$:/starisk/src/core/imgui/imgui.cpp || cmake_object_order_depends_target_starisk_vendor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_vendor.dir\src\core\imgui\imgui.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
+  OBJECT_DIR = CMakeFiles\starisk_vendor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_vendor.dir\src\core\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_vendor.dir\starisk_vendor.pdb
+  TARGET_PDB = starisk_vendor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_vendor.dir
+
+build CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_draw.cpp.obj: CXX_COMPILER__starisk_vendor_unscanned_Debug C$:/starisk/src/core/imgui/imgui_draw.cpp || cmake_object_order_depends_target_starisk_vendor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_vendor.dir\src\core\imgui\imgui_draw.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
+  OBJECT_DIR = CMakeFiles\starisk_vendor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_vendor.dir\src\core\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_vendor.dir\starisk_vendor.pdb
+  TARGET_PDB = starisk_vendor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_vendor.dir
+
+build CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_tables.cpp.obj: CXX_COMPILER__starisk_vendor_unscanned_Debug C$:/starisk/src/core/imgui/imgui_tables.cpp || cmake_object_order_depends_target_starisk_vendor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_vendor.dir\src\core\imgui\imgui_tables.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
+  OBJECT_DIR = CMakeFiles\starisk_vendor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_vendor.dir\src\core\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_vendor.dir\starisk_vendor.pdb
+  TARGET_PDB = starisk_vendor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_vendor.dir
+
+build CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__starisk_vendor_unscanned_Debug C$:/starisk/src/core/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_starisk_vendor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\starisk_vendor.dir\src\core\imgui\imgui_widgets.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
+  OBJECT_DIR = CMakeFiles\starisk_vendor.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_vendor.dir\src\core\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_vendor.dir\starisk_vendor.pdb
+  TARGET_PDB = starisk_vendor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_vendor.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target starisk_vendor
+
+
+#############################################
+# Link the static library starisk_vendor.lib
+
+build starisk_vendor.lib: CXX_STATIC_LIBRARY_LINKER__starisk_vendor_Debug CMakeFiles/starisk_vendor.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj CMakeFiles/starisk_vendor.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj CMakeFiles/starisk_vendor.dir/src/core/glad.c.obj CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui.cpp.obj CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_draw.cpp.obj CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_tables.cpp.obj CMakeFiles/starisk_vendor.dir/src/core/imgui/imgui_widgets.cpp.obj
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  OBJECT_DIR = CMakeFiles\starisk_vendor.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_vendor.dir\starisk_vendor.pdb
+  TARGET_FILE = starisk_vendor.lib
+  TARGET_PDB = starisk_vendor.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_vendor.dir
+
+# =============================================================================
 # Object build statements for SHARED_LIBRARY target starisk_core
 
 
 #############################################
 # Order-only phony target for starisk_core
 
-build cmake_object_order_depends_target_starisk_core: phony || .
+build cmake_object_order_depends_target_starisk_core: phony || cmake_object_order_depends_target_starisk_vendor
 
 build CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.cxx | CMakeFiles/starisk_core.dir/cmake_pch.hxx || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
@@ -57,30 +162,6 @@ build CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch: CXX_COMPILER__starisk_core_
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
   OBJECT_DIR = CMakeFiles\starisk_core.dir
   OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir
-  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
-  TARGET_PDB = starisk_core.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
-
-build CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/include/imgui/backends/imgui_impl_glfw.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
-  CONFIG = Debug
-  DEFINES = -Dstarisk_core_EXPORTS
-  DEP_FILE = CMakeFiles\starisk_core.dir\include\imgui\backends\imgui_impl_glfw.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk_core.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\include\imgui\backends
-  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
-  TARGET_PDB = starisk_core.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
-
-build CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/include/imgui/backends/imgui_impl_opengl3.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
-  CONFIG = Debug
-  DEFINES = -Dstarisk_core_EXPORTS
-  DEP_FILE = CMakeFiles\starisk_core.dir\include\imgui\backends\imgui_impl_opengl3.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk_core.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\include\imgui\backends
   TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
   TARGET_PDB = starisk_core.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
@@ -141,66 +222,6 @@ build CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj: CXX_COMPILER__staris
   INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
   OBJECT_DIR = CMakeFiles\starisk_core.dir
   OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
-  TARGET_PDB = starisk_core.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
-
-build CMakeFiles/starisk_core.dir/src/core/glad.c.obj: C_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/glad.c || cmake_object_order_depends_target_starisk_core
-  CONFIG = Debug
-  DEFINES = -Dstarisk_core_EXPORTS
-  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\glad.c.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk_core.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
-  TARGET_PDB = starisk_core.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
-
-build CMakeFiles/starisk_core.dir/src/core/imgui/imgui.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/imgui/imgui.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
-  CONFIG = Debug
-  DEFINES = -Dstarisk_core_EXPORTS
-  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\imgui\imgui.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk_core.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
-  TARGET_PDB = starisk_core.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
-
-build CMakeFiles/starisk_core.dir/src/core/imgui/imgui_draw.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/imgui/imgui_draw.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
-  CONFIG = Debug
-  DEFINES = -Dstarisk_core_EXPORTS
-  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\imgui\imgui_draw.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk_core.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
-  TARGET_PDB = starisk_core.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
-
-build CMakeFiles/starisk_core.dir/src/core/imgui/imgui_tables.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/imgui/imgui_tables.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
-  CONFIG = Debug
-  DEFINES = -Dstarisk_core_EXPORTS
-  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\imgui\imgui_tables.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk_core.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
-  TARGET_PDB = starisk_core.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
-
-build CMakeFiles/starisk_core.dir/src/core/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/imgui/imgui_widgets.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
-  CONFIG = Debug
-  DEFINES = -Dstarisk_core_EXPORTS
-  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\imgui\imgui_widgets.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
-  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
-  OBJECT_DIR = CMakeFiles\starisk_core.dir
-  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core\imgui
   TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
   TARGET_PDB = starisk_core.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
@@ -273,11 +294,11 @@ build CMakeFiles/starisk_core.dir/src/core/stb_impl.cpp.obj: CXX_COMPILER__stari
 #############################################
 # Link the shared library starisk_core.dll
 
-build starisk_core.dll starisk_core.lib: CXX_SHARED_LIBRARY_LINKER__starisk_core_Debug CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_glfw.cpp.obj CMakeFiles/starisk_core.dir/include/imgui/backends/imgui_impl_opengl3.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarBatchManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarQuad.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTexture.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTextureManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj CMakeFiles/starisk_core.dir/src/core/glad.c.obj CMakeFiles/starisk_core.dir/src/core/imgui/imgui.cpp.obj CMakeFiles/starisk_core.dir/src/core/imgui/imgui_draw.cpp.obj CMakeFiles/starisk_core.dir/src/core/imgui/imgui_tables.cpp.obj CMakeFiles/starisk_core.dir/src/core/imgui/imgui_widgets.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Joystick.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Keyboard.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Mouse.cpp.obj CMakeFiles/starisk_core.dir/src/core/shader.cpp.obj CMakeFiles/starisk_core.dir/src/core/stb_impl.cpp.obj | C$:/starisk/lib/glfw3.lib
+build starisk_core.dll starisk_core.lib: CXX_SHARED_LIBRARY_LINKER__starisk_core_Debug CMakeFiles/starisk_core.dir/src/core/StarBatchManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarQuad.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTexture.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTextureManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Joystick.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Keyboard.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Mouse.cpp.obj CMakeFiles/starisk_core.dir/src/core/shader.cpp.obj CMakeFiles/starisk_core.dir/src/core/stb_impl.cpp.obj | starisk_vendor.lib C$:/starisk/lib/glfw3.lib || starisk_vendor.lib
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -shared -fuse-ld=lld-link
-  LINK_LIBRARIES = C:/starisk/lib/glfw3.lib  -lopengl32.lib  -lgdi32.lib  -luser32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = starisk_vendor.lib  C:/starisk/lib/glfw3.lib  -lopengl32.lib  -lgdi32.lib  -luser32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\starisk_core.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -295,7 +316,7 @@ build starisk_core.dll starisk_core.lib: CXX_SHARED_LIBRARY_LINKER__starisk_core
 #############################################
 # Order-only phony target for starisk_editor
 
-build cmake_object_order_depends_target_starisk_editor: phony || cmake_object_order_depends_target_starisk_core
+build cmake_object_order_depends_target_starisk_editor: phony || cmake_object_order_depends_target_starisk_core cmake_object_order_depends_target_starisk_vendor
 
 build CMakeFiles/starisk_editor.dir/cmake_pch.hxx.pch: CXX_COMPILER__starisk_editor_unscanned_Debug C$:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx.cxx | CMakeFiles/starisk_editor.dir/cmake_pch.hxx || cmake_object_order_depends_target_starisk_editor
   CONFIG = Debug
@@ -338,11 +359,11 @@ build CMakeFiles/starisk_editor.dir/src/stariskEditor/main.cpp.obj: CXX_COMPILER
 #############################################
 # Link the executable starisk_editor.exe
 
-build starisk_editor.exe: CXX_EXECUTABLE_LINKER__starisk_editor_Debug CMakeFiles/starisk_editor.dir/src/stariskEditor/StariskEditor.cpp.obj CMakeFiles/starisk_editor.dir/src/stariskEditor/main.cpp.obj | starisk_core.lib C$:/starisk/lib/glfw3.lib || starisk_core.dll
+build starisk_editor.exe: CXX_EXECUTABLE_LINKER__starisk_editor_Debug CMakeFiles/starisk_editor.dir/src/stariskEditor/StariskEditor.cpp.obj CMakeFiles/starisk_editor.dir/src/stariskEditor/main.cpp.obj | starisk_core.lib starisk_vendor.lib C$:/starisk/lib/glfw3.lib || starisk_core.dll starisk_vendor.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = starisk_core.lib  C:/starisk/lib/glfw3.lib  -lopengl32.lib  -lgdi32.lib  -luser32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = starisk_core.lib  starisk_vendor.lib  C:/starisk/lib/glfw3.lib  -lopengl32.lib  -lgdi32.lib  -luser32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\starisk_editor.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -383,6 +404,8 @@ build starisk_core: phony starisk_core.dll
 
 build starisk_editor: phony starisk_editor.exe
 
+build starisk_vendor: phony starisk_vendor.lib
+
 # =============================================================================
 # Folder targets.
 
@@ -391,7 +414,7 @@ build starisk_editor: phony starisk_editor.exe
 #############################################
 # Folder: C:/starisk/build
 
-build all: phony starisk_core.dll starisk_editor.exe
+build all: phony starisk_vendor.lib starisk_core.dll starisk_editor.exe
 
 # =============================================================================
 # Built-in targets

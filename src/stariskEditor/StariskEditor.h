@@ -19,11 +19,15 @@ public:
     GLFWwindow* window = nullptr;
     ImGuiIO* io = nullptr;
     HMODULE projectDLL = nullptr;
+    GLuint gameFramebuffer = 0;
+    GLuint gameColorTexture = 0;
+    int gameViewWidth = 800, gameViewHeight = 600;
 
     // StariskEditor();
     ~StariskEditor();
-
+    
     void createWindow();
+    void initGameFramebuffer(int w, int h);
     void displayProject(const char* projectPath);
     void mainLoop();
     void processInput();

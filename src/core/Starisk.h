@@ -28,6 +28,7 @@ public:
     
 
     Starisk();
+    Starisk(GLFWwindow* existingWindow);
     ~Starisk();
 
     template <typename T, typename... Targs>
@@ -35,7 +36,16 @@ public:
     {
         return sem.addSystem<T>(std::forward<Targs>(mArgs)...);
     }
-    
+
+    static void initGLAD(GLADloadproc loaderFunc)
+    {
+        if (!gladLoadGLLoader(loaderFunc)) {
+            std::cout << "[Starisk] GLAD re-init failed\n";
+        } else {
+            std::cout << "[Starisk] GLAD re-init success\n";
+        }
+    }
+        
     
     StarQuad CreateQuad(float x_pos, float y_pos, float weight, float height, const char* texturePath);
     StarQuad CreateQuad(float x_pos, float y_pos, float weight, float height, glm::vec4 rgba);

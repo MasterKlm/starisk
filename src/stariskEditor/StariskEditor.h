@@ -17,6 +17,7 @@ class StariskEditor
 public:
     int WINDOW_WIDTH = 800, WINDOW_HEIGHT = 600;
     GLFWwindow* window = nullptr;
+    ImGuiContext* ctx = nullptr;
     ImGuiIO* io = nullptr;
     HMODULE projectDLL = nullptr;
     GLuint gameFramebuffer = 0;

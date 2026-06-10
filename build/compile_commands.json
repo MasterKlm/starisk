@@ -73,6 +73,12 @@
 },
 {
   "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\src\\core\\StarUtils.cpp.obj -c C:\\starisk\\src\\core\\StarUtils.cpp",
+  "file": "C:/starisk/src/core/StarUtils.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/src/core/StarUtils.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -Dstarisk_core_EXPORTS -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx -o CMakeFiles\\starisk_core.dir\\src\\core\\Starisk.cpp.obj -c C:\\starisk\\src\\core\\Starisk.cpp",
   "file": "C:/starisk/src/core/Starisk.cpp",
   "output": "C:/starisk/build/CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj"

@@ -16,6 +16,7 @@
 #include "ECS/components/TransformComponent.h"
 #include "ECS/systems.h"
 #include "StariskExport.h"
+#include "imgui/imgui.h"
 
 class STARISK_API Starisk
 {

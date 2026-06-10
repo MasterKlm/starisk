@@ -6,6 +6,34 @@
 
 Starisk* starisk = nullptr;
 
+
+static void chained_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    // std::cout << "[INPUT] Key event: " << key << " action: " << action << "\n";
+    // Forward to ImGui first
+    ImGui_ImplGlfw_KeyCallback(window, key, scancode, action, mods);
+    // Then forward to Starisk's keyboard system
+    Keyboard::keyCallback(window, key, scancode, action, mods);
+}
+
+static void chained_mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    ImGui_ImplGlfw_MouseButtonCallback(window, button, action, mods);
+    Mouse::mouseButtonCallback(window, button, action, mods);
+}
+
+static void chained_scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    ImGui_ImplGlfw_ScrollCallback(window, xoffset, yoffset);
+    Mouse::mouseWheelCallback(window, xoffset, yoffset);
+}
+
+static void chained_cursor_pos_callback(GLFWwindow* window, double xpos, double ypos)
+{
+    ImGui_ImplGlfw_CursorPosCallback(window, xpos, ypos);
+    Mouse::cursorPosCallback(window, xpos, ypos);
+}
+
 static void editor_framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
@@ -51,11 +79,23 @@ void StariskEditor::createWindow()
     ImGui::CreateContext();
     
     io = &ImGui::GetIO();
-    io->ConfigFlags |= ImGuiConfigFlags_DockingEnable | ImGuiConfigFlags_NavEnableKeyboard; // optional
+    ctx = ImGui::GetCurrentContext();
+    io->ConfigFlags |= ImGuiConfigFlags_DockingEnable; // optional
 
     ImGui::StyleColorsDark();
 
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    // glfwSetKeyCallback(window, Keyboard::keyCallback);
+    // glfwSetCursorPosCallback(window, Mouse::cursorPosCallback);
+    // glfwSetMouseButtonCallback(window, Mouse::mouseButtonCallback);
+    // glfwSetScrollCallback(window, Mouse::mouseWheelCallback);
+
+    glfwSetKeyCallback(window, chained_key_callback);
+    glfwSetMouseButtonCallback(window, chained_mouse_button_callback);
+    glfwSetScrollCallback(window, chained_scroll_callback);
+    glfwSetCursorPosCallback(window, chained_cursor_pos_callback);
+
+
+    ImGui_ImplGlfw_InitForOpenGL(window, false);
     ImGui_ImplOpenGL3_Init("#version 330");
 
 
@@ -73,18 +113,19 @@ void StariskEditor::createWindow()
     glfwSetFramebufferSizeCallback(window, editor_framebuffer_size_callback);
     glfwMaximizeWindow(window);
 
-    // glfwSetKeyCallback(window, Keyboard::keyCallback);
-    // glfwSetCursorPosCallback(window, Mouse::cursorPosCallback);
-    // glfwSetMouseButtonCallback(window, Mouse::mouseButtonCallback);
-    // glfwSetScrollCallback(window, Mouse::mouseWheelCallback);
-
+    
     initGameFramebuffer(800, 500);
 }
 
 
 void StariskEditor::processInput(){
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
+    // if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    //     glfwSetWindowShouldClose(window, true);
+    // if (ImGui::IsKeyPressed(ImGuiKey_Space))
+    // {
+    //     std::cout << "Space pressed\n";
+    // }
+
 };
 
 void StariskEditor::displayProject(const char* projectPath)
@@ -129,7 +170,7 @@ void StariskEditor::displayProject(const char* projectPath)
         return;
     }
 
-    typedef void(*RunProjectFn)(Starisk*);
+    typedef void(*RunProjectFn)(Starisk*, ImGuiContext*);
     RunProjectFn runProject = (RunProjectFn)GetProcAddress(projectDLL, "runProject");
 
     if(runProject)
@@ -139,8 +180,10 @@ void StariskEditor::displayProject(const char* projectPath)
         Starisk::initGLAD((GLADloadproc)glfwGetProcAddress);
         std::cout << "[DEBUG] Creating Starisk...\n";
         starisk = new Starisk(window);
+        StariskSettings::WINDOW_WIDTH = gameViewWidth; 
+        StariskSettings::WINDOW_HEIGHT = gameViewHeight;
         std::cout << "[DEBUG] Starisk created. Calling runProject...\n";
-        runProject(starisk);
+        runProject(starisk, ctx);
         std::cout << "Running project: " << projectPath << "\n";
     }
     else
@@ -204,7 +247,7 @@ void StariskEditor::mainLoop()
                         ImVec2(0,1), ImVec2(1,0)); // flipped UV because OpenGL
             ImGui::End();
 
-  
+        
             ImGui::SetNextWindowPos(ImVec2(0,WINDOW_HEIGHT - (WINDOW_HEIGHT * 0.30)));
             ImGui::SetNextWindowSize(ImVec2(WINDOW_WIDTH, (WINDOW_HEIGHT * 0.30)));
             ImGui::Begin("DockSpace", nullptr, 

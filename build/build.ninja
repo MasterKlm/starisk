@@ -214,6 +214,18 @@ build CMakeFiles/starisk_core.dir/src/core/StarTextureManager.cpp.obj: CXX_COMPI
   TARGET_PDB = starisk_core.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
 
+build CMakeFiles/starisk_core.dir/src/core/StarUtils.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/StarUtils.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
+  CONFIG = Debug
+  DEFINES = -Dstarisk_core_EXPORTS
+  DEP_FILE = CMakeFiles\starisk_core.dir\src\core\StarUtils.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_core.dir/cmake_pch.hxx
+  INCLUDES = -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends
+  OBJECT_DIR = CMakeFiles\starisk_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\starisk_core.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\starisk_core.dir\
+  TARGET_PDB = starisk_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\starisk_core.dir
+
 build CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj: CXX_COMPILER__starisk_core_unscanned_Debug C$:/starisk/src/core/Starisk.cpp | CMakeFiles/starisk_core.dir/cmake_pch.hxx CMakeFiles/starisk_core.dir/cmake_pch.hxx.pch || cmake_object_order_depends_target_starisk_core
   CONFIG = Debug
   DEFINES = -Dstarisk_core_EXPORTS
@@ -294,7 +306,7 @@ build CMakeFiles/starisk_core.dir/src/core/stb_impl.cpp.obj: CXX_COMPILER__stari
 #############################################
 # Link the shared library starisk_core.dll
 
-build starisk_core.dll starisk_core.lib: CXX_SHARED_LIBRARY_LINKER__starisk_core_Debug CMakeFiles/starisk_core.dir/src/core/StarBatchManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarQuad.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTexture.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTextureManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Joystick.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Keyboard.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Mouse.cpp.obj CMakeFiles/starisk_core.dir/src/core/shader.cpp.obj CMakeFiles/starisk_core.dir/src/core/stb_impl.cpp.obj | starisk_vendor.lib C$:/starisk/lib/glfw3.lib || starisk_vendor.lib
+build starisk_core.dll starisk_core.lib: CXX_SHARED_LIBRARY_LINKER__starisk_core_Debug CMakeFiles/starisk_core.dir/src/core/StarBatchManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarQuad.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTexture.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarTextureManager.cpp.obj CMakeFiles/starisk_core.dir/src/core/StarUtils.cpp.obj CMakeFiles/starisk_core.dir/src/core/Starisk.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Joystick.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Keyboard.cpp.obj CMakeFiles/starisk_core.dir/src/core/io/Mouse.cpp.obj CMakeFiles/starisk_core.dir/src/core/shader.cpp.obj CMakeFiles/starisk_core.dir/src/core/stb_impl.cpp.obj | starisk_vendor.lib C$:/starisk/lib/glfw3.lib || starisk_vendor.lib
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -shared -fuse-ld=lld-link

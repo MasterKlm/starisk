@@ -15,6 +15,7 @@ public:
         {
             if(!e->hasComponent<TransformComponent>()) continue;
             auto& tc = e->getComponent<TransformComponent>();
+            // std::cout << "[TS] moving quad to x=" << tc.x << " y=" << tc.y << "\n";
             e->quad.move(tc.x, tc.y, sbm);
             e->quad.x = tc.x;
             e->quad.y = tc.y;

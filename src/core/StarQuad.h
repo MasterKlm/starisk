@@ -78,6 +78,8 @@ public:
         }
 
         vertices = newVertices;
+        std::cout << "[TS] moving quad to x=" << x_pos << " y=" << y_pos << "\n";
+
         
 
         sbm->move(newVertices, sbm_data);

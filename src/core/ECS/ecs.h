@@ -10,6 +10,7 @@
 #include "../StarQuad.h"
 #include "../StarUtils.h"
 #include "../StariskExport.h"
+#include "imgui/imgui.h"
 
 
 class STARISK_API Component;
@@ -18,11 +19,7 @@ class STARISK_API StarECSManager;
 
 using ComponentId = std::size_t;
 
-inline ComponentId getComponentTypeID()
-{
-    static ComponentId lastId = 0;
-    return lastId++;
-}
+STARISK_API ComponentId getComponentTypeID();
 
 template <typename T>
 inline ComponentId getComponentTypeID()

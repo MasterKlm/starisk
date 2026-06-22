@@ -6,7 +6,7 @@
 class STARISK_API TransformComponent : public Component
 {
 public:
-    float x, y;
+    float x, y, velocity = 1.0f;
     float speed = 2.0f;
 
     TransformComponent(float xpos, float ypos)

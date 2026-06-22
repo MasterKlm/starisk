@@ -59,6 +59,7 @@ public:
     ~StarQuad(){};
     
     void changeRGBAColor(float r, float g, float b, float a, Starisk& starisk);
+    void changeRGBAColor(float r, float g, float b, float a, Starisk* starisk);
     
 
 

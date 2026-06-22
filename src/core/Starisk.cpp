@@ -154,6 +154,11 @@ StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height
     return quad;
 }
 
+void Starisk::injectKeyEvent(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    Keyboard::keyCallback(window, key, scancode, action, mods);
+}
+
 void Starisk::mainLoop(std::function<void()> fn)
 {
     // if(window == nullptr) 

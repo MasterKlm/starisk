@@ -9,11 +9,12 @@ Starisk* starisk = nullptr;
 
 static void chained_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
-    // std::cout << "[INPUT] Key event: " << key << " action: " << action << "\n";
-    // Forward to ImGui first
     ImGui_ImplGlfw_KeyCallback(window, key, scancode, action, mods);
-    // Then forward to Starisk's keyboard system
-    Keyboard::keyCallback(window, key, scancode, action, mods);
+    Keyboard::keyCallback(window, key, scancode, action, mods); // keep for editor-side use
+
+    // Also push the event into the loaded game's Starisk instance
+    if (starisk)
+        starisk->injectKeyEvent(window, key, scancode, action, mods);
 }
 
 static void chained_mouse_button_callback(GLFWwindow* window, int button, int action, int mods)

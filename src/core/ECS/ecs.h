@@ -10,6 +10,7 @@
 #include "../StarQuad.h"
 #include "../StarUtils.h"
 #include "../StariskExport.h"
+#include <unordered_map>
 #include "imgui/imgui.h"
 
 
@@ -19,12 +20,26 @@ class STARISK_API StarECSManager;
 
 using ComponentId = std::size_t;
 
-STARISK_API ComponentId getComponentTypeID();
+inline STARISK_API ComponentId getComponentTypeIDForName(const char* typeName) {
+    static std::unordered_map<std::string, ComponentId> typeMap;
+    static ComponentId counter = 0;
+
+    auto key = std::string(typeName);
+    auto it = typeMap.find(key);
+    if (it != typeMap.end())
+        return it->second;
+
+    ComponentId newId = counter++;
+    typeMap[key] = newId;
+    return newId;
+}
 
 template <typename T>
 inline ComponentId getComponentTypeID()
 {
-    static ComponentId typeId = getComponentTypeID();
+    // static still caches per-DLL for performance,
+    // but the value comes from the shared exported function
+    static ComponentId typeId = getComponentTypeIDForName(typeid(T).name());
     return typeId;
 }
 

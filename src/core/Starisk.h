@@ -59,6 +59,7 @@ public:
     void mainLoop();
     void init();
     void initStariskBaseSystems();
+    void injectKeyEvent(GLFWwindow* window, int key, int scancode, int action, int mods);
 
     void setGameRunning(bool v);
     bool isGameRunning();

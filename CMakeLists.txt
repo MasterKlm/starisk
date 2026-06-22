@@ -32,7 +32,7 @@ target_link_libraries(starisk_vendor PUBLIC
 # 2. Core Engine Library (Shared DLL)
 # ─────────────────────────────────────────
 file(GLOB_RECURSE CORE_SOURCES 
-    "src/core/*.cpp" 
+    "src/core/*.cpp"
 )
 
 # Filter out any stray imgui or glad files from the core cpp list

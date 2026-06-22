@@ -8,7 +8,10 @@
 class STARISK_API ColliderSystem : public System
 {
     public:         
-    
+        std::function<void()> customLoop = [](){
+
+        };
+
         std::function<void(std::unique_ptr<Entity>& entity, std::unique_ptr<Entity>& other)> AABBSideEffect = [](std::unique_ptr<Entity>& entity, std::unique_ptr<Entity>& other)
         {
             std::cout << "AABB collision detected between enitity (Id: " << entity->getId() << ") " << "and entity (Id: " << other->getId() << ")" << "\n";
@@ -16,6 +19,7 @@ class STARISK_API ColliderSystem : public System
         
         void update(StarECSManager* sem, StarBatchManager* sbm) override
         {
+            customLoop();
             for(auto& e : sem->entities)
             {
                 if(e->hasComponent<ColliderComponent>())
@@ -40,6 +44,10 @@ class STARISK_API ColliderSystem : public System
             AABBSideEffect = sideEffect;
         }
 
+        void SetCustomLogic(std::function<void()> fn){
+            customLoop = fn;
+        }
+
         
         
 
@@ -60,6 +68,28 @@ class STARISK_API ColliderSystem : public System
             
             return false;
         }
+
+
+        static bool AABB(Entity& entity, Entity& other)
+        {
+            auto& entityTransform = entity.getComponent<TransformComponent>();
+            auto& otherTransform = other.getComponent<TransformComponent>();
+
+            if(
+                entityTransform.x + entity.quad.width >= otherTransform.x &&
+                otherTransform.x + other.quad.width >= entityTransform.x &&
+                entityTransform.y + entity.quad.height >= otherTransform.y &&
+                otherTransform.y + other.quad.height >= entityTransform.y
+            )
+            {
+                return true;
+            }
+            
+            return false;
+        }
+
+
+
 };
 
 

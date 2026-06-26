@@ -181,7 +181,8 @@
 				8,
 				9,
 				10,
-				11
+				11,
+				12
 			]
 		}
 	],
@@ -314,14 +315,15 @@
 				8,
 				9,
 				10,
-				11
+				11,
+				12
 			]
 		},
 		{
 			"name" : "Precompile Header File",
 			"sourceIndexes" : 
 			[
-				12
+				13
 			]
 		}
 	],
@@ -361,6 +363,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/core/StarUtils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/core/StarVec2D.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

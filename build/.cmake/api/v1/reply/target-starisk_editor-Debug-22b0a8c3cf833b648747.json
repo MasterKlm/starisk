@@ -170,11 +170,11 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "starisk_core::@6890427a1f51a3e7e1df"
+			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "starisk_vendor::@6890427a1f51a3e7e1df"
+			"id" : "starisk_core::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "starisk_editor::@6890427a1f51a3e7e1df",

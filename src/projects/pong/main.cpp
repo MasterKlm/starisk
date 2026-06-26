@@ -3,12 +3,15 @@
 #include "../core/ecs/components.h"
 #include "imgui/imgui.h"
 
-extern "C" __declspec(dllexport) void runProject(Starisk* s, ImGuiContext* ctx)
+extern "C" __declspec(dllexport) void destroyProject(Starisk* s) { delete s; }
+
+
+extern "C" __declspec(dllexport) Starisk* runProject(GLFWwindow* window, ImGuiContext* ctx)
 {
-    if (!s) return;
 
     ImGui::SetCurrentContext(ctx); // sync the game DLL's ImGui to editor's context
-
+    Starisk* s = new Starisk(window);  // ✅ allocated in DLL heap
+    
     
 
     Entity& player = s->CreateEntity(50.0f, 100.0f, 30, 80, glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
@@ -29,10 +32,18 @@ extern "C" __declspec(dllexport) void runProject(Starisk* s, ImGuiContext* ctx)
     cs.SetCustomLogic([s, &player, &player2, &ball](){
         if(ColliderSystem::AABB(player, ball)){
             auto& ballTransform = ball.getComponent<TransformComponent>();
-            ballTransform.velocity = 2;
-            ballTransform.x += 10.0f;
-            ballTransform.y += 10.0f;
+            auto& playerTransform = player.getComponent<TransformComponent>();
+            float playerHeight = player.quad.height;
+            float playerWidth = player.quad.width;
+            if(ballTransform.pos.y + ballTransform.pos.x < playerTransform.pos.x + playerTransform.pos.y - (playerHeight / 2))
+            {
+                ballTransform.velocity = StarVec2D(-0.1f);
+            }
+            else{
+                ballTransform.velocity = StarVec2D(0.1f);
+            }
         }
     });
 
+    return s;
 }

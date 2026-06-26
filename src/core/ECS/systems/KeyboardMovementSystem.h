@@ -50,12 +50,12 @@ public:
             // which chained_key_callback already keeps updated
             // if (Keyboard::key(GLFW_KEY_SPACE)) std::cout << "Space pressed" << "\n";
             if (Keyboard::key(GLFW_KEY_W)){
-                transform.y -= 1 * transform.speed;
+                transform.pos.y -= (float)(1 * transform.speed);
                 // std::cout << "[KMS] new transform.y = " << transform.y << "\n"; 
             } 
-            if (Keyboard::key(GLFW_KEY_S)) transform.y += 1 * transform.speed;
-            if (Keyboard::key(GLFW_KEY_D)) transform.x += 1 * transform.speed;
-            if (Keyboard::key(GLFW_KEY_A)) transform.x -= 1 * transform.speed;
+            if (Keyboard::key(GLFW_KEY_S)) transform.pos.y += (float)(1 * transform.speed);
+            if (Keyboard::key(GLFW_KEY_D)) transform.pos.x += (float)(1 * transform.speed);
+            if (Keyboard::key(GLFW_KEY_A)) transform.pos.x -= (float)(1 * transform.speed);
         }
     }
 };

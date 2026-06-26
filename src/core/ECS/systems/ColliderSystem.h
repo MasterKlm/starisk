@@ -57,10 +57,10 @@ class STARISK_API ColliderSystem : public System
             auto& otherTransform = other->getComponent<TransformComponent>();
 
             if(
-                entityTransform.x + entity->quad.width >= otherTransform.x &&
-                otherTransform.x + other->quad.width >= entityTransform.x &&
-                entityTransform.y + entity->quad.height >= otherTransform.y &&
-                otherTransform.y + other->quad.height >= entityTransform.y
+                entityTransform.pos.x + entity->quad.width >= otherTransform.pos.x &&
+                otherTransform.pos.x + other->quad.width >= entityTransform.pos.x &&
+                entityTransform.pos.y + entity->quad.height >= otherTransform.pos.y &&
+                otherTransform.pos.y + other->quad.height >= entityTransform.pos.y
             )
             {
                 return true;
@@ -76,10 +76,10 @@ class STARISK_API ColliderSystem : public System
             auto& otherTransform = other.getComponent<TransformComponent>();
 
             if(
-                entityTransform.x + entity.quad.width >= otherTransform.x &&
-                otherTransform.x + other.quad.width >= entityTransform.x &&
-                entityTransform.y + entity.quad.height >= otherTransform.y &&
-                otherTransform.y + other.quad.height >= entityTransform.y
+                entityTransform.pos.x + entity.quad.width >= otherTransform.pos.x &&
+                otherTransform.pos.x + other.quad.width >= entityTransform.pos.x &&
+                entityTransform.pos.y + entity.quad.height >= otherTransform.pos.y &&
+                otherTransform.pos.y + other.quad.height >= entityTransform.pos.y
             )
             {
                 return true;

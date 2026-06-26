@@ -29,6 +29,7 @@ public:
     
     void createWindow();
     void initGameFramebuffer(int w, int h);
+    void closeCurrentProject();
     void displayProject(const char* projectPath);
     void mainLoop();
     void processInput();

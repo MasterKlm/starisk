@@ -2,23 +2,25 @@
 #define TRANSFORMCOMPONENT_H
 #include "../../StariskExport.h"
 #include "../ecs.h"
+#include "../../StarVec2D.h"
 
 class STARISK_API TransformComponent : public Component
 {
 public:
-    float x, y, velocity = 1.0f;
+    StarVec2D pos;
+    StarVec2D velocity;
     float speed = 2.0f;
 
     TransformComponent(float xpos, float ypos)
     {
-        x = xpos;
-        y = ypos;
+        pos.x = xpos;
+        pos.y = ypos;
     }
 
     TransformComponent(float xpos, float ypos, float speed)
     {
-        x = xpos;
-        y = ypos;
+        pos.x = xpos;
+        pos.y = ypos;
         speed = speed;
     }
 

@@ -129,14 +129,23 @@ void StariskEditor::processInput(){
 
 };
 
-void StariskEditor::displayProject(const char* projectPath)
+void StariskEditor::closeCurrentProject()
 {
     if(projectDLL != nullptr)
     {
+        typedef void(*DestroyProjectFn)(Starisk*);
+        DestroyProjectFn destroyProject = (DestroyProjectFn)GetProcAddress(projectDLL, "destroyProject");
+        if(destroyProject && starisk) destroyProject(starisk);
+        starisk = nullptr;
+        if(starisk) {delete starisk; starisk = nullptr;}
         FreeLibrary(projectDLL);
         projectDLL = nullptr;
-        if(starisk) { delete starisk; starisk = nullptr; }
     }
+}
+
+void StariskEditor::displayProject(const char* projectPath)
+{
+    closeCurrentProject();
 
     std::string sourcePath = projectPath;
     std::string outputPath = sourcePath;
@@ -171,7 +180,7 @@ void StariskEditor::displayProject(const char* projectPath)
         return;
     }
 
-    typedef void(*RunProjectFn)(Starisk*, ImGuiContext*);
+    typedef Starisk*(*RunProjectFn)(GLFWwindow*, ImGuiContext*);
     RunProjectFn runProject = (RunProjectFn)GetProcAddress(projectDLL, "runProject");
 
     if(runProject)
@@ -180,11 +189,11 @@ void StariskEditor::displayProject(const char* projectPath)
         std::cout << "[DEBUG] Re-initializing GLAD in starisk_core...\n";
         Starisk::initGLAD((GLADloadproc)glfwGetProcAddress);
         std::cout << "[DEBUG] Creating Starisk...\n";
-        starisk = new Starisk(window);
+        starisk = runProject(window, ctx);
         StariskSettings::WINDOW_WIDTH = gameViewWidth; 
         StariskSettings::WINDOW_HEIGHT = gameViewHeight;
         std::cout << "[DEBUG] Starisk created. Calling runProject...\n";
-        runProject(starisk, ctx);
+        runProject(window, ctx);
         std::cout << "Running project: " << projectPath << "\n";
     }
     else
@@ -243,9 +252,12 @@ void StariskEditor::mainLoop()
            
             ImGui::SetNextWindowPos(ImVec2(0,0));
             ImGui::Begin("Game View");
-            ImGui::Image((ImTextureID)(intptr_t)gameColorTexture,
+            if(starisk != nullptr){
+
+                ImGui::Image((ImTextureID)(intptr_t)gameColorTexture,
                         ImVec2(gameViewWidth, gameViewHeight),
                         ImVec2(0,1), ImVec2(1,0)); // flipped UV because OpenGL
+            }
             ImGui::End();
 
         
@@ -267,9 +279,13 @@ void StariskEditor::mainLoop()
             ImGui::End();
 
             ImGui::Begin("Files");
-            if(ImGui::Button("Open Project"))
+            if(ImGui::Button("Open Project", ImVec2(95, 20)))
             {
                 displayProject("./src/projects/pong/main.cpp");
+            }
+            if(ImGui::Button("Close Project", ImVec2(95, 20)))
+            {
+                closeCurrentProject();
             }
             ImGui::End();
 
@@ -297,6 +313,6 @@ void StariskEditor::mainLoop()
 
 StariskEditor::~StariskEditor()
 {
-    if(projectDLL) FreeLibrary(projectDLL);
+    closeCurrentProject();
     if(starisk) delete starisk;
 }

@@ -44,14 +44,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "starisk_core::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-starisk_core-Debug-128310fd426ff3716b20.json",
+					"jsonFile" : "target-starisk_core-Debug-593aa942966feaa74cdc.json",
 					"name" : "starisk_core",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "starisk_editor::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-starisk_editor-Debug-3913e55ef1989bbfcc5d.json",
+					"jsonFile" : "target-starisk_editor-Debug-22b0a8c3cf833b648747.json",
 					"name" : "starisk_editor",
 					"projectIndex" : 0
 				},

@@ -48,8 +48,8 @@ public:
     }
         
     
-    StarQuad CreateQuad(float x_pos, float y_pos, float weight, float height, const char* texturePath);
-    StarQuad CreateQuad(float x_pos, float y_pos, float weight, float height, glm::vec4 rgba);
+    StarQuad CreateQuad(float x_pos, float y_pos, float width, float height, const char* texturePath);
+    StarQuad CreateQuad(float x_pos, float y_pos, float width, float height, glm::vec4 rgba);
 
     Entity& CreateEntity(float xpos, float ypos, int width, int height, const char* texturePath);
     Entity& CreateEntity(float xpos, float ypos, int width, int height); //default texture placeholder

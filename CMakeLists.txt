@@ -84,3 +84,29 @@ target_link_libraries(starisk_editor PRIVATE
     gdi32
     user32
 )
+
+
+# ─────────────────────────────────────────
+# 4. Standalone Library Test
+# ─────────────────────────────────────────
+file(GLOB_RECURSE LIBTEST_SOURCES
+    "src/projects/libTest/*.cpp"
+)
+
+add_executable(starisk_libtest ${LIBTEST_SOURCES})
+
+target_include_directories(starisk_libtest PRIVATE
+    include/
+    include/imgui/
+    include/imgui/backends/
+    src/core/
+)
+
+target_link_libraries(starisk_libtest PRIVATE
+    starisk_core
+    starisk_vendor
+    ${CMAKE_SOURCE_DIR}/lib/glfw3.lib
+    opengl32
+    gdi32
+    user32
+)

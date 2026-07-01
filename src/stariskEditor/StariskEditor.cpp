@@ -54,11 +54,20 @@ static void editor_framebuffer_size_callback(GLFWwindow* window, int width, int 
 void StariskEditor::createWindow()
 {
 
+    //intialize glfw
+
     glfwInit();
+
+    //version 3.4
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
+    //apple only
+    #ifdef __APPLE__
+        glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    #endif
 
     window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Starisk**", nullptr, NULL);
 
@@ -193,7 +202,6 @@ void StariskEditor::displayProject(const char* projectPath)
         StariskSettings::WINDOW_WIDTH = gameViewWidth; 
         StariskSettings::WINDOW_HEIGHT = gameViewHeight;
         std::cout << "[DEBUG] Starisk created. Calling runProject...\n";
-        runProject(window, ctx);
         std::cout << "Running project: " << projectPath << "\n";
     }
     else
@@ -242,7 +250,7 @@ void StariskEditor::mainLoop()
                 glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
                 glClear(GL_COLOR_BUFFER_BIT);
 
-                starisk->mainLoop();
+                starisk->mainLoop(true);
 
                 glBindFramebuffer(GL_FRAMEBUFFER, 0);
                 glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);

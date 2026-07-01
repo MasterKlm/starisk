@@ -55,8 +55,8 @@ public:
     Entity& CreateEntity(float xpos, float ypos, int width, int height); //default texture placeholder
     Entity& CreateEntity(float xpos, float ypos, int width, int height, glm::vec4 rgba);
     
-    void mainLoop(std::function<void()> fn);
-    void mainLoop();
+    void mainLoop(std::function<void()> fn, bool isEditor = false);
+    void mainLoop(bool isEditor = false);
     void init();
     void initStariskBaseSystems();
     void injectKeyEvent(GLFWwindow* window, int key, int scancode, int action, int mods);

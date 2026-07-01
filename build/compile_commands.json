@@ -136,5 +136,17 @@
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -IC:/starisk/src/core -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_editor.dir/cmake_pch.hxx -o CMakeFiles\\starisk_editor.dir\\src\\stariskEditor\\main.cpp.obj -c C:\\starisk\\src\\stariskEditor\\main.cpp",
   "file": "C:/starisk/src/stariskEditor/main.cpp",
   "output": "C:/starisk/build/CMakeFiles/starisk_editor.dir/src/stariskEditor/main.cpp.obj"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -IC:/starisk/src/core -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -emit-pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_libtest.dir/cmake_pch.hxx -x c++-header -o CMakeFiles\\starisk_libtest.dir\\cmake_pch.hxx.pch -c C:\\starisk\\build\\CMakeFiles\\starisk_libtest.dir\\cmake_pch.hxx.cxx",
+  "file": "C:/starisk/build/CMakeFiles/starisk_libtest.dir/cmake_pch.hxx.cxx",
+  "output": "C:/starisk/build/CMakeFiles/starisk_libtest.dir/cmake_pch.hxx.pch"
+},
+{
+  "directory": "C:/starisk/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/starisk/include -IC:/starisk/include/imgui -IC:/starisk/include/imgui/backends -IC:/starisk/src/core -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -Xclang -include-pch -Xclang C:/starisk/build/CMakeFiles/starisk_libtest.dir/cmake_pch.hxx.pch -Xclang -include -Xclang C:/starisk/build/CMakeFiles/starisk_libtest.dir/cmake_pch.hxx -o CMakeFiles\\starisk_libtest.dir\\src\\projects\\libTest\\main.cpp.obj -c C:\\starisk\\src\\projects\\libTest\\main.cpp",
+  "file": "C:/starisk/src/projects/libTest/main.cpp",
+  "output": "C:/starisk/build/CMakeFiles/starisk_libtest.dir/src/projects/libTest/main.cpp.obj"
 }
 ]

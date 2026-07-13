@@ -45,7 +45,44 @@ public:
     T _lastVertex;
 
     
-    
+    template <typename R>
+    StarBatch(const unsigned maxNumVertices, int sbm_index, R renderType)
+    : uMaxNumVertices(maxNumVertices), sbmIndex(sbm_index), uNumOfUsedVertices(0), VAO(0), VBO(0), _config(renderType, 0)
+    {
+        EBO = 0;
+
+        if(uMaxNumVertices < 1000)
+        {
+            std::cout << "max vertices of " << uMaxNumVertices << " is too small. Must be atleast 1000" << "\n";
+        }
+
+        glGenVertexArrays(1, &VAO);
+        glGenBuffers(1, &VBO);
+        glGenBuffers(1, &EBO);
+
+        glBindVertexArray(VAO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(T) * uMaxNumVertices, nullptr, GL_STATIC_DRAW);
+
+        
+        if constexpr (std::is_same_v<T, VertexUV>)
+        {
+            enableAttribPointerf(3);  // position
+            enableAttribPointerf(2);  // uv
+        }
+        if constexpr (std::is_same_v<T, LineVertex>)
+        {
+            enableAttribPointerf(3); // position
+        }
+        else if constexpr (std::is_same_v<T, VertexRGBA>)
+        {
+            enableAttribPointerf(3);  // position
+            enableAttribPointerf(4);  // rgba 
+        }
+        
+    }
+
     StarBatch(const unsigned maxNumVertices, int sbm_index)
     : uMaxNumVertices(maxNumVertices), sbmIndex(sbm_index), uNumOfUsedVertices(0), VAO(0), VBO(0), _config(GL_TRIANGLES, 0)
     {
@@ -70,6 +107,10 @@ public:
         {
             enableAttribPointerf(3);  // position
             enableAttribPointerf(2);  // uv
+        }
+        if constexpr (std::is_same_v<T, LineVertex>)
+        {
+            enableAttribPointerf(2); // position
         }
         else if constexpr (std::is_same_v<T, VertexRGBA>)
         {
@@ -124,42 +165,46 @@ public:
     {
         indices.clear();
 
-        for(int i = 0; i < uNumOfUsedVertices; i += 4)
-        {
-            if(i + 3 < uNumOfUsedVertices)
+        if(_config.uRenderType == GL_TRIANGLES){
+
+            for(int i = 0; i < uNumOfUsedVertices; i += 4)
             {
-                // First triangle
-                indices.push_back(i);
-                indices.push_back(i + 1);
-                indices.push_back(i + 2);
-                
-                // Second triangle
-                indices.push_back(i + 2);
-                indices.push_back(i + 3);
-                indices.push_back(i);
+                if(i + 3 < uNumOfUsedVertices)
+                {
+                    // First triangle
+                    indices.push_back(i);
+                    indices.push_back(i + 1);
+                    indices.push_back(i + 2);
+                    
+                    // Second triangle
+                    indices.push_back(i + 2);
+                    indices.push_back(i + 3);
+                    indices.push_back(i);
 
 
+                }
+            }
+
+
+
+            if(prevIndices != indices)
+            {
+                glBindVertexArray(VAO);
+                glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+                glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
+
+                //std::cout << "Batch Memory Usage: " << uNumOfUsedVertices * sizeof(T) << " Bytes" << "\n";
+
+                prevIndices = indices;
             }
         }
-
-
-
-        if(prevIndices != indices)
-        {
-            glBindVertexArray(VAO);
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-            glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
-
-            //std::cout << "Batch Memory Usage: " << uNumOfUsedVertices * sizeof(T) << " Bytes" << "\n";
-
-            prevIndices = indices;
-        }
+        else glBindVertexArray(VAO);
     }
 
     void render()
     {
         if(uNumOfUsedVertices == 0) return;
-        if(indices.empty()){
+        if(_config.uRenderType != GL_LINES && indices.empty()){
             std::cout << "Run StarBatch.prepareRender() to set indices before calling render()" << "\n";
             return;
         };
@@ -168,7 +213,8 @@ public:
 
 
         glBindVertexArray(VAO);
-        glDrawElements(_config.uRenderType, (GLsizei)indices.size(), GL_UNSIGNED_INT, 0);
+        if(_config.uRenderType == GL_TRIANGLES) glDrawElements(_config.uRenderType, (GLsizei)indices.size(), GL_UNSIGNED_INT, 0);
+        if(_config.uRenderType == GL_LINES) glDrawArrays(GL_LINES, 0, (GLsizei)uNumOfUsedVertices);
     }
 
     bool isEnoughRoom(const unsigned numOfVertices)

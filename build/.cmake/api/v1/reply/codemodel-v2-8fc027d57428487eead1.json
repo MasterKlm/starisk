@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : [],
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-b5805d5c08fd3d92def4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "starisk",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "starisk_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-starisk_core-Debug-da516726bd70c089f468.json",
+					"name" : "starisk_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "starisk_editor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-starisk_editor-Debug-0ae24b11f94de9c8e560.json",
+					"name" : "starisk_editor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "starisk_libtest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-starisk_libtest-Debug-c648d39c4d65d9347dc9.json",
+					"name" : "starisk_libtest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "starisk_vendor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-starisk_vendor-Debug-c2706e805d72fcbaee77.json",
+					"name" : "starisk_vendor",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/starisk/build",
+		"source" : "C:/starisk"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	}
+}

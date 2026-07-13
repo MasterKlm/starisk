@@ -20,19 +20,13 @@ class STARISK_API StarECSManager;
 
 using ComponentId = std::size_t;
 
-inline STARISK_API ComponentId getComponentTypeIDForName(const char* typeName) {
-    static std::unordered_map<std::string, ComponentId> typeMap;
-    static ComponentId counter = 0;
-
-    auto key = std::string(typeName);
-    auto it = typeMap.find(key);
-    if (it != typeMap.end())
-        return it->second;
-
-    ComponentId newId = counter++;
-    typeMap[key] = newId;
-    return newId;
-}
+// Defined once in ecs.cpp (compiled only into starisk_core.dll) so every
+// DLL that calls this -- editor, core, and any loaded project plugin --
+// shares the SAME typeMap/counter instead of each getting its own private
+// copy. That sharing is what the getComponentTypeID<T>() comment below
+// already assumed was happening; previously this was `inline` in the
+// header, which meant it silently was NOT shared.
+STARISK_API ComponentId getComponentTypeIDForName(const char* typeName);
 
 template <typename T>
 inline ComponentId getComponentTypeID()
@@ -94,7 +88,7 @@ public:
     //Entity& operator=(Entity&&) = default;
 
 
-    Entity(){ id = generateUUID(); }
+    Entity(){ id = generateUUID(); componentArray.fill(nullptr); }
     
     ~Entity(){ destroy(); }
 
@@ -146,6 +140,7 @@ public:
     T& getComponent() const
     {
         auto ptr(componentArray[getComponentTypeID<T>()]);
+        assert(ptr != nullptr && "getComponent<T>() called on entity without that component");
         return  *static_cast<T*>(ptr);
     }
 
@@ -176,6 +171,7 @@ public:
     std::vector<std::unique_ptr<Entity>> entities;
     std::vector<std::unique_ptr<System>> systems;
     StarBatchManager* sbm;
+    size_t entityCount = 0;
 
     StarECSManager()
     {
@@ -207,10 +203,13 @@ public:
 
     void refresh()
     {
-        entities.erase(std::remove_if(std::begin(entities), std::end(entities), [](const std::unique_ptr<Entity> &mEntity)
+        entities.erase(std::remove_if(std::begin(entities), std::end(entities), [this](const std::unique_ptr<Entity> &mEntity)
     {
         return !mEntity->isActive();
     }), std::end(entities));
+        entityCount--;
+
+        //if(entityCount != entities.size()) entityCount = entities.size();
     }
 
     template <typename T, typename... Targs>
@@ -234,7 +233,7 @@ public:
         Entity* e = new Entity();
         std::unique_ptr<Entity> uPtr{e};
         entities.emplace_back(std::move(uPtr));
-
+        entityCount++;
         return *e;
     }
 

@@ -38,15 +38,16 @@ public:
         return sem.addSystem<T>(std::forward<Targs>(mArgs)...);
     }
 
-    static void initGLAD(GLADloadproc loaderFunc)
-    {
-        if (!gladLoadGLLoader(loaderFunc)) {
-            std::cout << "[Starisk] GLAD re-init failed\n";
-        } else {
-            std::cout << "[Starisk] GLAD re-init success\n";
-        }
-    }
-        
+    static void initGLAD(GLADloadproc loaderFunc);
+
+    // Syncs *this DLL's* private ImGui global context pointer (GImGui) to the
+    // shared context created by the editor. Must be compiled once into
+    // starisk_core.dll (declared here, defined in Starisk.cpp) -- if this were
+    // inline in the header, every binary that includes Starisk.h would get its
+    // own copy and calling it wouldn't actually set core's copy. Same root
+    // cause as the GLAD issue, just for ImGui's global state instead.
+    static void initImGuiContext(ImGuiContext* ctx);
+
     
     StarQuad CreateQuad(float x_pos, float y_pos, float width, float height, const char* texturePath);
     StarQuad CreateQuad(float x_pos, float y_pos, float width, float height, glm::vec4 rgba);

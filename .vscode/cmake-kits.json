@@ -8,5 +8,15 @@
         "preferredGenerator": {
             "name": "Ninja"
         }
+    },
+    {
+        "name": "GCC",
+        "compilers": {
+            "C": "C:/msys64/ucrt64/bin/gcc.exe",
+            "CXX": "C:/msys64/ucrt64/bin/g++.exe"
+        },
+        "preferredGenerator": {
+            "name": "Ninja"
+        }
     }
 ]

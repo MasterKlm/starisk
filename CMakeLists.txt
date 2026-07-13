@@ -1,6 +1,41 @@
 cmake_minimum_required(VERSION 3.10)
+
+# ─────────────────────────────────────────
+# Force the whole project onto GCC / MinGW-w64.
+# Must be set BEFORE project() to take effect.
+# (Also set your IDE's CMake "kit" to GCC/MinGW —
+#  this alone won't override an IDE kit selection.)
+# ─────────────────────────────────────────
+if(NOT DEFINED CMAKE_C_COMPILER)
+    set(CMAKE_C_COMPILER "C:/msys64/ucrt64/bin/gcc.exe")
+endif()
+if(NOT DEFINED CMAKE_CXX_COMPILER)
+    set(CMAKE_CXX_COMPILER "C:/msys64/ucrt64/bin/g++.exe")
+endif()
+# ^ Hardcoded to the exact same compiler compile_project.bat uses.
+# This matters: if CMake's kit resolves to a *different* MinGW install
+# than the one in compile_project.bat, starisk_core.dll and your
+# compiled project .dll end up linked against two different C++
+# runtimes (libstdc++-6.dll / libgcc_s_seh-1.dll / libwinpthread-1.dll).
+# That mismatch is a classic cause of "works standalone, crashes when
+# the plugin DLL is loaded and called into."
+
 project(starisk)
 set(CMAKE_CXX_STANDARD 17)
+
+# ─────────────────────────────────────────
+# GLFW import library selection
+# GCC/MinGW needs the MinGW-w64 build (libglfw3.a),
+# NOT the MSVC-built glfw3.lib (causes corrupt .drectve
+# warnings and can break linking of dynamically loaded DLLs).
+# Download from glfw.org -> "lib-mingw-w64" and place at
+# lib/mingw/libglfw3.a
+# ─────────────────────────────────────────
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    set(GLFW_LIB ${CMAKE_SOURCE_DIR}/lib/mingw/libglfw3.a)
+else()
+    set(GLFW_LIB ${CMAKE_SOURCE_DIR}/lib/glfw3.lib)
+endif()
 
 # ─────────────────────────────────────────
 # 1. Third-Party Static Library (ImGui & GLAD)
@@ -22,7 +57,7 @@ target_include_directories(starisk_vendor PUBLIC
 )
 
 target_link_libraries(starisk_vendor PUBLIC
-    ${CMAKE_SOURCE_DIR}/lib/glfw3.lib
+    ${GLFW_LIB}
     opengl32
     gdi32
     user32
@@ -33,6 +68,7 @@ target_link_libraries(starisk_vendor PUBLIC
 # ─────────────────────────────────────────
 file(GLOB_RECURSE CORE_SOURCES 
     "src/core/*.cpp"
+    "src/core/ECS/*.cpp"
 )
 
 # Filter out any stray imgui or glad files from the core cpp list
@@ -49,7 +85,7 @@ target_include_directories(starisk_core PUBLIC
 # Link core to vendor so it can use GLAD symbols
 target_link_libraries(starisk_core PUBLIC
     starisk_vendor
-    ${CMAKE_SOURCE_DIR}/lib/glfw3.lib
+    ${GLFW_LIB}
     opengl32
     gdi32
     user32
@@ -79,7 +115,7 @@ target_include_directories(starisk_editor PRIVATE
 target_link_libraries(starisk_editor PRIVATE 
     starisk_core 
     starisk_vendor
-    ${CMAKE_SOURCE_DIR}/lib/glfw3.lib
+    ${GLFW_LIB}
     opengl32
     gdi32
     user32
@@ -105,7 +141,7 @@ target_include_directories(starisk_libtest PRIVATE
 target_link_libraries(starisk_libtest PRIVATE
     starisk_core
     starisk_vendor
-    ${CMAKE_SOURCE_DIR}/lib/glfw3.lib
+    ${GLFW_LIB}
     opengl32
     gdi32
     user32

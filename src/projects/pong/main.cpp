@@ -48,7 +48,7 @@ extern "C" __declspec(dllexport) Starisk* runProject(GLFWwindow* window, ImGuiCo
     ballRay.angle = 60.0f;
     ballRay.findScreenEndPoint(window);
     Entity& player2 = s->CreateEntity(200.0f, 100.0f, 30, 80, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
-    // Entity& player3 = s->CreateEntity(200.0f, 20.0f, 30, 80, glm::vec4(0.5f, 0.3f, 0.8f, 1.0f));
+    //Entity& player3 = s->CreateEntity(200.0f, 20.0f, 30, 80, glm::vec4(0.5f, 0.3f, 0.8f, 1.0f));
     
     player.addComponent<ColliderComponent>("AABB");
     ball.addComponent<ColliderComponent>("AABB");
@@ -58,18 +58,18 @@ extern "C" __declspec(dllexport) Starisk* runProject(GLFWwindow* window, ImGuiCo
     // cs.SetAABBSideEffect([s](std::unique_ptr<Entity>& entity, std::unique_ptr<Entity>& other){
     //     other->quad.changeRGBAColor(0.0f, 1.0f, 0.0f, 1.0f, s);
     // });
-    std::cout << "BallRay x: " << ballRay.p1.x << " BallRay y: " << ballRay.p1.y << "\n";
-    std::cout << "BallRay x: " << ballRay.p2.x << " BallRay y:  " << ballRay.p2.y << "\n";
+    //std::cout << "BallRay x: " << ballRay.p1.x << " BallRay y: " << ballRay.p1.y << "\n";
+    //std::cout << "BallRay x: " << ballRay.p2.x << " BallRay y:  " << ballRay.p2.y << "\n";
     // Entity& s1 = s->CreateEntity(10, 10, 10, 10, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
     // Entity& s2 = s->CreateEntity(100, 50, 10, 10, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
 
-    cs.SetCustomLogic([&ballRay, s, &player, &player2, &ball](){
-        if(ColliderSystem::AABB(player, ball)){
+    cs.SetCustomLogic([s, &ball, &player, &player2](){
+        if(ColliderSystem::AABB(player, player2)){
             auto& playerTransform = player.getComponent<TransformComponent>();
             float playerHeight = player.quad.height;
             float playerCenterY = playerTransform.pos.y + (playerHeight / 2.0f);
-
-            // ballRay.drawPoints(s);
+            
+            ballRay.drawPoints(s);
             // if(ballTransform.pos.y < playerCenterY)
             // {
             //     ballTransform.velocity = StarVec2D(-2.0f, -2.0f); // top half → go up-right

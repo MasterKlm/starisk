@@ -27,6 +27,7 @@ class STARISK_API ColliderSystem : public System
                     for(auto& other : sem->entities)
                     {
                         if(other == e) continue;
+                        if(!other->hasComponent<ColliderComponent>()) continue;
                         if(e->getComponent<ColliderComponent>().tag == std::string("AABB") && other->getComponent<ColliderComponent>().tag == std::string("AABB"))
                         {
                             if(ColliderSystem::AABB(e, other))

@@ -69,7 +69,7 @@ void StariskEditor::createWindow()
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     #endif
 
-    window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Starisk**", nullptr, NULL);
+    window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Starisk** Engine", nullptr, NULL);
 
     if(window == NULL){
         std::cout << "Window creaion failed" << "\n";
@@ -144,9 +144,18 @@ void StariskEditor::closeCurrentProject()
     {
         typedef void(*DestroyProjectFn)(Starisk*);
         DestroyProjectFn destroyProject = (DestroyProjectFn)GetProcAddress(projectDLL, "destroyProject");
-        if(destroyProject && starisk) destroyProject(starisk);
-        starisk = nullptr;
-        if(starisk) {delete starisk; starisk = nullptr;}
+
+        if(destroyProject && starisk != nullptr)
+        {
+            destroyProject(starisk);
+            starisk = nullptr;
+        }
+        else if(starisk)
+        {
+            delete starisk;
+            starisk = nullptr;
+        }
+
         FreeLibrary(projectDLL);
         projectDLL = nullptr;
     }
@@ -161,7 +170,7 @@ void StariskEditor::displayProject(const char* projectPath)
 
     size_t extPos = outputPath.find_last_of(".");
     if (extPos != std::string::npos) {
-        outputPath = outputPath.substr(0, extPos) + ".dll";
+        outputPath = outputPath.substr(0, extPos) + ".dll"; // project filename.dll
     }
 
     SetEnvironmentVariableA("STARISK_SRC", sourcePath.c_str());
@@ -197,6 +206,8 @@ void StariskEditor::displayProject(const char* projectPath)
         glfwMakeContextCurrent(window);
         std::cout << "[DEBUG] Re-initializing GLAD in starisk_core...\n";
         Starisk::initGLAD((GLADloadproc)glfwGetProcAddress);
+        std::cout << "[DEBUG] Syncing ImGui context in starisk_core...\n";
+        Starisk::initImGuiContext(ctx);
         std::cout << "[DEBUG] Creating Starisk...\n";
         starisk = runProject(window, ctx);
         StariskSettings::WINDOW_WIDTH = gameViewWidth; 

@@ -1,11 +1,25 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "GCC",
             "includePath": [
                 "${workspaceFolder}/include",
                 "${workspaceFolder}/include/imgui",
-                "${workspaceFolder}/include/imgui/backends"
+                "${workspaceFolder}/include/imgui/backends",
+                "${workspaceFolder}/src"
+            ],
+            "defines": [],
+            "compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        },
+        {
+            "name": "Clang",
+            "includePath": [
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include/imgui",
+                "${workspaceFolder}/include/imgui/backends",
                 "${workspaceFolder}/src"
             ],
             "defines": [],

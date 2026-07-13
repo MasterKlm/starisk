@@ -21,6 +21,20 @@ Starisk::Starisk(GLFWwindow* existingWindow)
     std::cout << "[DEBUG] initStariskBaseSystems done\n";
 }
 
+void Starisk::initGLAD(GLADloadproc loaderFunc)
+{
+    if (!gladLoadGLLoader(loaderFunc)) {
+        std::cout << "[Starisk] GLAD re-init failed\n";
+    } else {
+        std::cout << "[Starisk] GLAD re-init success\n";
+    }
+}
+
+void Starisk::initImGuiContext(ImGuiContext* ctx)
+{
+    ImGui::SetCurrentContext(ctx);
+}
+
 void Starisk::init()
 {
     //intialize glfw

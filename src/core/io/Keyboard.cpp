@@ -7,9 +7,12 @@ void Keyboard::keyCallback(GLFWwindow *window, int key, int scancode, int action
 {
     if(action != GLFW_RELEASE)
     {
-        if(!keys[key])
-        {
-            keys[key] = true;
+        if(key >= 0 && key < GLFW_KEY_LAST){
+
+            if(!keys[key])
+            {
+                keys[key] = true;
+            }
         }
     }
     else

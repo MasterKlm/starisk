@@ -6,6 +6,8 @@
 #include "imgui/backends/imgui_impl_glfw.h"
 #include "imgui/backends/imgui_impl_opengl3.h"
 #include <string>
+#include <stack>
+#include "../core/StarUtils.h"
 #include <istream>
 #include <fstream>
 #include <windows.h>
@@ -33,6 +35,9 @@ public:
     void displayProject(const char* projectPath);
     void mainLoop();
     void processInput();
+
+
+    void selectGameProjectUI();
 
 };
 

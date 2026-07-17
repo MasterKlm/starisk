@@ -171,6 +171,15 @@ StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height
     return quad;
 }
 
+
+StarLine Starisk::CreateLine(StarVec2D p1, StarVec2D p2)
+{
+    StarLine line(p1, p2);
+    line.sbm_data = sbm->drawLine(line.p1, line.p2, StariskSettings::WINDOW_WIDTH, StariskSettings::WINDOW_HEIGHT);
+
+    return line;
+}
+
 void Starisk::injectKeyEvent(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
     Keyboard::keyCallback(window, key, scancode, action, mods);

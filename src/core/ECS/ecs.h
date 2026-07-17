@@ -155,7 +155,7 @@ public:
 
     System(){}
     
-    virtual ~System(){}
+    virtual ~System() = default;
 
     virtual void init(){}
     virtual void update(StarECSManager* sem, StarBatchManager* sbm){}

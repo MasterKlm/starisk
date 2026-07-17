@@ -73,7 +73,7 @@ public:
         }
         if constexpr (std::is_same_v<T, LineVertex>)
         {
-            enableAttribPointerf(3); // position
+            enableAttribPointerf(2); // position
         }
         else if constexpr (std::is_same_v<T, VertexRGBA>)
         {
@@ -271,6 +271,16 @@ public:
                         startIndex * sizeof(T),      
                         newVertices.size() * sizeof(float),
                         &newVertices[0]);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+    }
+
+    void updateVertices(int startIndex, const std::vector<LineVertex>& lines)
+    {
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferSubData(GL_ARRAY_BUFFER,
+                        startIndex * sizeof(T),      
+                        lines.size() * sizeof(T),
+                        &lines[0]);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
     

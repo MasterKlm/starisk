@@ -5,10 +5,9 @@
 
 StarBatchManager::StarBatchManager()
 {
-    int id = getBatchId();
-    uvBatch.emplace_back(StarBatch<VertexUV>(1000, id, GL_TRIANGLES));
-    colorBatch.emplace_back(StarBatch<VertexRGBA>(1000, id, GL_TRIANGLES));
-    lineBatch.emplace_back(StarBatch<LineVertex>(1000, id, GL_LINES));
+    uvBatch.emplace_back(StarBatch<VertexUV>(1000, 0, GL_TRIANGLES));
+    colorBatch.emplace_back(StarBatch<VertexRGBA>(1000, 0, GL_TRIANGLES));
+    lineBatch.emplace_back(StarBatch<LineVertex>(1000, 0 , GL_LINES));
     //set atlas texture
     uvShader.activate();
     uvShader.setInt("u_Atlas", 0);
@@ -16,29 +15,8 @@ StarBatchManager::StarBatchManager()
 
 StarBatchManager::~StarBatchManager()
 {
-    // for(auto b : uvBatch)
-    // {
-    //     b.~StarBatch();
-    // }
 
-    // for(auto b : colorBatch)
-    // {
-    //     b.~StarBatch();
-    // }
 }
-
-
-int StarBatchManager::getBatchId()
-{
-    //std::cout << "called getBatchId()" << "\n";/900
-    static int lastId = 0;
-    return lastId++;
-}
-
-// int StarBatchManager::getGroupBatchId()
-// {
-
-// }
 
 SBM_DATA StarBatchManager::add(const std::vector<float> &v)
 {
@@ -78,11 +56,7 @@ SBM_DATA StarBatchManager::add(const std::vector<float> &v)
 
 }
 
-SBM_DATA StarBatchManager::add(const LineVertex &line)
-{
-    SBM_DATA ret = allocate(line);
-    return ret;
-}
+
 SBM_DATA StarBatchManager::allocate(const std::vector<VertexUV> &v) noexcept
 {
     
@@ -92,15 +66,6 @@ SBM_DATA StarBatchManager::allocate(const std::vector<VertexUV> &v) noexcept
     return data;
 }
 
-SBM_DATA StarBatchManager::allocate(const LineVertex &line) noexcept
-{
-    
-    std::vector<LineVertex> lines;
-    lines.push_back(line);
-    SBM_DATA data = lineBatch.back().add(lines);
-    
-    return data;
-}
 
 void StarBatchManager::move(std::vector<float> newVertices, SBM_DATA sbm_data)
 {
@@ -116,6 +81,12 @@ void StarBatchManager::move(std::vector<float> newVertices, SBM_DATA sbm_data)
         colorBatch[sbm_data.starBatchIndex].updateVertices(sbm_data.startBufferIndex, newVertices);
     }
 }
+
+void StarBatchManager::move(std::vector<LineVertex> lines, SBM_DATA sbm_data)
+{
+    lineBatch[sbm_data.starBatchIndex].updateVertices(sbm_data.startBufferIndex, lines);
+}
+
 
 
 
@@ -147,22 +118,19 @@ void StarBatchManager::createNewBatchesIfNeeded()
     
     if(lastUvBatch.uNumOfUsedVertices == lastUvBatch.uMaxNumVertices)
     {
-        int id = getBatchId();
-        //if((id + 1) >= (int)uvBatch.size()) id--;
-
+        // Use the current size as the next index
+        int id = (int)uvBatch.size();
         uvBatch.emplace_back(StarBatch<VertexUV>(1000, id));
-
     }
     
     if(lastColorBatch.uNumOfUsedVertices == lastColorBatch.uMaxNumVertices)
     {
-        int id = getBatchId();
-        //if((id + 1) >= (int)uvBatch.size()) id--;
+        int id = (int)colorBatch.size();
         colorBatch.emplace_back(StarBatch<VertexRGBA>(1000, id));
     }
 
     if(lastLineBatch.uNumOfUsedVertices == lastLineBatch.uMaxNumVertices){
-        int id = getBatchId();
+        int id = (int)lineBatch.size();
         lineBatch.emplace_back(StarBatch<LineVertex>(1000, id, GL_LINES));
     }
 
@@ -171,7 +139,7 @@ void StarBatchManager::createNewBatchesIfNeeded()
 }
 
 
-void StarBatchManager::drawLine(StarVec2D p1, StarVec2D p2, int window_width, int window_height)
+SBM_DATA StarBatchManager::drawLine(StarVec2D p1, StarVec2D p2, int window_width, int window_height)
 {
     float nx1 = (p1.x / window_width) * 2.0f - 1.0f;
     float ny1 = 1.0f - (p1.y / window_height) * 2.0f;
@@ -179,7 +147,8 @@ void StarBatchManager::drawLine(StarVec2D p1, StarVec2D p2, int window_width, in
     float ny2 = 1.0f - (p2.y / window_height) * 2.0f;
 
     std::vector<LineVertex> verts = { {nx1, ny1}, {nx2, ny2} };
-    lineBatch.back().add(verts);
+    SBM_DATA data = lineBatch.back().add(verts);
+    return data;
 }
 
 void StarBatchManager::update()
@@ -215,6 +184,7 @@ void StarBatchManager::update()
         lb.prepareRender();
         lineShader.activate();
         lb.render();
+        totalBatchMemory_LineVertex += lb.uNumOfUsedVertices;
     }
 
     if(totalBatchMemory_VertexUV != prevTotalBatchMemory_VertexUV) std::cout << "Total Vertex UV Batches GPU Memory Usage: " << totalBatchMemory_VertexUV * sizeof(VertexUV) << " Bytes" << "\n";

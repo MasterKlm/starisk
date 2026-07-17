@@ -161,6 +161,59 @@ void StariskEditor::closeCurrentProject()
     }
 }
 
+
+void StariskEditor::selectGameProjectUI()
+{
+    std::string rootProjectsPath = std::filesystem::absolute("./src/projects/").string();
+    static std::string selectedPath = rootProjectsPath;
+    static std::stack<std::string> prevPathsStack;
+    prevPathsStack.push(rootProjectsPath);
+    static std::vector<std::string> paths = getChildPaths(rootProjectsPath);
+
+    ImGui::Begin("Files");
+
+    ImGui::PushStyleColor(ImGuiCol_Header,        IM_COL32(0, 0, 0, 0));
+    ImGui::PushStyleColor(ImGuiCol_HeaderHovered, IM_COL32(50, 100, 200, 80));
+    ImGui::PushStyleColor(ImGuiCol_HeaderActive,  IM_COL32(50, 100, 200, 120));
+
+    
+    for(auto& p : paths){
+        if(ImGui::Selectable(p.c_str())){
+            if(std::filesystem::is_directory(std::filesystem::path(p))){
+                paths = getChildPaths(p);
+                prevPathsStack.push(p);
+                selectedPath = p + "\\main.cpp";
+
+            }
+            
+        }
+    }
+
+    ImGui::PopStyleColor(3);
+
+    if(ImGui::Button("Back")){
+        if(prevPathsStack.size() > 0){
+            std::string prevPath = prevPathsStack.top();
+            std::cout << prevPath << "\n";
+            paths = getChildPaths(prevPath);
+            prevPathsStack.pop();
+        }
+    }
+    ImGui::SameLine();
+
+    
+    std::string currentDisplayedPathMessage = "Open Project: " +  selectedPath;
+    if(ImGui::Button(currentDisplayedPathMessage.c_str()))
+    {
+        if(!selectedPath.empty()) displayProject(selectedPath.c_str());
+    }
+    if(ImGui::Button("Close Project", ImVec2(95, 20)))
+    {
+        closeCurrentProject();
+    }
+    ImGui::End();
+}
+
 void StariskEditor::displayProject(const char* projectPath)
 {
     closeCurrentProject();
@@ -176,7 +229,7 @@ void StariskEditor::displayProject(const char* projectPath)
     SetEnvironmentVariableA("STARISK_SRC", sourcePath.c_str());
     SetEnvironmentVariableA("STARISK_OUT", outputPath.c_str());
 
-    int result = std::system("compile_project.bat");
+    int result = std::system(std::filesystem::absolute("compile_project.bat").string().c_str());
 
     if (result != 0)
     {
@@ -200,6 +253,9 @@ void StariskEditor::displayProject(const char* projectPath)
 
     typedef Starisk*(*RunProjectFn)(GLFWwindow*, ImGuiContext*);
     RunProjectFn runProject = (RunProjectFn)GetProcAddress(projectDLL, "runProject");
+    
+    StariskSettings::WINDOW_WIDTH = gameViewWidth; 
+    StariskSettings::WINDOW_HEIGHT = gameViewHeight;
 
     if(runProject)
     {
@@ -297,17 +353,8 @@ void StariskEditor::mainLoop()
             ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
             ImGui::End();
 
-            ImGui::Begin("Files");
-            if(ImGui::Button("Open Project", ImVec2(95, 20)))
-            {
-                displayProject("./src/projects/pong/main.cpp");
-            }
-            if(ImGui::Button("Close Project", ImVec2(95, 20)))
-            {
-                closeCurrentProject();
-            }
-            ImGui::End();
 
+            selectGameProjectUI();
            
             ImGui::Render();
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

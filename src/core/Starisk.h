@@ -17,6 +17,7 @@
 #include "ECS/systems.h"
 #include "StariskExport.h"
 #include "imgui/imgui.h"
+#include "StarLine.h"
 
 class STARISK_API Starisk
 {
@@ -51,6 +52,7 @@ public:
     
     StarQuad CreateQuad(float x_pos, float y_pos, float width, float height, const char* texturePath);
     StarQuad CreateQuad(float x_pos, float y_pos, float width, float height, glm::vec4 rgba);
+    StarLine CreateLine(StarVec2D p1, StarVec2D p2);
 
     Entity& CreateEntity(float xpos, float ypos, int width, int height, const char* texturePath);
     Entity& CreateEntity(float xpos, float ypos, int width, int height); //default texture placeholder

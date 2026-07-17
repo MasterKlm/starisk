@@ -2,7 +2,7 @@
 #include <string>
 #include <unordered_map>
 
-ComponentId getComponentTypeIDForName(const char* typeName)
+STARISK_API ComponentId getComponentTypeIDForName(const char* typeName)
 {
     static std::unordered_map<std::string, ComponentId> typeMap;
     static ComponentId counter = 0;

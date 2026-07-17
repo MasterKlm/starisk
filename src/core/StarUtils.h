@@ -7,6 +7,8 @@
 #include "glm/common.hpp"
 #include <random>
 #include <sstream>
+#include <filesystem>
+#include <string>
 #include <iomanip>
 #include "StariskExport.h"
 
@@ -100,6 +102,17 @@ inline std::vector<float> calcStarQuadVertFromfWidth(float x, float y, float w, 
     };
 
     return vertices;
+}
+
+
+inline std::vector<std::string> getChildPaths(std::string& currentDir){
+    std::vector<std::string> dirItems;
+    for(auto& entry : std::filesystem::directory_iterator(currentDir)){
+        dirItems.push_back(entry.path().string());
+    }
+
+    return dirItems;
+
 }
 
 #endif

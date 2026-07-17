@@ -9,6 +9,7 @@
 #include "../ecs.h"
 #include "../../StariskExport.h"
 #include "imgui/imgui.h"
+#include <functional>
 
 class STARISK_API KeyboardMovementSystem : public System
 {
@@ -17,6 +18,10 @@ public:
     KeyboardMovementSystem(ImGuiContext* ctx)
     {
         ImGui::SetCurrentContext(ctx);
+    }
+
+    static void setKeyboardMovementComponentCustomLogic(KeyboardMovementComponent& kmc, std::function<void()> fn){
+        kmc.customLogic = fn;
     }
 
     // Signature MUST match base class exactly
@@ -42,13 +47,12 @@ public:
             // std::cout << "[KMS] kmc.active=" << kmc.active << " W=" << Keyboard::key(GLFW_KEY_W) << "\n";
 
 
-            auto& transform = entity->getComponent<TransformComponent>();
 
             if (!kmc.active) continue;
+            auto& transform = entity->getComponent<TransformComponent>();
 
-            // Keyboard::key() reads from starisk_core's static array,
-            // which chained_key_callback already keeps updated
-            // if (Keyboard::key(GLFW_KEY_SPACE)) std::cout << "Space pressed" << "\n";
+            if(kmc.customLogic != NULL) { kmc.customLogic(); continue; }
+
             if (Keyboard::key(GLFW_KEY_W)){
                 transform.pos.y -= (float)(1 * transform.speed);
                 // std::cout << "[KMS] new transform.y = " << transform.y << "\n"; 
@@ -56,6 +60,8 @@ public:
             if (Keyboard::key(GLFW_KEY_S)) transform.pos.y += (float)(1 * transform.speed);
             if (Keyboard::key(GLFW_KEY_D)) transform.pos.x += (float)(1 * transform.speed);
             if (Keyboard::key(GLFW_KEY_A)) transform.pos.x -= (float)(1 * transform.speed);
+
+            
         }
     }
 };

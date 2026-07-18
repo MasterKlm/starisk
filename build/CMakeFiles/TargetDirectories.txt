@@ -1,6 +1,0 @@
-C:/starisk/build/CMakeFiles/starisk_vendor.dir
-C:/starisk/build/CMakeFiles/starisk_core.dir
-C:/starisk/build/CMakeFiles/starisk_editor.dir
-C:/starisk/build/CMakeFiles/starisk_libtest.dir
-C:/starisk/build/CMakeFiles/edit_cache.dir
-C:/starisk/build/CMakeFiles/rebuild_cache.dir

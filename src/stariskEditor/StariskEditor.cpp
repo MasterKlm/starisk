@@ -236,12 +236,33 @@ void StariskEditor::displayProject(const char* projectPath)
 
     if (result != 0)
     {
-        std::string message = "Compilation failed for: " + std::string(projectPath);
-        popupMessagesStack.push(message);
+        std::string message = std::string(projectPath);
+        size_t projectsPos = message.find("projects\\");
+        if (projectsPos != std::string::npos)
+        {
+            message = "Compilation failed for: " + message.substr(projectsPos);
+        }
+        const size_t maxLen = 40; 
+        if (message.size() > maxLen)
+        {
+            message = message.substr(0, maxLen) + "...";
+        }
+
+        addPopupMessage(message);
         return;
     }
 
-    std::cout << "Compilation successful! Loading " << outputPath << "...\n";
+    std::string compileSuccessMessage = std::string(outputPath);
+    size_t projectPos = compileSuccessMessage.find("projects\\");
+    if(projectPos != std::string::npos){
+        size_t gameNameStartPos = projectPos + std::string("projects\\").size();
+        size_t gameNameEndPos = compileSuccessMessage.find("\\main.dll");
+        if(gameNameEndPos != std::string::npos){
+            compileSuccessMessage = "Opened Game: " + compileSuccessMessage.substr(gameNameStartPos, gameNameEndPos - gameNameStartPos);
+
+        }
+    }
+    addPopupMessage(compileSuccessMessage);
     Sleep(500);
 
     // FIX 2: Convert relative path to absolute path for LoadLibraryA
@@ -393,18 +414,21 @@ void StariskEditor::showPopups()
     for(size_t i = 0; i < popupMessagesStack.size(); i++){
         const std::string id = "Popup##" + popupMessagesStack.top();
         ImGui::OpenPopup(id.c_str());
-        ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - 100, WINDOW_HEIGHT - 50));
+        ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - 400, WINDOW_HEIGHT - 50));
         if(ImGui::BeginPopup(id.c_str())){
-            ImGui::Text("%s ", popupMessagesStack.top());
+            ImGui::Text("%s ", popupMessagesStack.top().c_str());
             ImGui::SameLine();
             if (ImGui::Button("OK"))
+            {
                 popupMessagesStack.pop();
                 ImGui::CloseCurrentPopup();
+            }
             ImGui::EndPopup();
         }
     }
 }
 
+void StariskEditor::addPopupMessage(std::string msg){ popupMessagesStack.push(msg); }
 
 StariskEditor::~StariskEditor()
 {

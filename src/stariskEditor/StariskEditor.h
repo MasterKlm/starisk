@@ -39,6 +39,7 @@ public:
     void processInput();
     void showPopups();
 
+    void addPopupMessage(std::string msg);
 
     void selectGameProjectUI();
 

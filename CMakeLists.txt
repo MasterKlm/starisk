@@ -6,12 +6,8 @@ cmake_minimum_required(VERSION 3.10)
 # (Also set your IDE's CMake "kit" to GCC/MinGW —
 #  this alone won't override an IDE kit selection.)
 # ─────────────────────────────────────────
-if(NOT DEFINED CMAKE_C_COMPILER)
-    set(CMAKE_C_COMPILER "C:/msys64/ucrt64/bin/gcc.exe")
-endif()
-if(NOT DEFINED CMAKE_CXX_COMPILER)
-    set(CMAKE_CXX_COMPILER "C:/msys64/ucrt64/bin/g++.exe")
-endif()
+set(CMAKE_C_COMPILER "C:/msys64/ucrt64/bin/gcc.exe")
+set(CMAKE_CXX_COMPILER "C:/msys64/ucrt64/bin/g++.exe")
 # ^ Hardcoded to the exact same compiler compile_project.bat uses.
 # This matters: if CMake's kit resolves to a *different* MinGW install
 # than the one in compile_project.bat, starisk_core.dll and your
@@ -31,11 +27,8 @@ set(CMAKE_CXX_STANDARD 17)
 # Download from glfw.org -> "lib-mingw-w64" and place at
 # lib/mingw/libglfw3.a
 # ─────────────────────────────────────────
-if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-    set(GLFW_LIB ${CMAKE_SOURCE_DIR}/lib/mingw/libglfw3.a)
-else()
-    set(GLFW_LIB ${CMAKE_SOURCE_DIR}/lib/glfw3.lib)
-endif()
+set(GLFW_LIB ${CMAKE_SOURCE_DIR}/lib/mingw/libglfw3.a)
+
 
 # ─────────────────────────────────────────
 # 1. Third-Party Static Library (ImGui & GLAD)

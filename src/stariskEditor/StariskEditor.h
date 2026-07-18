@@ -11,7 +11,8 @@
 #include <istream>
 #include <fstream>
 #include <windows.h>
-
+#include <chrono>
+#include <thread>
 
 class StariskEditor
 {
@@ -25,6 +26,7 @@ public:
     GLuint gameFramebuffer = 0;
     GLuint gameColorTexture = 0;
     int gameViewWidth = 800, gameViewHeight = 600;
+    std::stack<std::string> popupMessagesStack;
 
     // StariskEditor();
     ~StariskEditor();
@@ -35,6 +37,7 @@ public:
     void displayProject(const char* projectPath);
     void mainLoop();
     void processInput();
+    void showPopups();
 
 
     void selectGameProjectUI();

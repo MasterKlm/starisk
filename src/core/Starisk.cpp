@@ -1,6 +1,10 @@
 #include "Starisk.h"
 
-    
+const double targetFPS = 60.0;
+const auto targetFrameTime = std::chrono::duration<double>(1.0 / targetFPS);
+
+
+   
 
 Starisk::Starisk()
 {
@@ -205,6 +209,7 @@ void Starisk::mainLoop(std::function<void()> fn, bool isEditor)
 
     while(!glfwWindowShouldClose(window))
     {
+        auto frameStart = std::chrono::high_resolution_clock::now();
         processInput();
 
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -214,6 +219,16 @@ void Starisk::mainLoop(std::function<void()> fn, bool isEditor)
         sem.update(sbm);
         fn();
 
+
+        auto frameEnd = std::chrono::high_resolution_clock::now();
+        auto elapsed = frameEnd - frameStart;
+
+        if (elapsed < targetFrameTime)
+        {
+            std::this_thread::sleep_for(targetFrameTime - elapsed);
+        }
+
+        
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
@@ -243,6 +258,7 @@ void Starisk::mainLoop(bool isEditor)
     // Standalone mode
     while(!glfwWindowShouldClose(window))
     {
+        auto frameStart = std::chrono::high_resolution_clock::now();
         processInput();
 
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -250,6 +266,14 @@ void Starisk::mainLoop(bool isEditor)
 
         sbm->update();
         sem.update(sbm);
+
+        auto frameEnd = std::chrono::high_resolution_clock::now();
+        auto elapsed = frameEnd - frameStart;
+
+        if (elapsed < targetFrameTime)
+        {
+            std::this_thread::sleep_for(targetFrameTime - elapsed);
+        }
 
         glfwSwapBuffers(window);
         glfwPollEvents();

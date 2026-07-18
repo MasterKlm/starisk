@@ -1,6 +1,8 @@
 #include "StariskEditor.h"
 #include "../core/Starisk.h"
 
+const double targetFPS = 60.0;
+const auto targetFrameTime = std::chrono::duration<double>(1.0 / targetFPS);
 
 
 
@@ -78,6 +80,7 @@ void StariskEditor::createWindow()
     }
 
     glfwMakeContextCurrent(window);
+
 
     if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
         std::cout << "Failed to initialize glad" << '\n';
@@ -233,7 +236,8 @@ void StariskEditor::displayProject(const char* projectPath)
 
     if (result != 0)
     {
-        std::cout << "Compilation failed for: " << projectPath << "\n";
+        std::string message = "Compilation failed for: " + std::string(projectPath);
+        popupMessagesStack.push(message);
         return;
     }
 
@@ -296,77 +300,86 @@ void StariskEditor::initGameFramebuffer(int w, int h)
 
 void StariskEditor::mainLoop()
 {
-    while(!glfwWindowShouldClose(window))
-        {
-            //proccess input
-            processInput();
+    while(!glfwWindowShouldClose(window)){
+        auto frameStart = std::chrono::high_resolution_clock::now();
+        //proccess input
+        processInput();
 
-            //render
-            glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        //render
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        //render
+        // Render game into FBO
+        if (starisk != nullptr) {
+            glBindFramebuffer(GL_FRAMEBUFFER, gameFramebuffer);
+            glViewport(0, 0, gameViewWidth, gameViewHeight);
+            glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            ImGui_ImplOpenGL3_NewFrame();
-            ImGui_ImplGlfw_NewFrame();
-            ImGui::NewFrame();
+            starisk->mainLoop(true);
 
-            //render
-            // Render game into FBO
-            if (starisk != nullptr) {
-                glBindFramebuffer(GL_FRAMEBUFFER, gameFramebuffer);
-                glViewport(0, 0, gameViewWidth, gameViewHeight);
-                glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-                glClear(GL_COLOR_BUFFER_BIT);
-
-                starisk->mainLoop(true);
-
-                glBindFramebuffer(GL_FRAMEBUFFER, 0);
-                glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-            }
-
-
-           
-            ImGui::SetNextWindowPos(ImVec2(0,0));
-            ImGui::Begin("Game View");
-            if(starisk != nullptr){
-
-                ImGui::Image((ImTextureID)(intptr_t)gameColorTexture,
-                        ImVec2(gameViewWidth, gameViewHeight),
-                        ImVec2(0,1), ImVec2(1,0)); // flipped UV because OpenGL
-            }
-            ImGui::End();
-
-        
-            ImGui::SetNextWindowPos(ImVec2(0,WINDOW_HEIGHT - (WINDOW_HEIGHT * 0.30)));
-            ImGui::SetNextWindowSize(ImVec2(WINDOW_WIDTH, (WINDOW_HEIGHT * 0.30)));
-            ImGui::Begin("DockSpace", nullptr, 
-                ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove |
-                ImGuiWindowFlags_NoResize   | ImGuiWindowFlags_NoBringToFrontOnFocus
-            );
-                ImGui::DockSpace(ImGui::GetID("MyDockspace"), ImVec2(0,0));
-            ImGui::End();
-                
-            // int debugPanelWidth = WINDOW_WIDTH * 0.10;
-            // ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - debugPanelWidth,0));
-            // ImGui::SetNextWindowSize(ImVec2(debugPanelWidth,0));
-
-            ImGui::Begin("Debug");
-            ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
-            ImGui::End();
-
-
-            selectGameProjectUI();
-           
-            ImGui::Render();
-            ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-        
-
-
-
-            glfwSwapBuffers(window);
-            glfwPollEvents();
-
-
+            glBindFramebuffer(GL_FRAMEBUFFER, 0);
+            glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         }
+
+
+        
+        ImGui::SetNextWindowPos(ImVec2(0,0));
+        ImGui::Begin("Game View");
+        if(starisk != nullptr){
+
+            ImGui::Image((ImTextureID)(intptr_t)gameColorTexture,
+                    ImVec2(gameViewWidth, gameViewHeight),
+                    ImVec2(0,1), ImVec2(1,0)); // flipped UV because OpenGL
+        }
+        ImGui::End();
+
+    
+        ImGui::SetNextWindowPos(ImVec2(0,WINDOW_HEIGHT - (WINDOW_HEIGHT * 0.30)));
+        ImGui::SetNextWindowSize(ImVec2(WINDOW_WIDTH, (WINDOW_HEIGHT * 0.30)));
+        ImGui::Begin("DockSpace", nullptr, 
+            ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove |
+            ImGuiWindowFlags_NoResize   | ImGuiWindowFlags_NoBringToFrontOnFocus
+        );
+            ImGui::DockSpace(ImGui::GetID("MyDockspace"), ImVec2(0,0));
+        ImGui::End();
+            
+        // int debugPanelWidth = WINDOW_WIDTH * 0.10;
+        // ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - debugPanelWidth,0));
+        // ImGui::SetNextWindowSize(ImVec2(debugPanelWidth,0));
+
+        ImGui::Begin("Debug");
+        ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
+        ImGui::End();
+
+
+        selectGameProjectUI();
+        showPopups();
+        
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    
+
+
+        auto frameEnd = std::chrono::high_resolution_clock::now();
+        auto elapsed = frameEnd - frameStart;
+
+        if (elapsed < targetFrameTime)
+        {
+            std::this_thread::sleep_for(targetFrameTime - elapsed);
+        }
+
+
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+
+
+    }
 
         
 
@@ -375,6 +388,22 @@ void StariskEditor::mainLoop()
 }
 
 
+void StariskEditor::showPopups()
+{
+    for(size_t i = 0; i < popupMessagesStack.size(); i++){
+        const std::string id = "Popup##" + popupMessagesStack.top();
+        ImGui::OpenPopup(id.c_str());
+        ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - 100, WINDOW_HEIGHT - 50));
+        if(ImGui::BeginPopup(id.c_str())){
+            ImGui::Text("%s ", popupMessagesStack.top());
+            ImGui::SameLine();
+            if (ImGui::Button("OK"))
+                popupMessagesStack.pop();
+                ImGui::CloseCurrentPopup();
+            ImGui::EndPopup();
+        }
+    }
+}
 
 
 StariskEditor::~StariskEditor()

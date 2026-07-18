@@ -1,15 +1,5 @@
 [
-    {
-        "name": "Clang",
-        "compilers": {
-            "C": "C:/Program Files/LLVM/bin/clang.exe",
-            "CXX": "C:/Program Files/LLVM/bin/clang++.exe"
-        },
-        "preferredGenerator": {
-            "name": "Ninja"
-        }
-    },
-    {
+   {
         "name": "GCC",
         "compilers": {
             "C": "C:/msys64/ucrt64/bin/gcc.exe",

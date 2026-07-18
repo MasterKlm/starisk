@@ -17,6 +17,8 @@
 #include "ECS/systems.h"
 #include "StariskExport.h"
 #include "imgui/imgui.h"
+#include <chrono>
+#include <thread>
 #include "StarLine.h"
 
 class STARISK_API Starisk

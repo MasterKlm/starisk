@@ -1,4 +1,6 @@
 #include <iostream>
+#include <thread>
+#include <chrono>
 #include "../core/Starisk.h"
 #include "../core/ecs/components.h"
 #include "imgui/imgui.h"
@@ -103,11 +105,12 @@ extern "C" __declspec(dllexport) Starisk* runProject(GLFWwindow* window, ImGuiCo
                 ballRay->setAngle(-60.f);
             }
             
-            for(float i = 0.0f; i < 1.0f; i+=0.00000001f){
+            for(float i = 0.0f; i < 1.0f; i+=0.0001f){
 
                 float newBallX = ballRay->p1.x + i * (ballRay->p2.x - ballRay->p1.x);
                 float newBallY = ballRay->p1.y + i * (ballRay->p2.y - ballRay->p1.y);
                 ballTransform.pos = StarVec2D(newBallX, newBallY);
+                
             }
 
             ballRay->findScreenEndPoint();

@@ -13,21 +13,8 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-gcc-x64"
-        },
-        {
-            "name": "Clang",
-            "includePath": [
-                "${workspaceFolder}/include",
-                "${workspaceFolder}/include/imgui",
-                "${workspaceFolder}/include/imgui/backends",
-                "${workspaceFolder}/src"
-            ],
-            "defines": [],
-            "compilerPath": "C:/Program Files/LLVM/bin/clang++.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-clang-x64"
         }
+       
     ],
     "version": 4
 }

@@ -157,6 +157,38 @@ Entity& Starisk::CreateEntity(float xpos, float ypos, int width, int height,  gl
     
 }
 
+
+Entity& Starisk::CreateEntity(float xpos, float ypos, int width, int height, const char* texturePath, float speed)
+{   
+    
+    Entity& e = sem.addEntity();
+    e.addComponent<TransformComponent>(xpos, ypos, speed);
+    e.quad = CreateQuad(xpos, ypos, width, height, texturePath);
+    return e;
+    
+}
+
+Entity& Starisk::CreateEntity(float xpos, float ypos, int width, int height, float speed)
+{   
+    
+    Entity& e = sem.addEntity();
+    const char* t = "assets/img/texture_placeholder.png";
+    e.addComponent<TransformComponent>(xpos, ypos, speed);
+    e.quad = CreateQuad(xpos, ypos, width, height, t);
+    return e;
+    
+}
+
+Entity& Starisk::CreateEntity(float xpos, float ypos, int width, int height,  glm::vec4 rgba, float speed)
+{   
+    
+    Entity& e = sem.addEntity();
+    e.addComponent<TransformComponent>(xpos, ypos, speed);
+    e.quad = CreateQuad(xpos, ypos, width, height, rgba);
+    return e;
+    
+}
+
 StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height, const char* texturePath)
 {
     StarQuad quad{x_pos, y_pos, width, height, texturePath};

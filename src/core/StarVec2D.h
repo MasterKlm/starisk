@@ -15,15 +15,23 @@ class STARISK_API StarVec2D
 
     StarVec2D& operator+=(const StarVec2D& other); 
     StarVec2D operator+(const StarVec2D& other) const;
+    StarVec2D operator+=(const float val);
+    StarVec2D operator+(const float val);
 
     StarVec2D& operator-=(const StarVec2D& other);
     StarVec2D operator-(const StarVec2D& other) const;
+    StarVec2D operator-=(const float val);
+    StarVec2D operator-(const float val);
 
     StarVec2D& operator*=(const StarVec2D& other);
     StarVec2D operator*(const StarVec2D& other) const;
+    StarVec2D operator*=(const float val);
+    StarVec2D operator*(const float val);
     
     StarVec2D& operator/=(const StarVec2D& other);
     StarVec2D operator/(const StarVec2D& other) const;
+    StarVec2D operator/=(const float val);
+    StarVec2D operator/(const float val);
 
 
     

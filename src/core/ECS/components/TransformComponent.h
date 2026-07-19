@@ -21,7 +21,7 @@ public:
     {
         pos.x = xpos;
         pos.y = ypos;
-        speed = speed;
+        this->speed = speed;
     }
 
 };

@@ -59,6 +59,11 @@ public:
     Entity& CreateEntity(float xpos, float ypos, int width, int height, const char* texturePath);
     Entity& CreateEntity(float xpos, float ypos, int width, int height); //default texture placeholder
     Entity& CreateEntity(float xpos, float ypos, int width, int height, glm::vec4 rgba);
+
+    Entity& CreateEntity(float xpos, float ypos, int width, int height, const char* texturePath, float speed);
+    Entity& CreateEntity(float xpos, float ypos, int width, int height, float speed); //default texture placeholder
+    Entity& CreateEntity(float xpos, float ypos, int width, int height, glm::vec4 rgba, float speed);
+    
     
     void mainLoop(std::function<void()> fn, bool isEditor = false);
     void mainLoop(bool isEditor = false);

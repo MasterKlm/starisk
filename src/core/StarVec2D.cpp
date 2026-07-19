@@ -23,6 +23,17 @@ StarVec2D& StarVec2D::operator+=(const StarVec2D& other)
     return *this;
 }
 
+StarVec2D StarVec2D::operator+=(const float val)
+{
+    return StarVec2D(x + val, y + val);
+}
+
+StarVec2D StarVec2D::operator+(const float val)
+{
+    return *this += val;
+}
+
+
 StarVec2D StarVec2D::operator-(const StarVec2D& other) const
 {
     return StarVec2D(x - other.x, y - other.y);
@@ -32,6 +43,16 @@ StarVec2D& StarVec2D::operator-=(const StarVec2D& other)
 {
     *this = *this - other;
     return *this;
+}
+
+StarVec2D StarVec2D::operator-=(const float val)
+{
+    return StarVec2D(x - val, y - val);
+}
+
+StarVec2D StarVec2D::operator-(const float val)
+{
+    return *this -= val;
 }
 
 StarVec2D StarVec2D::operator*(const StarVec2D& other) const
@@ -45,6 +66,17 @@ StarVec2D& StarVec2D::operator*=(const StarVec2D& other)
     return *this;
 }
 
+StarVec2D StarVec2D::operator*=(const float val)
+{
+    return StarVec2D(x * val, y * val);
+
+}
+
+StarVec2D StarVec2D::operator*(const float val)
+{
+    return *this *= val;
+}
+
 StarVec2D StarVec2D::operator/(const StarVec2D& other) const 
 {
     return StarVec2D(x / other.x, y / other.y);
@@ -56,3 +88,13 @@ StarVec2D& StarVec2D::operator/=(const StarVec2D& other)
     return *this;
 }
 
+StarVec2D StarVec2D::operator/=(const float val)
+{
+    return StarVec2D(x / val, y / val);
+  
+}
+
+StarVec2D StarVec2D::operator/(const float val)
+{
+    return *this /= val;
+}

@@ -15,7 +15,7 @@ public:
         {
             if(!e->hasComponent<TransformComponent>()) continue;
             auto& tc = e->getComponent<TransformComponent>();
-            tc.pos += tc.velocity;
+            tc.pos += (tc.velocity * tc.speed);
             // std::cout << "[TS] moving quad to x=" << tc.x << " y=" << tc.y << "\n";
             e->quad.move(tc.pos.x, tc.pos.y, sbm);
             e->quad.x = tc.pos.x;

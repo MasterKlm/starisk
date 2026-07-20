@@ -6,7 +6,7 @@
 #include <cmath>
 #define PLAYER_SPEEDS 10.0f
 
-extern "C" __declspec(dllexport) void destroyProject(Starisk* s) { delete s; }
+StariskDestory destroyProject(Starisk* s) { delete s; }
 
 struct Ray {
     StarVec2D p1, p2;
@@ -81,7 +81,7 @@ struct Ray {
 
 void kickOff(std::shared_ptr<Ray> ballRay, Entity& ball);
 
-extern "C" __declspec(dllexport) Starisk* runProject(GLFWwindow* window, ImGuiContext* ctx)
+StariskMain mainProject(GLFWwindow* window, ImGuiContext* ctx)
 {
 
 

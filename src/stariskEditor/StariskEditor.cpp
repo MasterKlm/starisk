@@ -277,7 +277,7 @@ void StariskEditor::displayProject(const char* projectPath)
     }
 
     typedef Starisk*(*RunProjectFn)(GLFWwindow*, ImGuiContext*);
-    RunProjectFn runProject = (RunProjectFn)GetProcAddress(projectDLL, "runProject");
+    RunProjectFn runProject = (RunProjectFn)GetProcAddress(projectDLL, "mainProject");
     
     StariskSettings::WINDOW_WIDTH = gameViewWidth; 
     StariskSettings::WINDOW_HEIGHT = gameViewHeight;

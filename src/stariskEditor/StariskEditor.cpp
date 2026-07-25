@@ -342,8 +342,10 @@ void StariskEditor::mainLoop()
 
 
         
-        ImGui::SetNextWindowPos(ImVec2(0,0));
+        ImGui::SetNextWindowPos(ImVec2(200,0));
+        ImGui::SetNextWindowSize(ImVec2(gameViewWidth, gameViewHeight));
         ImGui::Begin("Game View");
+        ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
         if(starisk != nullptr){
 
             ImGui::Image((ImTextureID)(intptr_t)gameColorTexture,
@@ -359,17 +361,12 @@ void StariskEditor::mainLoop()
             ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove |
             ImGuiWindowFlags_NoResize   | ImGuiWindowFlags_NoBringToFrontOnFocus
         );
-            ImGui::DockSpace(ImGui::GetID("MyDockspace"), ImVec2(0,0));
+            ImGui::DockSpace(ImGui::GetID("MyDockspace"), ImVec2(0,WINDOW_HEIGHT - gameViewHeight));
         ImGui::End();
             
         // int debugPanelWidth = WINDOW_WIDTH * 0.10;
         // ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - debugPanelWidth,0));
         // ImGui::SetNextWindowSize(ImVec2(debugPanelWidth,0));
-
-        ImGui::Begin("Debug");
-        ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
-        ImGui::End();
-
 
         selectGameProjectUI();
         showPopups();
@@ -403,23 +400,34 @@ void StariskEditor::mainLoop()
 
 void StariskEditor::showPopups()
 {
-    for(size_t i = 0; i < popupMessagesStack.size(); i++){
+    if(!popupMessagesStack.empty()){
         const std::string id = "Popup##" + popupMessagesStack.top();
-        ImGui::OpenPopup(id.c_str());
-        ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - 400, WINDOW_HEIGHT - 50));
-        if(ImGui::BeginPopup(id.c_str())){
-            ImGui::Text("%s ", popupMessagesStack.top().c_str());
-            ImGui::SameLine();
-            if (ImGui::Button("OK"))
-            {
-                popupMessagesStack.pop();
-                ImGui::CloseCurrentPopup();
-            }
-            ImGui::EndPopup();
-        }
-    }
-}
 
+        ImGui::SetNextWindowSizeConstraints(
+            ImVec2(250, 0),           // min size (no minimum)
+            ImVec2(300, FLT_MAX)    // max size: width capped at 400, height unlimited
+        );
+        ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - 270, WINDOW_HEIGHT - 100));
+        ImGui::SetNextWindowBgAlpha(0.9f); // optional: slight transparency, toast-style
+
+        ImGui::Begin(id.c_str(), nullptr,
+            ImGuiWindowFlags_NoTitleBar   |
+            ImGuiWindowFlags_NoResize     |
+            ImGuiWindowFlags_NoMove       |
+            ImGuiWindowFlags_AlwaysAutoResize |
+            ImGuiWindowFlags_NoSavedSettings
+        );
+
+        ImGui::TextWrapped("%s", popupMessagesStack.top().c_str());
+        // ImGui::SameLine();
+        if(ImGui::Button("OK"))
+        {
+            popupMessagesStack.pop();
+        }
+
+        ImGui::End();
+    }
+}  
 void StariskEditor::addPopupMessage(std::string msg){ popupMessagesStack.push(msg); }
 
 StariskEditor::~StariskEditor()

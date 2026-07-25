@@ -83,9 +83,7 @@ void kickOff(std::shared_ptr<Ray> ballRay, Entity& ball);
 StariskMain mainProject(GLFWwindow* window, ImGuiContext* ctx)
 {
 
-    Starisk* s = new Starisk(window, ctx);
-    
-    
+    Starisk* s = new Starisk(window, ctx);    
 
     Entity& player = s->CreateEntity(50.0f, 100.0f, 30, 80, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f), PLAYER_SPEEDS);
     player.addComponent<KeyboardMovementComponent>();

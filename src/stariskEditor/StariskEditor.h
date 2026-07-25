@@ -25,7 +25,7 @@ public:
     HMODULE projectDLL = nullptr;
     GLuint gameFramebuffer = 0;
     GLuint gameColorTexture = 0;
-    int gameViewWidth = 800, gameViewHeight = 600;
+    int gameViewWidth = 1000, gameViewHeight = 600;
     std::stack<std::string> popupMessagesStack;
 
     // StariskEditor();

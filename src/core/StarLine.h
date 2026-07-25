@@ -17,6 +17,10 @@ public:
     StarLine(){}
 
     StarLine(StarVec2D point1, StarVec2D point2) : p1(point1), p2(point2){}
+    StarLine(float x1, float y1, float x2, float y2){
+        p1 = StarVec2D(x1, y1);
+        p2 = StarVec2D(x2, y2);
+    }
 
 
     void updatePoints(StarVec2D point1, StarVec2D point2, StarBatchManager* sbm){

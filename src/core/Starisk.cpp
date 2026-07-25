@@ -12,9 +12,12 @@ Starisk::Starisk()
 
 }
 
-Starisk::Starisk(GLFWwindow* existingWindow)
+Starisk::Starisk(GLFWwindow* existingWindow, ImGuiContext* ctx)
 {
 
+    
+    ImGui::SetCurrentContext(ctx); // sync the game DLL's ImGui to editor's context
+    std::cout << "[DEBUG] Starisk(ImGuiContext::SetCurrentContext) called\n";
     std::cout << "[DEBUG] Starisk(window) called\n";
     window = existingWindow;
     if (!glfwGetCurrentContext()) {
@@ -211,6 +214,15 @@ StarQuad Starisk::CreateQuad(float x_pos, float y_pos, float width, float height
 StarLine Starisk::CreateLine(StarVec2D p1, StarVec2D p2)
 {
     StarLine line(p1, p2);
+    line.sbm_data = sbm->drawLine(line.p1, line.p2, StariskSettings::WINDOW_WIDTH, StariskSettings::WINDOW_HEIGHT);
+
+    return line;
+}
+
+
+StarLine Starisk::CreateLine(float x1, float y1, float x2, float y2)
+{
+    StarLine line(x1, y1, x2, y2);
     line.sbm_data = sbm->drawLine(line.p1, line.p2, StariskSettings::WINDOW_WIDTH, StariskSettings::WINDOW_HEIGHT);
 
     return line;

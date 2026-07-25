@@ -22,10 +22,10 @@
 #include "StarLine.h"
 #if defined(_WIN32) || defined(__CYGWIN__)
     #define StariskMain    extern "C" __declspec(dllexport) Starisk*
-    #define StariskDestroy extern "C" __declspec(dllexport) void
+    // #define StariskDestroy extern "C" __declspec(dllexport) void
 #else
     #define StariskMain    extern "C" __attribute__((visibility("default"))) Starisk*
-    #define StariskDestroy extern "C" __attribute__((visibility("default"))) void
+    // #define StariskDestroy extern "C" __attribute__((visibility("default"))) void
 #endif
 
 class STARISK_API Starisk
@@ -39,7 +39,7 @@ public:
     
 
     Starisk();
-    Starisk(GLFWwindow* existingWindow);
+    Starisk(GLFWwindow* existingWindow, ImGuiContext* ctx);
     ~Starisk();
 
     template <typename T, typename... Targs>
@@ -62,6 +62,7 @@ public:
     StarQuad CreateQuad(float x_pos, float y_pos, float width, float height, const char* texturePath);
     StarQuad CreateQuad(float x_pos, float y_pos, float width, float height, glm::vec4 rgba);
     StarLine CreateLine(StarVec2D p1, StarVec2D p2);
+    StarLine CreateLine(float x1, float y1, float x2, float y2);
 
     Entity& CreateEntity(float xpos, float ypos, int width, int height, const char* texturePath);
     Entity& CreateEntity(float xpos, float ypos, int width, int height); //default texture placeholder

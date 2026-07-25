@@ -6,7 +6,6 @@
 #include <cmath>
 #define PLAYER_SPEEDS 10.0f
 
-StariskDestory destroyProject(Starisk* s) { delete s; }
 
 struct Ray {
     StarVec2D p1, p2;
@@ -84,22 +83,19 @@ void kickOff(std::shared_ptr<Ray> ballRay, Entity& ball);
 StariskMain mainProject(GLFWwindow* window, ImGuiContext* ctx)
 {
 
-
-
-    ImGui::SetCurrentContext(ctx); // sync the game DLL's ImGui to editor's context
-    Starisk* s = new Starisk(window);  // ✅ allocated in DLL heap
+    Starisk* s = new Starisk(window, ctx);
     
     
 
-    Entity& player = s->CreateEntity(50.0f, 100.0f, 30, 80, glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), PLAYER_SPEEDS);
+    Entity& player = s->CreateEntity(50.0f, 100.0f, 30, 80, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f), PLAYER_SPEEDS);
     player.addComponent<KeyboardMovementComponent>();
     auto& cs = s->addSystem<ColliderSystem>();
     auto& ts = s->addSystem<TransformSystem>();
     auto& kms = s->addSystem<KeyboardMovementSystem>(ctx);
-    Entity& ball = s->CreateEntity(StariskSettings::WINDOW_WIDTH/2, StariskSettings::WINDOW_HEIGHT/3, 20, 20, glm::vec4(1.0f, 0.5f, 0.3f, 1.0f), 0.75f);
+    Entity& ball = s->CreateEntity(StariskSettings::WINDOW_WIDTH/2, StariskSettings::WINDOW_HEIGHT/3, 20, 20, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f), 0.75f);
     auto ballRay = std::make_shared<Ray>(ball.getComponent<TransformComponent>().pos);
     ballRay->angle = 10.0f;
-    Entity& player2 = s->CreateEntity(StariskSettings::WINDOW_WIDTH-50.0f, StariskSettings::WINDOW_HEIGHT/1.7, 30, 80, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f), PLAYER_SPEEDS);
+    Entity& player2 = s->CreateEntity(StariskSettings::WINDOW_WIDTH-50.0f, StariskSettings::WINDOW_HEIGHT/1.7, 30, 80, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f), PLAYER_SPEEDS);
     player2.addComponent<KeyboardMovementComponent>();
     //Entity& player3 = s->CreateEntity(200.0f, 20.0f, 30, 80, glm::vec4(0.5f, 0.3f, 0.8f, 1.0f));
     // --- Kickoff: launch the ball toward player 1 or player 2 at game start ---

@@ -22,7 +22,7 @@ public:
     std::optional<StarTexture> texture;
     std:: optional<glm::vec4> rgba;
     //T vertexType;
-
+    StarBatchManager* sbm = nullptr;
     std::vector<float> vertices;
 
     StarQuad(){};

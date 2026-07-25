@@ -145,16 +145,8 @@ void StariskEditor::closeCurrentProject()
 {
     if(projectDLL != nullptr)
     {
-        typedef void(*DestroyProjectFn)(Starisk*);
-        DestroyProjectFn destroyProject = (DestroyProjectFn)GetProcAddress(projectDLL, "destroyProject");
-
-        if(destroyProject && starisk != nullptr)
-        {
-            destroyProject(starisk);
-            starisk = nullptr;
-        }
-        else if(starisk)
-        {
+    
+        if(starisk != nullptr){
             delete starisk;
             starisk = nullptr;
         }

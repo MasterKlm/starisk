@@ -1,4 +1,5 @@
 #include "StariskEditor.h"
+#include "StariskEditorUtils.h"
 #include "../core/Starisk.h"
 
 const double targetFPS = 60.0;
@@ -8,6 +9,8 @@ const auto targetFrameTime = std::chrono::duration<double>(1.0 / targetFPS);
 
 Starisk* starisk = nullptr;
 
+StariskEditor::StariskEditor(){
+}
 
 static void chained_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -88,6 +91,9 @@ void StariskEditor::createWindow()
         
     }
 
+    icons["folder_icon"] = LoadTextureFromFile("assets/img/folder_icon.png");
+
+
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     
@@ -165,26 +171,31 @@ void StariskEditor::selectGameProjectUI()
     prevPathsStack.push(rootProjectsPath);
     static std::vector<std::string> paths = getChildPaths(rootProjectsPath);
 
+    ImGui::SetNextWindowSize(ImVec2(600, WINDOW_HEIGHT - gameViewHeight));
     ImGui::Begin("Files");
 
-    ImGui::PushStyleColor(ImGuiCol_Header,        IM_COL32(0, 0, 0, 0));
-    ImGui::PushStyleColor(ImGuiCol_HeaderHovered, IM_COL32(50, 100, 200, 80));
-    ImGui::PushStyleColor(ImGuiCol_HeaderActive,  IM_COL32(50, 100, 200, 120));
 
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0, 0, 0, 0));
     
     for(auto& p : paths){
-        if(ImGui::Selectable(p.c_str())){
+        ImGui::PushID(p.c_str());
+        if(ImGui::ImageButton("##folder_icon", (ImTextureID)(intptr_t)icons["folder_icon"], ImVec2(64, 64))){
             if(std::filesystem::is_directory(std::filesystem::path(p))){
                 paths = getChildPaths(p);
                 prevPathsStack.push(p);
                 selectedPath = p + "\\main.cpp";
 
             }
-            
+
         }
+
+        ImGui::Text(p.c_str());
+            
+        ImGui::SameLine();
+        ImGui::PopID();
     }
 
-    ImGui::PopStyleColor(3);
+    ImGui::PopStyleColor(1);
 
     if(ImGui::Button("Back")){
         if(prevPathsStack.size() > 0){

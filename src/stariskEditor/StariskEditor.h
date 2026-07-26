@@ -9,8 +9,10 @@
 #include <stack>
 #include "../core/StarUtils.h"
 #include <istream>
+#include <unordered_map>
 #include <fstream>
 #include <windows.h>
+#include <map>
 #include <chrono>
 #include <thread>
 
@@ -27,8 +29,9 @@ public:
     GLuint gameColorTexture = 0;
     int gameViewWidth = 1000, gameViewHeight = 600;
     std::stack<std::string> popupMessagesStack;
+    std::unordered_map<std::string, GLuint> icons;
 
-    // StariskEditor();
+    StariskEditor();
     ~StariskEditor();
     
     void createWindow();

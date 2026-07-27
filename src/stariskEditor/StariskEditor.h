@@ -27,7 +27,7 @@ public:
     HMODULE projectDLL = nullptr;
     GLuint gameFramebuffer = 0;
     GLuint gameColorTexture = 0;
-    int gameViewWidth = 1000, gameViewHeight = 600;
+    int gameViewWidth = 1000, gameViewHeight = 550;
     std::stack<std::string> popupMessagesStack;
     std::unordered_map<std::string, GLuint> icons;
 

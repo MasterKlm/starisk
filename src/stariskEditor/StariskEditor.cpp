@@ -91,7 +91,13 @@ void StariskEditor::createWindow()
         
     }
 
-    icons["folder_icon"] = LoadTextureFromFile("assets/img/folder_icon.png");
+    GLFWimage editorIcons[1];
+    editorIcons[0].pixels = stbi_load("assets/img/starisk_icon.png", &editorIcons[0].width, &editorIcons[0].height, 0, 4);
+
+    glfwSetWindowIcon(window, 1, editorIcons);
+
+    icons["folder_icon"]    =  LoadTextureFromFile("assets/img/folder_icon.png");
+    icons["file_icon"]      =    LoadTextureFromFile("assets/img/file_icon.png");
 
 
     IMGUI_CHECKVERSION();
@@ -166,41 +172,91 @@ void StariskEditor::closeCurrentProject()
 void StariskEditor::selectGameProjectUI()
 {
     std::string rootProjectsPath = std::filesystem::absolute("./src/projects/").string();
-    static std::string selectedPath = rootProjectsPath;
+    static char selectedPath[MAX_PATH];
     static std::stack<std::string> prevPathsStack;
     prevPathsStack.push(rootProjectsPath);
     static std::vector<std::string> paths = getChildPaths(rootProjectsPath);
 
-    ImGui::SetNextWindowSize(ImVec2(600, WINDOW_HEIGHT - gameViewHeight));
-    ImGui::Begin("Files");
+    static bool initialized = false;
 
-
-    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0, 0, 0, 0));
-    
-    for(auto& p : paths){
-        ImGui::PushID(p.c_str());
-        if(ImGui::ImageButton("##folder_icon", (ImTextureID)(intptr_t)icons["folder_icon"], ImVec2(64, 64))){
-            if(std::filesystem::is_directory(std::filesystem::path(p))){
-                paths = getChildPaths(p);
-                prevPathsStack.push(p);
-                selectedPath = p + "\\main.cpp";
-
-            }
-
-        }
-
-        ImGui::Text(p.c_str());
-            
-        ImGui::SameLine();
-        ImGui::PopID();
+    if (!initialized)
+    {
+        strncpy(selectedPath, rootProjectsPath.c_str(), sizeof(selectedPath) - 1);
+        selectedPath[sizeof(selectedPath) - 1] = '\0';
+        prevPathsStack.push(rootProjectsPath);
+        paths = getChildPaths(rootProjectsPath);
+        initialized = true;
     }
 
-    ImGui::PopStyleColor(1);
+
+    ImGui::SetNextWindowSize(ImVec2(700, WINDOW_HEIGHT - gameViewHeight));
+    
+    ImGui::Begin("Files", nullptr, ImGuiWindowFlags_NoBackground);
+
+    ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(1.0f,1.0f,255,10.5f));
+    ImGui::SetNextItemWidth(-FLT_MIN);
+    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
+    ImGui::InputText("##",selectedPath, sizeof(selectedPath));
+    ImGui::PopStyleColor(2);
+
+    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0,0,0,0));
+    // ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0,0,0,0));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0,0,0,0));
+
+    if (ImGui::BeginTable("FileGrid", 4))
+    {
+        int column = 0;
+
+        for (auto& p : paths)
+        {
+            ImGui::TableNextColumn();
+
+            ImGui::PushID(p.c_str());
+
+
+            if (std::filesystem::is_directory(p))
+            {
+
+                if (ImGui::ImageButton(
+                        "##folder_icon",
+                        (ImTextureID)(intptr_t)icons["folder_icon"],
+                        ImVec2(64, 64)))
+                {
+                    std::string clickedPath = p; // snapshot BEFORE paths gets reassigned
+
+                    paths = getChildPaths(clickedPath);
+                    prevPathsStack.push(clickedPath);
+
+                    selectedPath[0] = '\0';
+                    strncat(selectedPath, clickedPath.c_str(),
+                            sizeof(selectedPath) - strlen(selectedPath) - 1);
+                    strncat(selectedPath, "\\main.cpp",
+                            sizeof(selectedPath) - strlen(selectedPath) - 1);
+                }
+            }
+            else{
+                ImGui::Image((ImTextureID)(intptr_t)icons["file_icon"], ImVec2(64, 64));
+            }
+
+
+            // Display only the filename instead of the full path
+            ImGui::TextWrapped("%s",
+                std::filesystem::path(p).filename().string().c_str());
+
+            ImGui::PopID();
+        }
+
+        ImGui::EndTable();
+    } 
+
+    ImGui::PopStyleColor(2);
+    ImGui::PopStyleVar();
 
     if(ImGui::Button("Back")){
         if(prevPathsStack.size() > 0){
             std::string prevPath = prevPathsStack.top();
-            std::cout << prevPath << "\n";
+            // std::cout << prevPath << "\n";
             paths = getChildPaths(prevPath);
             prevPathsStack.pop();
         }
@@ -208,10 +264,11 @@ void StariskEditor::selectGameProjectUI()
     ImGui::SameLine();
 
     
-    std::string currentDisplayedPathMessage = "Open Project: " +  selectedPath;
-    if(ImGui::Button(currentDisplayedPathMessage.c_str()))
+    std::string currentDisplayedPathMessage = "Open Project" +  std::string(selectedPath);
+    if(ImGui::Button("Open Project"))
     {
-        if(!selectedPath.empty()) displayProject(selectedPath.c_str());
+        std::cout << "[DEBUG] selectedPath = '" << selectedPath << "'\n";
+        if(selectedPath != "") displayProject(selectedPath);
     }
     if(ImGui::Button("Close Project", ImVec2(95, 20)))
     {
@@ -367,7 +424,7 @@ void StariskEditor::mainLoop()
 
     
         ImGui::SetNextWindowPos(ImVec2(0,WINDOW_HEIGHT - (WINDOW_HEIGHT * 0.30)));
-        ImGui::SetNextWindowSize(ImVec2(WINDOW_WIDTH, (WINDOW_HEIGHT * 0.30)));
+        ImGui::SetNextWindowSize(ImVec2(WINDOW_WIDTH, (WINDOW_HEIGHT - gameViewHeight)));
         ImGui::Begin("DockSpace", nullptr, 
             ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove |
             ImGuiWindowFlags_NoResize   | ImGuiWindowFlags_NoBringToFrontOnFocus

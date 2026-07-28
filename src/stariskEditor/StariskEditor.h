@@ -27,7 +27,8 @@ public:
     HMODULE projectDLL = nullptr;
     GLuint gameFramebuffer = 0;
     GLuint gameColorTexture = 0;
-    int gameViewWidth = 1000, gameViewHeight = 550;
+    int gameViewWidth = 1000, gameViewHeight = 600;
+    int gameViewX = 200, gameViewY = 0;
     std::stack<std::string> popupMessagesStack;
     std::unordered_map<std::string, GLuint> icons;
 
@@ -35,7 +36,7 @@ public:
     ~StariskEditor();
     
     void createWindow();
-    void initGameFramebuffer(int w, int h);
+    void initGameFramebuffer(int w, int h, int x, int y);
     void closeCurrentProject();
     void displayProject(const char* projectPath);
     void mainLoop();
@@ -44,7 +45,9 @@ public:
 
     void addPopupMessage(std::string msg);
 
+    //ui elements
     void selectGameProjectUI();
+    void ecsInfoUI();
 
 };
 

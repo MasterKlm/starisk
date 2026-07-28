@@ -14,7 +14,7 @@ class STARISK_API ColliderSystem : public System
 
         std::function<void(std::unique_ptr<Entity>& entity, std::unique_ptr<Entity>& other)> AABBSideEffect = [](std::unique_ptr<Entity>& entity, std::unique_ptr<Entity>& other)
         {
-            std::cout << "AABB collision detected between enitity (Id: " << entity->getId() << ") " << "and entity (Id: " << other->getId() << ")" << "\n";
+            std::cout << "AABB collision detected between enitity (Id: " << entity->getID() << ") " << "and entity (Id: " << other->getID() << ")" << "\n";
         };
         
         void update(StarECSManager* sem, StarBatchManager* sbm) override

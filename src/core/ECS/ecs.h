@@ -92,9 +92,9 @@ public:
     
     ~Entity(){ destroy(); }
 
-    std::string getId()
+    std::string* getID()
     {
-        return id;
+        return &id;
     }
 
     void destroy(){ active = false;}

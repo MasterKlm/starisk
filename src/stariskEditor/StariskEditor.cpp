@@ -5,7 +5,7 @@
 const double targetFPS = 60.0;
 const auto targetFrameTime = std::chrono::duration<double>(1.0 / targetFPS);
 
-
+ImFont* interFont = nullptr;
 
 Starisk* starisk = nullptr;
 
@@ -96,8 +96,9 @@ void StariskEditor::createWindow()
 
     glfwSetWindowIcon(window, 1, editorIcons);
 
-    icons["folder_icon"]    =  LoadTextureFromFile("assets/img/folder_icon.png");
-    icons["file_icon"]      =    LoadTextureFromFile("assets/img/file_icon.png");
+    icons["folder_icon"]    =       LoadTextureFromFile("assets/img/folder_icon.png");
+    icons["file_icon"]      =       LoadTextureFromFile("assets/img/file_icon.png");
+    icons["back_icon"]      =       LoadTextureFromFile("assets/img/back_icon.png");
 
 
     IMGUI_CHECKVERSION();
@@ -106,6 +107,10 @@ void StariskEditor::createWindow()
     io = &ImGui::GetIO();
     ctx = ImGui::GetCurrentContext();
     io->ConfigFlags |= ImGuiConfigFlags_DockingEnable; // optional
+
+
+    interFont = io->Fonts->AddFontFromFileTTF("assets/fonts/Inter.ttf", 13.0f);
+
 
     ImGui::StyleColorsDark();
 
@@ -139,7 +144,7 @@ void StariskEditor::createWindow()
     glfwMaximizeWindow(window);
 
     
-    initGameFramebuffer(800, 500);
+    initGameFramebuffer(800, 500, 300, 0);
 }
 
 
@@ -168,6 +173,36 @@ void StariskEditor::closeCurrentProject()
     }
 }
 
+void StariskEditor::ecsInfoUI()
+{
+    ImGui::SetNextWindowPos(ImVec2(0,0));
+    ImGui::SetNextWindowSize(ImVec2(gameViewX, gameViewHeight));
+    ImGui::Begin("ECS Info", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize);
+    ImGui::Text("ECS Info");
+    ImGui::Separator();
+    if(starisk != nullptr){
+        
+        
+        for(auto& entity : starisk->sem.entities){
+            char entityDisplayName[1024] = "Entity: #";
+
+            const char* id = entity->getID()->c_str();
+            size_t maxLen = 25;
+
+            strncat(entityDisplayName, id, maxLen);
+
+            if (strlen(id) > maxLen)
+            {
+                strcat(entityDisplayName, "...");
+            }
+
+            ImGui::Text(entityDisplayName);
+        }
+
+    }
+
+    ImGui::End();
+}
 
 void StariskEditor::selectGameProjectUI()
 {
@@ -253,7 +288,9 @@ void StariskEditor::selectGameProjectUI()
     ImGui::PopStyleColor(2);
     ImGui::PopStyleVar();
 
-    if(ImGui::Button("Back")){
+    ImGui::Dummy(ImVec2(0, 10));
+    ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 5.0f);
+    if(ImGui::ImageButton("back_icon", (ImTextureID)(intptr_t)icons["back_icon"], ImVec2(20,13))){
         if(prevPathsStack.size() > 0){
             std::string prevPath = prevPathsStack.top();
             // std::cout << prevPath << "\n";
@@ -270,10 +307,13 @@ void StariskEditor::selectGameProjectUI()
         std::cout << "[DEBUG] selectedPath = '" << selectedPath << "'\n";
         if(selectedPath != "") displayProject(selectedPath);
     }
+    ImGui::SameLine();
     if(ImGui::Button("Close Project", ImVec2(95, 20)))
     {
         closeCurrentProject();
     }
+
+    ImGui::PopStyleVar();
     ImGui::End();
 }
 
@@ -362,9 +402,10 @@ void StariskEditor::displayProject(const char* projectPath)
     }
 }
 
-void StariskEditor::initGameFramebuffer(int w, int h)
+void StariskEditor::initGameFramebuffer(int w, int h, int x, int y)
 {
     gameViewWidth = w; gameViewHeight = h;
+    gameViewX = x; gameViewY = y;
 
     glGenFramebuffers(1, &gameFramebuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, gameFramebuffer);
@@ -402,17 +443,19 @@ void StariskEditor::mainLoop()
             glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            starisk->mainLoop(true);
+            starisk->mainLoop(true); // run game main loop in frame buffer
 
             glBindFramebuffer(GL_FRAMEBUFFER, 0);
             glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         }
 
+        ecsInfoUI();
 
         
-        ImGui::SetNextWindowPos(ImVec2(200,0));
+        ImGui::PushFont(interFont);
+        ImGui::SetNextWindowPos(ImVec2(gameViewX,gameViewY));
         ImGui::SetNextWindowSize(ImVec2(gameViewWidth, gameViewHeight));
-        ImGui::Begin("Game View");
+        ImGui::Begin("Game View", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove);
         ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
         if(starisk != nullptr){
 
@@ -423,7 +466,7 @@ void StariskEditor::mainLoop()
         ImGui::End();
 
     
-        ImGui::SetNextWindowPos(ImVec2(0,WINDOW_HEIGHT - (WINDOW_HEIGHT * 0.30)));
+        ImGui::SetNextWindowPos(ImVec2(0,WINDOW_HEIGHT - (WINDOW_HEIGHT - gameViewHeight)));
         ImGui::SetNextWindowSize(ImVec2(WINDOW_WIDTH, (WINDOW_HEIGHT - gameViewHeight)));
         ImGui::Begin("DockSpace", nullptr, 
             ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove |
@@ -438,6 +481,8 @@ void StariskEditor::mainLoop()
 
         selectGameProjectUI();
         showPopups();
+
+        ImGui::PopFont();
         
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

@@ -1,6 +1,7 @@
 #ifndef STARTEXTUREMANAGER_H
 #define STARTEXTUREMANAGER_H
 #include "StariskExport.h"
+#include <unordered_map>
 
 struct STARISK_API AtlasRegion {
     float uMin = 0.0f, vMin = 0.0f, uMax = 0.0f, vMax = 0.0f;
@@ -20,7 +21,10 @@ public:
 
     static AtlasRegion getRegion(int xOffset, int yOffset, int width, int height);
     static AtlasRegion allocateRegion(int width, int height);
+    AtlasRegion GetOrLoadRegion(const char* texturePath, int width, int height);
     void Bind();
+private:
+    std::unordered_map<std::string, AtlasRegion> loadedRegions;
 };
 
 

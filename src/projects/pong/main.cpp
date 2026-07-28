@@ -99,6 +99,27 @@ StariskMain mainProject(GLFWwindow* window, ImGuiContext* ctx)
     // --- Kickoff: launch the ball toward player 1 or player 2 at game start ---
 
 
+    KeyboardMovementSystem::setKeyboardMovementComponentCustomLogic(player.getComponent<KeyboardMovementComponent>(), [&player, &ball, ballRay](){
+        auto& playerTransform = player.getComponent<TransformComponent>();
+        if(Keyboard::key(GLFW_KEY_W)){
+            playerTransform.pos.y -= (float)(1 * playerTransform.speed);
+        }
+        if(Keyboard::key(GLFW_KEY_S)){
+            playerTransform.pos.y += (float)(1 * playerTransform.speed);
+        }
+        if(Keyboard::key(GLFW_KEY_A)){
+            if(playerTransform.pos.x - (float)(1 * playerTransform.speed) > 0)
+                playerTransform.pos.x -= (float)(1 * playerTransform.speed);
+            
+        }
+        if(Keyboard::key(GLFW_KEY_D)){
+            if(playerTransform.pos.x + (float)(1 * playerTransform.speed) < StariskSettings::WINDOW_WIDTH / 2 - 15)
+                playerTransform.pos.x += (float)(1 * playerTransform.speed);
+        }
+        // reset game
+        if(Keyboard::key(GLFW_KEY_R)) kickOff(ballRay, ball);
+
+    });
 
 
     KeyboardMovementSystem::setKeyboardMovementComponentCustomLogic(player2.getComponent<KeyboardMovementComponent>(), [&player2, &ball, ballRay](){
@@ -110,15 +131,15 @@ StariskMain mainProject(GLFWwindow* window, ImGuiContext* ctx)
             player2Transform.pos.y += (float)(1 * player2Transform.speed);
         }
         if(Keyboard::key(GLFW_KEY_H)){
-            player2Transform.pos.x -= (float)(1 * player2Transform.speed);
+            if(player2Transform.pos.x - (float)(1 * player2Transform.speed) > StariskSettings::WINDOW_WIDTH / 2 + 15)
+                player2Transform.pos.x -= (float)(1 * player2Transform.speed);
             
         }
         if(Keyboard::key(GLFW_KEY_K)){
-            player2Transform.pos.x += (float)(1 * player2Transform.speed);
+            if(player2Transform.pos.x + player2.quad.width + (float)(1 * player2Transform.speed) < StariskSettings::WINDOW_WIDTH - 10 )
+                player2Transform.pos.x += (float)(1 * player2Transform.speed);
         }
-        // reset game
-        if(Keyboard::key(GLFW_KEY_R)) kickOff(ballRay, ball);
-
+        
     });
 
     player.addComponent<ColliderComponent>("AABB");

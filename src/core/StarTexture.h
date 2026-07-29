@@ -15,6 +15,7 @@ public:
     StarTexture(const char* filePath);
     
     ~StarTexture();
+    void reload(const char* filePath);
     
     float uMin, uMax, vMin, vMax;
 

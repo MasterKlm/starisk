@@ -35,7 +35,7 @@ void StarQuad::changeRGBAColor(float r, float g, float b, float a, Starisk* star
 
 
 
-void StarQuad::updateTexture(StarBatchManager* sbm, const char* newTexturePath)
+void StarQuad::updateTexture(const char* newTexturePath)
 {
     AtlasRegion region = sbm->textureManager.GetOrLoadRegion(newTexturePath, (int)width, (int)height);
 

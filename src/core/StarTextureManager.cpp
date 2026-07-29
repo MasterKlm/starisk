@@ -66,14 +66,3 @@ AtlasRegion StarTextureManager::allocateRegion(int width, int height) {
 }
 
 
-
-AtlasRegion StarTextureManager::GetOrLoadRegion(const char* texturePath, int width, int height)
-{
-    auto it = loadedRegions.find(texturePath);
-    if(it != loadedRegions.end())
-        return it->second;
-
-    AtlasRegion region = allocateRegion(width, height);
-    loadedRegions[texturePath] = region;
-    return region;
-}

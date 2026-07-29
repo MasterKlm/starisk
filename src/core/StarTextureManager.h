@@ -21,10 +21,7 @@ public:
 
     static AtlasRegion getRegion(int xOffset, int yOffset, int width, int height);
     static AtlasRegion allocateRegion(int width, int height);
-    AtlasRegion GetOrLoadRegion(const char* texturePath, int width, int height);
     void Bind();
-private:
-    std::unordered_map<std::string, AtlasRegion> loadedRegions;
 };
 
 

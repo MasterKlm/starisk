@@ -12,9 +12,9 @@ StariskMain mainProject(GLFWwindow* window, ImGuiContext* ctx)
     
     auto& kms = starisk->addSystem<KeyboardMovementSystem>(ctx);
 
-    KeyboardMovementSystem::setKeyboardMovementComponentCustomLogic(player.getComponent<KeyboardMovementComponent>(), [starisk, &player](){
+    KeyboardMovementSystem::setKeyboardMovementComponentCustomLogic(player.getComponent<KeyboardMovementComponent>(), [&player](){
         if(Keyboard::key(GLFW_KEY_W)){
-            player.quad.updateTexture(starisk->sbm, "assets/img/folder_icon.png");
+            player.quad.updateTexture("assets/img/folder_icon.png");
         }
     });
 

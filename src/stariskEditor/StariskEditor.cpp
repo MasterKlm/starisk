@@ -173,7 +173,7 @@ void StariskEditor::closeCurrentProject()
     }
 }
 
-void StariskEditor::ecsInfoUI()
+void StariskEditor::EcsInfoUI()
 {
     ImGui::SetNextWindowPos(ImVec2(0,0));
     ImGui::SetNextWindowSize(ImVec2(gameViewX, gameViewHeight));
@@ -204,7 +204,7 @@ void StariskEditor::ecsInfoUI()
     ImGui::End();
 }
 
-void StariskEditor::selectGameProjectUI()
+void StariskEditor::FileBrowserUI()
 {
     std::string rootProjectsPath = std::filesystem::absolute("./src/projects/").string();
     static char selectedPath[MAX_PATH];
@@ -225,16 +225,34 @@ void StariskEditor::selectGameProjectUI()
 
 
     ImGui::SetNextWindowSize(ImVec2(700, WINDOW_HEIGHT - gameViewHeight));
-    
+    ImGui::SetNextWindowPos(ImVec2(0, gameViewHeight));
     ImGui::Begin("Files", nullptr, ImGuiWindowFlags_NoBackground);
 
     ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(1.0f,1.0f,255,10.5f));
     ImGui::SetNextItemWidth(-FLT_MIN);
     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
-    ImGui::InputText("##",selectedPath, sizeof(selectedPath));
-    ImGui::PopStyleColor(2);
 
     ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
+
+    ImGui::InputText("##",selectedPath, sizeof(selectedPath));
+    ImGui::SameLine();
+    if(ImGui::Button("+")){
+        ImGui::SetNextWindowPos(ImVec2(100, gameViewHeight));
+        ImGui::Begin("Create New Project", nullptr, ImGuiWindowFlags_NoBackground);
+
+        for(auto& entry : std::filesystem::directory_iterator(rootProjectsPath)){
+            if(std::filesystem::is_directory(entry.path())){
+                ImGui::Image((ImTextureID)(intptr_t)icons["folder_icon"], ImVec2(20, 20));
+                ImGui::SameLine();
+                ImGui::Text(entry.path().string().c_str());
+            }
+        }
+
+        ImGui::EndChild();
+    }
+
+    ImGui::PopStyleColor(2);
+
     ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0,0,0,0));
     // ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0,0,0,0));
     ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0,0,0,0));
@@ -449,7 +467,7 @@ void StariskEditor::mainLoop()
             glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         }
 
-        ecsInfoUI();
+        EcsInfoUI();
 
         
         ImGui::PushFont(interFont);
@@ -479,7 +497,7 @@ void StariskEditor::mainLoop()
         // ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - debugPanelWidth,0));
         // ImGui::SetNextWindowSize(ImVec2(debugPanelWidth,0));
 
-        selectGameProjectUI();
+        FileBrowserUI();
         showPopups();
 
         ImGui::PopFont();
@@ -520,7 +538,7 @@ void StariskEditor::showPopups()
             ImVec2(250, 0),           // min size (no minimum)
             ImVec2(300, FLT_MAX)    // max size: width capped at 400, height unlimited
         );
-        ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - 270, WINDOW_HEIGHT - 100));
+        ImGui::SetNextWindowPos(ImVec2(WINDOW_WIDTH - 270, WINDOW_HEIGHT - 70));
         ImGui::SetNextWindowBgAlpha(0.9f); // optional: slight transparency, toast-style
 
         ImGui::Begin(id.c_str(), nullptr,

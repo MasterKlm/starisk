@@ -34,14 +34,3 @@ void StarQuad::changeRGBAColor(float r, float g, float b, float a, Starisk* star
 }
 
 
-
-void StarQuad::updateTexture(const char* newTexturePath)
-{
-    AtlasRegion region = sbm->textureManager.GetOrLoadRegion(newTexturePath, (int)width, (int)height);
-
-    std::vector<float> newVertices = calcStarQuadVertUVFromfWidth(x, y, width, height, region.uMin, region.uMax, region.vMin, region.vMax);
-
-    sbm->move(newVertices, sbm_data);
-
-    vertices = newVertices;
-}

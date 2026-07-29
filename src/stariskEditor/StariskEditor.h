@@ -45,8 +45,8 @@ public:
     void addPopupMessage(std::string msg);
 
     //ui elements
-    void selectGameProjectUI();
-    void ecsInfoUI();
+    void FileBrowserUI();
+    void EcsInfoUI();
 
 };
 

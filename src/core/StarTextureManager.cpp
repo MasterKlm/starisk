@@ -66,3 +66,13 @@ AtlasRegion StarTextureManager::allocateRegion(int width, int height) {
 }
 
 
+bool StarTextureManager::hasLoadedTexture(std::string filePath)
+{
+    if(loadedTextures.find(filePath) != loadedTextures.end()){
+        return true;
+    }
+
+    return false;
+
+}
+

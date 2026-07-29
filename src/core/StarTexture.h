@@ -5,7 +5,7 @@
 #include "stb_image.h"          
 #include "stb_image_resize2.h"
 #include "StariskExport.h"
-
+#include <iostream>
 
 class STARISK_API StarTexture
 {
@@ -15,7 +15,6 @@ public:
     StarTexture(const char* filePath);
     
     ~StarTexture();
-    void reload(const char* filePath);
     
     float uMin, uMax, vMin, vMax;
 

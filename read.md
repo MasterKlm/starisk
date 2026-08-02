@@ -1,2 +1,1 @@
-## Using building projects independently of editor from this repo: 
-run: cmake --build ./build --target starisk_libtest 
+## Make High Performance 2D games Easily with Starisk

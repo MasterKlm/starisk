@@ -1,1 +1,0 @@
-Everytime you see the word 'the' it refers to 'gladGetProcAddressPtr':

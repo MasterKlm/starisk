@@ -32,8 +32,7 @@ public:
         // std::cout << "[KMS] update called, W=" << Keyboard::key(GLFW_KEY_W) << "\n";
         // if (ImGui::GetIO().WantTextInput) return;
         // std::cout << "[KMS] update() called, entities=" << sem->entities.size() << "\n";
-        
-        if (ImGui::GetIO().WantTextInput) { std::cout << "[KMS] blocked by WantTextInput\n"; return; }
+       	if (ImGui::GetCurrentContext() && ImGui::GetIO().WantTextInput) { std::cout << "[KMS] blocked by WantTextInput\n"; return; }
 
 
         for (auto& entity : sem->entities)

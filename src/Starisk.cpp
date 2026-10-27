@@ -92,8 +92,9 @@ void Starisk::createWindow(int width, int height, const char* title)
     std::cout << "OpenGL version: " << version << "\n";
 
     //set view port
-    
-    glViewport(0,0, 800, 600);
+    int fbWidth, fbHeight;
+    glfwGetFramebufferSize(window, &fbWidth, &fbHeight);
+    glViewport(0,0, fbWidth, fbHeight);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 

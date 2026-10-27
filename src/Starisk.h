@@ -50,12 +50,6 @@ public:
 
     static void initGLAD(GLADloadproc loaderFunc);
 
-    // Syncs *this DLL's* private ImGui global context pointer (GImGui) to the
-    // shared context created by the editor. Must be compiled once into
-    // starisk_core.dll (declared here, defined in Starisk.cpp) -- if this were
-    // inline in the header, every binary that includes Starisk.h would get its
-    // own copy and calling it wouldn't actually set core's copy. Same root
-    // cause as the GLAD issue, just for ImGui's global state instead.
     static void initImGuiContext(ImGuiContext* ctx);
 
     
